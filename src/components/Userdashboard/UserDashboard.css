@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* CSS Reset */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Color Variables */
+:root {
+    --white: #fff;
+    --Blue: #29335C;
+}
+
+/* Basic styles */
+html {
+    font-size: 10px;
+}
+
+.main-container{
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    font-weight: 400;
+    overflow-x: hidden;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+img {
+    display: block;
+}
+
+li{
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    line-height: inherit;
+    font-family: inherit;
+    border: none;
+}
