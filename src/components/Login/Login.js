@@ -9,8 +9,8 @@ const Login = () => {
     <div>
        <div className="container_login">
 			<div className="content_1" >
-				<div className="back_icon" ><a href="google.com" ><i class="fa-solid fa-angle-left"></i></a></div>
-				<div className="login_logo"><img src={Logo} alt='ec' /></div>
+				<div className="back_icon" ><a href="/" ><i class="uil uil-previous"></i></a></div>
+				<div className="logo"><img src={Logo} alt='ec' /></div>
 				<p className="welcome" >Welcome Back</p>
 				<div className="header">Get back on <span>track</span></div>
 				<div className="form" >
