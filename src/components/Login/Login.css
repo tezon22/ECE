@@ -4,7 +4,16 @@
     gap:20px;
     height:auto;
     justify-content:center;
-    margin:30px;
+    margin:0 30px;
+    position: relative;
+    }
+    .back_icon{
+      position: absolute;
+      top: 5%;
+      left: 5px;
+    }
+    .back_icon a i{
+      font-size: 40px;
     }
    
    .container_login .content_1{
@@ -20,13 +29,17 @@
     }
    
     .login_logo{
-    height: 200px;
-    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:max-content;
   }
   
   .login_logo img{
-    max-width:150px;
-    height:150px;
+    max-width:200px;
+    height:max-content;
+    margin-top: -50px;
+    margin-bottom: 20px;
   }
    
     .container_login .content_1 .welcome{
@@ -104,6 +117,9 @@
     width:100%;
     height:100%;
     }
+    .y{
+      margin-bottom: 10px;
+    }
    
     @media only screen and (max-width:700px){
    
@@ -131,4 +147,7 @@
     .container_login .content_2{
     background:none;
     }
+    .back_icon a i{
+      font-size: 30px;
    }
+  }
