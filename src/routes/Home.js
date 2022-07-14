@@ -4,7 +4,7 @@ import Hero from '../components/Hero/Hero'
 import Ebooks from '../components/E-books/Ebooks'
 import Newscenter from '../components/Newscenter/Newscenter'
 import Footer from '../components/Footer/Footer'
-import UserDashboard from '../components/Userdashboard/UserDashboard'
+import Calculator from '../components/calculator/Calculator'
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
       <Hero/>
       <Ebooks/>
       <Newscenter/>
-      <UserDashboard/>
+      <Calculator/>
       <Footer/>
     </div>
   )

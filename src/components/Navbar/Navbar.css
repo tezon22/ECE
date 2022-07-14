@@ -2,24 +2,27 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	text-decoration: none;
+}
+.nav{
+	background-color: #F4FFFD;
+	margin-top: 15px;
 }
 .nav_container{
 	margin-right: 60px;
 	margin-left: 20px;
-	margin-top: 30px;
-}
-.nav {
-	position: absolute;
-	background: #F4FFFD;
-	width: 100%;
-	height: 96px;
+	height: 100%;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
 }
 .logo{
 	width: 150px;
-	height: 150px;
-	float: left;
-	position: relative;
-	top: -64px;
+	height: 50px;
+	margin: -10px;
+	background-size: cover;
+	background-position: center;
+	background-image: url('./ECE\ LOGO\ With\ TEXT.png');
 }
 .right_side{
 	float: right;
@@ -44,15 +47,17 @@
 	font-size: 16px;
 	color: #29335C;
 	border: 1px solid #29335C;
-	padding: 4px 16px;
+	border-radius: 4px;
+	padding: 4px 30px;
 }
 .sign{
 	margin-left: 36px;
 	text-decoration: none;
-	color: #fff;
 	font-size: 16px;
+	color: #fff;
 	background-color: #9B2226;
-	padding: 4px 16px;
+	border-radius: 4px;
+	padding: 6px 30px;
 }
 @media only screen and (max-width: 1000px){
 	.right_side ul{
@@ -65,9 +70,11 @@
 	}
 	.log{
 		margin-left: 18px;
+		display: none;
 	}
 	.sign{
 		margin-left: 18px;
+		display: none;
 	}
 }
 @media only screen and (max-width: 700px){

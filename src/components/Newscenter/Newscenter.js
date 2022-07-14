@@ -4,7 +4,7 @@ import Image4 from './image 4.png'
 
 const Newscenter = () => {
   return (
-    <div>
+    <div className='news_container'>
       <div className="news_row">
         <div className="col_5">
           <h1>Stay <span>updated</span> everyday and everytime</h1>

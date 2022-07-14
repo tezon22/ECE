@@ -1,12 +1,11 @@
 import React from 'react'
 import './Ebook.css'
 import Image5 from './image 5.png'
-import Oval from './Oval.png'
 
 const Ebooks = () => {
   return (
     <div>
-      <section className="e_envelope" style={{backgroundImage:{Oval}}}>
+      <section className="e_envelope">
         <div className="e_container">
           <div className="e_row">
             <div className="col_3">

@@ -1,6 +1,7 @@
 .hero_container{
 	margin-left: 50px;
 	margin-right: 50px;
+	margin-bottom: -90px;
 	padding: 195px 20px;
 }
 .hero_row{
@@ -33,8 +34,13 @@
 	background: #F4FFFD;
 	text-align: center;
 	max-width: 450px;
-	padding: 4px 0;
+	padding: 20px;
+	color: #29335C;
+	font-family: 'Aeros', sans-serif;
+	margin-bottom: 10px;
+	font-size: 20px;
 }
+
 .col_1 h1{
 	font-size: 36px;
 	color: #29335C;/*blue*/
@@ -54,14 +60,31 @@
 	font-size: 18px;
 	color: #fff;
 	background-color: #9B2226;
-	padding: 8px 60px;
+	padding: 8px 30px;
 	border-radius: 4px;
 	text-transform: uppercase;
 }
-@media only screen and (max-width: 700px){
+
+@media only screen and (max-width: 884px){
 	.hero_container{
 		margin-left: 25px;
 		margin-right: 25px;
+		padding: 100px 10px;
+	}
+	.col_1, .col_2{
+		flex-basis: 100%;
+	}
+	.hero_hide{
+		display: none;
+	}
+	.col_1 h2{
+		font-size: 10px;
+		max-width: 300px;
+	}
+	.hero_container{
+		margin-left: 25px;
+		margin-right: 25px;
+		padding: 100px 10px;
 	}
 	.col_1, .col_2{
 		flex-basis: 100%;
@@ -72,34 +95,28 @@
 	.hero_hide{
 		display: none;
 	}
-	.col_1 h2{
-		font-size: 18px;
-		max-width: 300px;
-	}
+	
 	.col_1 h1{
-		font-size: 26px;
+		font-size: 10px;
 		margin-top: 16px;
 	}
 	.col_1 p{
-		font-size: 18px;
+		font-size: 12px;
 	}
 	.col_2{
 		margin-top: 24px;
 	}
-}
-@media only screen and (max-width: 884px){
-	.hero_hide{
+	.vector, .vector12 {
 		display: none;
 	}
-	.col_1 h2{
-		font-size: 20px;
-		max-width: 300px;
-	}
 	.col_1 h1{
-		font-size: 26px;
+		font-size: 20px;
 		margin-top: 16px;
 	}
 	.col_1 p{
-		font-size: 18px;
+		font-size: 14px;
+	}
+	.vector, .vector12 {
+		display: none;
 	}
 }

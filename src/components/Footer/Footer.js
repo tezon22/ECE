@@ -1,15 +1,11 @@
 import React from 'react'
 import './Footer.css'
 import Tezonlogo from './Tezon logo.png'
-import Vector2 from './Vector 2.png'
 
 const Footer = () => {
   return (
     <div>
       <section>
-        <summary>
-          <h2>Get access to everything <span>now</span> <img src={Vector2} alt='vector2'/> <a href="google.com">Sign Up</a></h2>
-        </summary>
         <footer>
           <div className ="col_9">
             <img src={Tezonlogo} alt='tezon'/>
