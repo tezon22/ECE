@@ -1,15 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Signup.css'
 import Logo from '../Navbar/ECE LOGO With TEXT.png'
 import Image2 from './image 2.png'
 
 const Signup = () => {
+	const [show, setShow] = useState(false)
+	const change = () => {
+		setShow(!show)
+	}
   return (
     <div>
     <div className="container_signup">
 			<div className="content_1" >
-				<div className="back_icon" ><a href="google.com" ><i className="fa-solid fa-angle-left"></i></a></div>
-				<div className="signup_logo"><img src={Logo} alt='ece' /></div>
+				<div className="back_icon" ><a href="/" ><i class="uil uil-previous"></i></a></div>
+				<div className="login_logo"><img src={Logo} alt='ece' /></div>
 				<p className="get_started" >Get started</p>
 				<div className="header">Create an <span>account</span></div>
 				<div className="form" >
@@ -17,7 +21,8 @@ const Signup = () => {
 					  <div className="signup_input" >
 						  <input type="textbox" name="fullname" placeholder="Full name" required/><br/>
 					  	<input type="email" name="email" placeholder="E-mail" required /><br/>
-						  <input type="password" name="password" placeholder="Password" required/><br/>
+						<div className='password'>  <input type={show? "text" : "password"} name="password" placeholder="Password" required/>
+						<span onClick={change}>{show? <i class="uil uil-eye-slash"></i> : <i class="uil uil-eye"></i>}</span> </div>
 						</div>
             <div className="signup_level" ><p>Select:</p><br/>
 							<input type="radio" name="select" value="100 level" id="100L" required/><label for="100L"><span></span>100 level</label><br/>
@@ -27,8 +32,8 @@ const Signup = () => {
 					</form>
 				</div>
 				<div className="or" ><hr/><span>OR</span><hr/></div>
-				<div className="google" ><a href="google.com" ><i className="fa-brands fa-google"></i><span>Sign up with Google</span></a></div>
-				<p className="login" >Already have an account? <a href="google.com" >LOG IN</a></p>
+				<div className="google" ><a href="login" ><i className="fa-brands fa-google"></i><span>Sign up with Google</span></a></div>
+				<p className="login" >Already have an account? <a href="login" >LOG IN</a></p>
 			</div>
 			<div className="content_2">
 				<img src={Image2} alt='ima'/>

@@ -7,6 +7,7 @@
   margin:30px;
   }
   
+  
  .container_signup .content_1{
   width:100%;
   height:auto;
@@ -19,16 +20,6 @@
   font-size:25px;
   }
   
-  .signup_logo{
-    height: 200px;
-    margin-top: -20px;
-  }
-  
-  .signup_logo img{
-    max-width:150px;
-    height:150px;
-  }
- 
   .container_signup .content_1 .get_started{
   font-weight:600;
   text-align:center;
@@ -178,6 +169,18 @@
   width:100%;
   height:100%;
   }
+  .password{
+    position: relative;
+  }
+  .password span{
+    position: absolute;
+    bottom: 35%;
+    right: 5%;
+  }
+  .password span i{
+    font-size: 20px;
+  }
+
  
   @media only screen and (max-width:700px){
    .container_signup{
