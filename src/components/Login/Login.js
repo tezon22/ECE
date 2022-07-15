@@ -26,7 +26,7 @@ const Login = () => {
 						  <button type="submit" >LOG IN</button>
 					</form>
 				</div>
-			<div className="or" ><hr/><span>OR</span><hr/></div>
+			<div className="or y" ><hr/><span>OR</span><hr/></div>
 				<p className="login" >Already have an account? <a href="signup" >SIGNUP</a></p>
 			</div>
 			<div className="content_2">
