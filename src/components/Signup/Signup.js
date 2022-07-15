@@ -9,7 +9,7 @@ const Signup = () => {
     <div className="container_signup">
 			<div className="content_1" >
 				<div className="back_icon" ><a href="google.com" ><i className="fa-solid fa-angle-left"></i></a></div>
-				<div className="logo"><img src={Logo} alt='ece' /></div>
+				<div className="signup_logo"><img src={Logo} alt='ece' /></div>
 				<p className="get_started" >Get started</p>
 				<div className="header">Create an <span>account</span></div>
 				<div className="form" >
