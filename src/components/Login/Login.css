@@ -9,8 +9,8 @@
     }
     .back_icon{
       position: absolute;
-      top: 5%;
-      left: 5px;
+      top: 2%;
+      left: 8px;
     }
     .back_icon a i{
       font-size: 40px;
@@ -38,7 +38,7 @@
   .login_logo img{
     max-width:200px;
     height:max-content;
-    margin-top: -50px;
+    margin-top:3px;
     margin-bottom: 20px;
   }
    
