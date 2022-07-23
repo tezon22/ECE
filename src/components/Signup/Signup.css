@@ -70,6 +70,8 @@
   
   .form form .signup_level>p{
   margin-bottom:12px;
+  font-size: 15px;
+  font-weight: 600;
   }
   
   .form form .signup_level>input[type="radio"] {

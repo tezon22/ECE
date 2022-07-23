@@ -34,11 +34,12 @@
 	display: inline-block;
 	margin-left: 36px;
 	margin-top: 2px;
+	font-size: 18px;
 }
- a{
+ link{
 	color: #29335C;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 1.4rem;
 }
 .log{
 	margin-left: 36px;
