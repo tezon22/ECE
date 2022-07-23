@@ -14,7 +14,7 @@ const Hero = () => {
             <h2>FACULTY OF ENGINEERING</h2>
             <h1>Department of <span>Electronics</span> and <span>Computer</span> Engineering</h1>
             <p>A plug into an engineering digital library, <br class="hero_hide"/>Let's study.</p>
-            <a href="/login">Get Started</a>
+            <a href="/signup">Get Started</a>
             <img src={Vector} alt='vector' className='vector'/>
             <img src={Vector12} alt='vector12'className='vector12'/>
           </div>

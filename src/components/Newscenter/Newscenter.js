@@ -9,7 +9,7 @@ const Newscenter = () => {
         <div className="col_5">
           <h1>Stay <span>updated</span> everyday and everytime</h1>
           <p>Get steady information and news, lecture timetable updates, newly uploaded PDFs and more</p>
-          <a href="google.com">News Center</a>
+          <a href="/news">News Center</a>
         </div>
         <div className="col_6">
           <img src={Image4} alt='image4'/>
