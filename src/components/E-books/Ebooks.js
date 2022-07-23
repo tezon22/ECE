@@ -14,7 +14,7 @@ const Ebooks = () => {
             <div className="col_4">
               <h1>All your needed <span>resources</span> for study in one location, accessible anywhere.</h1>
               <p>Get access to engineering e-books and PDF's in just one click whenever and where ever you need them.</p>
-              <a href="google.com">See e-books</a>
+              <a href="ebooks">See e-books</a>
             </div>
           </div>
         </div>

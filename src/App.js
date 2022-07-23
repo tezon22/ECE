@@ -8,6 +8,7 @@ import Ebooks from './components/E-books/Ebooks';
 import Newscenter from './components/Newscenter/Newscenter';
 import ChangePassword from './components/changePassword/changePassword';
 import About from './components/about/About';
+import Contact from './components/contact/Contact';
 
 
 function App() {
@@ -17,10 +18,11 @@ function App() {
         <Route exact path='/' element={<Home/>}/>
         <Route exact path='/login' element={<Login/>}/>
         <Route exact path='/signup' element={<Signup/>}/>
-        <Route exact path='/ebooks' element={<Ebooks/>}/>
+        <Route exact path='/ebook' element={<Ebooks/>}/>
         <Route exact path='/news' element={<Newscenter/>}/>
-        <Route exact path='/password change' element={<ChangePassword/>}/>
+        <Route exact path='/passwordchange' element={<ChangePassword/>}/>
         <Route exact path='/about' element={<About/>}/>
+        <Route exact path='/contact' element={<Contact/>}/>
         <Route exact path='/section' element={<Section/>}/>
       </Routes>
     </>
