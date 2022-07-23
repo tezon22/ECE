@@ -19,9 +19,9 @@ const Navbar = () => {
         <div className="">
           <div className={ nav?  "nav-menu" : "right_side"}>
             <ul>
-              <li><a href="/">Home</a></li>
+              <li><Link to={"/"}>Home</Link></li>
               <li><Link to="/section">Sections</Link></li>
-              <li><a href="google.com">Info</a></li>
+              <li><Link to={"/"}>Info</Link></li>
             </ul>
             <Link to='/login' className="log">
               LOG IN

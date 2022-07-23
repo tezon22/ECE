@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './UserDashboard.css'
 import user from './images/Vector (2).png'
 import pdf from './images/Vector (3).png'
@@ -14,6 +14,10 @@ import footer_img from './images/image 16.png'
 import settings from './images/Vector (15).png'
 
 const UserDashboard = () => {
+  const[arrow, setArrow] = useState(false)
+  const dragged = ()=>{
+    setArrow(!arrow)
+  } 
   return (
     <div>
       <html>
@@ -22,14 +26,14 @@ const UserDashboard = () => {
           <nav className='nav-bar'>
             <h1>Dashboard</h1>
             <img src={arrow} alt=" "/>
-            <ul className='flex-list'>
+            <ul className={arrow ? 'dragged': 'flex-list'}>
               <li><img src={user} alt='user'/><a href=''>Profile</a></li>
               <li><img src={pdf} alt='pdf'/><a href=''>P.D.F's</a></li>
               <li><img src={news} alt='news'/><a href=''>News</a></li>
               <li><img src={calc} alt='calc'/><a href=''>Calculator</a></li>
               <li><img src={settings} alt=''/><a>Settings</a></li>
             </ul>
-            <button className='drag-button'>
+            <button onClick={dragged} className='drag-button'>
               Activities <img src={arrow} alt=" "/>
             </button>
           </nav>
