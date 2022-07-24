@@ -27,7 +27,7 @@ const UserDashboard = () => {
               <li><img src={pdf} alt='pdf'/><a href=''>P.D.F's</a></li>
               <li><img src={news} alt='news'/><a href=''>News</a></li>
               <li><img src={calc} alt='calc'/><a href=''>Calculator</a></li>
-              <li><img src={settings} alt=''/><a>Settings</a></li>
+              <li><img src={settings} alt='settings'/><a href=''>Settings</a></li>
             </ul>
             <button className='drag-button'>
               Activities <img src={arrow} alt=" "/>
@@ -47,35 +47,37 @@ const UserDashboard = () => {
             </header>
 
             <section className='grid-section'>
-              <article className='grid-tiles'>
+              <a href='' className='grid-tiles'>
                 <img src={news_2} alt=" "/>
                 <p>News update</p>
                 <img src={arrow_2} alt=" "/>
-              </article>
+              </a>
               
 
-              <article className='grid-tiles'>
+              <a href='' className='grid-tiles'>
                 <img src={pdf_2} alt=" "/>
                 <p>P.D.F / E-books</p>
                 <img src={arrow_2} alt=" "/>
-              </article>
+              </a>
 
-              <article className='grid-tiles'>
+              <a href='' className='grid-tiles'>
                 <img src={calc_2} alt=" "/>
                 <p>Calculate C.G.P.A</p>
                 <img src={arrow_2} alt=" "/>
-              </article>
+              </a>
                
-              <article className='grid-tiles'>
+              <a href='' className='grid-tiles'>
                 <img src={timetable} alt=" "/>
                 <p>Time table</p>
                 <img src={arrow_2} alt=" "/>
-              </article>
+              </a>
 
             </section>
 
-            <article>
-             <img className='footer-img' src={footer_img} alt="footer-img"/>
+            <article className='footer-img-article'>
+             <img className='footer-img' src={footer_img} alt="Image Expression"/>
+             <img className='footer-img' src={footer_img} alt="Image Expression"/>
+             <img className='footer-img' src={footer_img} alt="Image Expression"/>
             </article>
           </main>
 
