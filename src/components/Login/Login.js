@@ -22,7 +22,7 @@ const Login = () => {
 				  		<input type="email" name="email" placeholder="E-mail" required /><br/>
 						  <div className='password'>  <input type={show? "text" : "password"} name="password" placeholder="Password" required/>
 						<span onClick={change}>{show? <i class="uil uil-eye-slash"></i> : <i class="uil uil-eye"></i>}</span> </div>
-						  <p className="forgot" ><a href="passwordchange" >Forgot password?</a></p>
+						  <span className="forgot" ><a href="passwordchange" >Forgot password?</a></span>
 						  <button type="submit" >LOG IN</button>
 					</form>
 				</div>

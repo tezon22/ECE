@@ -8,7 +8,7 @@ const ChangePassword = () => {
 	}
   return (
     <div className="container_pwdchange">
-      <a href="" className="back_icon_changepwd" ><i class="uil uil-previous"></i></a>
+      <a href="/login" className="back_icon_changepwd" ><i class="uil uil-previous"></i></a>
       <div className="change_pass" >Change Password</div>
       <div className="form" >
       	<form method="post" action=" " >

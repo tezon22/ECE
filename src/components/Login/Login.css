@@ -86,7 +86,9 @@
    
     .forgot{
     text-align:right;
+    width:100%;
     margin-top:-15px;
+    display: inline-block;
     }
    
     .forgot a{
