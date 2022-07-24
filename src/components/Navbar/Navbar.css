@@ -71,7 +71,7 @@
 @media only screen and (max-width: 884px){
 	.nav-menu {
 		transform: translate(0);
-		transition: ease-in-out 0.1s;
+		transition: ease-in-out 0.8s;
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
@@ -93,7 +93,8 @@
 	.right_side {
 		flex-direction: column;
 		gap: 10px;
-		transform: translateX(200%);
+		transition:ease-in-out 1s;
+		transform: translateX(150px);
 		position: fixed;
 	}
 	.log{
@@ -110,13 +111,13 @@
 	.log{
 		margin-left: 8px;
 		font-size: 12px;
-		padding: 8px 20px;
+		padding: 8px 28px;
 		text-align: center;
 	}
 	.sign{
 		margin-left: 8px;
 		font-size: 12px;
-		padding: 8px 20px;
+		padding: 8px 30px;
 		text-align: center;
 	}
 	.nav_container{
