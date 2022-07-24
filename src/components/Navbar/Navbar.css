@@ -71,7 +71,7 @@
 @media only screen and (max-width: 884px){
 	.nav-menu {
 		transform: translate(0);
-		transition: ease-in-out 0.1s;
+		transition: ease-in-out 0.8s;
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
@@ -93,7 +93,8 @@
 	.right_side {
 		flex-direction: column;
 		gap: 10px;
-		transform: translateX(200%);
+		transition:ease-in-out 5s;
+		transform: translateX(150px);
 		position: fixed;
 	}
 	.log{
