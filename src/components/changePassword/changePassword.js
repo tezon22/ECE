@@ -20,9 +20,9 @@ const ChangePassword = () => {
 		        <button type="submit" >DONE</button>
 	       </form>
 	     </div>
-	<p className="try_login_again">
+	<p className="try_login_again"><a href="login">
 	Try logging in again
-	</p>
+	</a></p>
     </div>
   )
 }
