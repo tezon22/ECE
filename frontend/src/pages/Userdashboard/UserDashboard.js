@@ -31,9 +31,6 @@ const UserDashboard = () => {
 
   useEffect(() => {
 
-    if (!user) {
-      navigate('/login')
-    }
 
 
     return () => {
@@ -44,10 +41,10 @@ const UserDashboard = () => {
   return (
     <div>
       <Navbar/>
-        <div className='full-container full-grid'>
+        <div className={arrows? 'extend' : 'full-container full-grid'}>
           <nav className='nav-bar'>
             <h1>Dashboard</h1>
-            <img src={arrow} alt=" "/>
+            <img className='arrr' src={arrow} alt=" "/>
             <ul className={arrows ? 'dragged': 'flex-list'}>
               <li><img src={user1} alt='user'/><a href=''>Profile</a></li>
               <li><img src={pdf} alt='pdf'/><a href=''>P.D.F's</a></li>
@@ -55,7 +52,7 @@ const UserDashboard = () => {
               <li><img src={calc} alt='calc'/><a href=''>Calculator</a></li>
               <li><img src={settings} alt='settings'/><a href=''>Settings</a></li>
             </ul>
-            <button onClick={dragged} className='drag-button'>
+            <button onClick={dragged} className={arrows? 'dragg' : 'drag-button'}>
               Activities <img src={arrow} alt=" "/>
             </button>
           </nav>
@@ -64,9 +61,7 @@ const UserDashboard = () => {
           <main className='main-container'>
             <header className='main-header'>
               <div className='img-flex'>
-                <span className='img-holder'>
-
-                </span>
+                <span className='img-holder'></span>
               </div>
               <p>7th July, 2022.</p>
               <h1>Hello,{user && user.name} </h1>
