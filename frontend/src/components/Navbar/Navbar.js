@@ -49,7 +49,7 @@ const Navbar = () => {
                 )}
               </div>
             </ul>
-            <div>
+            <div className= 'red'>
               {user ? (
                 <Link to="/home"  className="sign" onClick={onLogout}>
                   LOGOUT

@@ -79,7 +79,7 @@ const Signup = () => {
       <div className="container_signup">
         <div className="content_1">
           <div className="back_icon">
-            <a href="/">
+          <a href={!user? "/home" :'/'}>
               <i className="uil uil-previous"></i>
             </a>
           </div>
