@@ -27,6 +27,7 @@
 .right_side{
 	float: right;
 	display: flex;
+	transition: 1s;
 }
 .right_side ul{
 	margin-right: 250px;
@@ -82,8 +83,9 @@
 		right: -10px;
 		top: 50px;
 		background-color: #F4FFFD;
-		width: 80%;
+		width: 70%;
 		height: 40vh;
+		z-index: 3;
 	}
 	.nav-menu ul{
 		display: flex;
@@ -93,7 +95,7 @@
 	.right_side {
 		flex-direction: column;
 		gap: 10px;
-		transition:ease-in-out 1s;
+		transition: 1s ease-in-out;
 		transform: translateX(150px);
 		position: fixed;
 	}
@@ -109,16 +111,23 @@
 }
 @media only screen and (max-width: 800px){
 	.log{
-		margin-left: 8px;
+		margin-left: 0px;
+		margin-bottom: 10px;
 		font-size: 12px;
-		padding: 8px 28px;
+		padding: 10px 10px 10px 30px ;
 		text-align: center;
+		width: 100%;
 	}
 	.sign{
-		margin-left: 8px;
-		font-size: 12px;
-		padding: 8px 30px;
+		margin-left: 0px;
+		font-size: 11px;
+		padding: 10px 30px;
 		text-align: center;
+		width: 100%;
+		
+	}
+	.nav-menu ul li{
+		margin-bottom: 10px;
 	}
 	.nav_container{
 		margin-right: 10px;
@@ -131,4 +140,12 @@
 		right: 10px;
 		top: 20px;
 	}
+	.red{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+	}
+	
 }

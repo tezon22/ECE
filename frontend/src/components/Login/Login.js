@@ -70,7 +70,7 @@ const Login = () => {
       <div className="container_login">
         <div className="content_1">
           <div className="back_icon">
-            <a href="/">
+            <a href={!user? "/home" :'/'}>
               <i class="uil uil-previous"></i>
             </a>
           </div>

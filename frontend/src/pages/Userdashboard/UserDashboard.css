@@ -69,9 +69,52 @@ button {
 .full-grid {
     display: grid;
     grid-template-columns: 5.6rem 1fr;
+    transition: 0.8s ease-in-out;
 }
-
-
+.extend{
+    display: grid;
+    grid-template-columns: 13rem 1fr;
+    transition: 0.8s ease-in-out;
+}
+.extend .nav-bar h1{
+    display: block;
+}
+.extend .nav-bar .arrr{
+    display: none;
+}
+.dragg{
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    top: 30.5rem;
+    right: -4rem;
+    transform: rotate(-90deg);
+    border-radius: 4px;
+    width: 10rem;
+    padding-bottom: 0.4rem;
+    height: 4rem;
+    gap: 1.5rem;
+}
+.dragg img{
+    transform: rotate(90deg);
+    transition: 0.8s;
+}
+.dragged li{
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 10px;
+}
+.dragged a{
+    font-size: 1rem;
+    
+}
+.dragged li img{
+    width: 30px;
+}
 
 /* NAVBAR*/
 .nav-bar {
@@ -82,6 +125,7 @@ button {
     flex-direction: column;
     align-items: center;
     gap: 13rem;
+    position: relative;
 }
 
 .flex-list {
@@ -152,6 +196,7 @@ button {
     flex-direction: row-reverse;
     width: 100%;
     height: 5.5rem;
+    position: relative;
 }
 
 .img-holder {
@@ -166,8 +211,8 @@ button {
 .img-holder::before {
     content: '';
     position: absolute;
-    top: 15px;
-    right: 22px;
+    top: 0px;
+    right: 5px;
     border-radius: 50%;
     background-color: #32A564;
     height: 1.0rem;
