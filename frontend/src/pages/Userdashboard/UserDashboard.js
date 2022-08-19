@@ -31,7 +31,9 @@ const UserDashboard = () => {
 
   useEffect(() => {
 
-
+    if (!user) {
+      navigate('/home')
+    } 
 
     return () => {
       dispatch(reset())
