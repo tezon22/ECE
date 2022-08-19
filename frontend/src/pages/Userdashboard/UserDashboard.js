@@ -31,9 +31,7 @@ const UserDashboard = () => {
 
   useEffect(() => {
 
-    if (!user) {
-      navigate('/home')
-    } 
+  
 
     return () => {
       dispatch(reset())
@@ -62,7 +60,7 @@ const UserDashboard = () => {
 
           <main className='main-container'>
             <header className='main-header'>
-              <div className='img-flex'>
+              <div className='img-flex ball'>
                 <span className='img-holder'></span>
               </div>
               <p>7th July, 2022.</p>

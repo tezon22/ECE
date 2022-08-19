@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import { getEmail } from '../../features/reset/emailRedux'
+import {toast} from 'react-toastify'
 import Spinner from '../Spinner'
 export default function EnterEmail() {
 	const [email, setEmail] = useState('')
@@ -14,7 +15,7 @@ export default function EnterEmail() {
   const {gettingE, gottenE, lostE, message} = useSelector((state) => state.email)
   const navigate = useNavigate()
   useEffect(() => {
-    if(gottenE){
+    if (gottenE) {
       navigate('/email/passwordchange')
     }
     
@@ -34,6 +35,8 @@ export default function EnterEmail() {
     }
     if(gettingE){
       return <Spinner/>
+    } else {
+      toast.error("user doesn't exist")
     }
     
 
