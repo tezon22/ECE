@@ -30,15 +30,17 @@ const emailSlice = createSlice({
     extraReducers: {
         [getEmail.pending]: (state) =>{
             state.gettingE = true
+            state.lostE = false
         },
         [getEmail.fulfilled]: (state,action) =>{
             state.gettingE = false
             state.gottenE = true
+            state.lostE = false
             state.email = action.payload
         } ,
         [getEmail.rejected]: (state, action) =>{
             state.gettingE = false
-            state.gottenE = false
+            state.lostE = true
             state.message = action.payload
         }
     }

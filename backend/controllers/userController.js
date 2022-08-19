@@ -76,7 +76,6 @@ const getMe = asyncHandler(async (req, res) => {
 })
 
 //reset password
-
 const resetPassword = asyncHandler( async (req,res) =>{
    const { email, password} = req.body
    const salt = await bcrypt.genSalt(10)
@@ -94,8 +93,6 @@ const resetPassword = asyncHandler( async (req,res) =>{
     res.status(400).json({message: "email does not exist"})
    }
 })
-
-
 // get oldUser id
 const oldUser = asyncHandler(async (req, res) => {
   const {email} = req.body
@@ -108,12 +105,10 @@ const oldUser = asyncHandler(async (req, res) => {
       token: generateToken(user._id),
     })
   } else if(!user){
-    res.status(400)
-    throw new Error('Email does not exist')
+    res.status(400).json({message: 'Email does not exist'})
   }
   else{
-    res.status(400)
-    throw new Error('server error')
+    res.status(500).json({message: 'Network error'})
   }
 })
 
