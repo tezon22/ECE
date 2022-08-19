@@ -75,6 +75,48 @@ const getMe = asyncHandler(async (req, res) => {
   res.status(200).json(req.user)
 })
 
+//reset password
+
+const resetPassword = asyncHandler( async (req,res) =>{
+   const { email, password} = req.body
+   const salt = await bcrypt.genSalt(10)
+   const securePassword = await bcrypt.hash(password,salt)
+   const user = await User.findOneAndUpdate({email}, 
+    {$set:{password: securePassword}},{new:true}, (err,data) =>{
+        if(data){
+            (res.status(200).json({message: 'password updated'}))
+        }else{
+            throw err
+        }
+    }).clone().catch((err) =>{console.log(err)}) 
+  
+   if(!user){
+    res.status(400).json({message: "email does not exist"})
+   }
+})
+
+
+// get oldUser id
+const oldUser = asyncHandler(async (req, res) => {
+  const {email} = req.body
+  const user = await User.findOne({email})
+  if (user) {
+    res.json({
+      _id: user.id,
+      name: user.name,
+      email: user.email,
+      token: generateToken(user._id),
+    })
+  } else if(!user){
+    res.status(400)
+    throw new Error('Email does not exist')
+  }
+  else{
+    res.status(400)
+    throw new Error('server error')
+  }
+})
+
 // Generate JWT
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
@@ -86,4 +128,6 @@ module.exports = {
   registerUser,
   loginUser,
   getMe,
+  resetPassword, 
+  oldUser
 }

@@ -307,8 +307,8 @@ button {
     }
 
     .img-holder::before {
-        top: 39px;
-        right: 67px;
+        top: 5px;
+        right: 5px;
     }
 
     .nav-bar>h1,
