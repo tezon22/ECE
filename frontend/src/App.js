@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 import Home from './pages/Home'
 import Section from './pages/Section'
 import Login from './components/Login/Login';
@@ -10,6 +11,7 @@ import ChangePassword from './components/changePassword/changePassword';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import UserDashboard from './pages/Userdashboard/UserDashboard';
+import EnterEmail from './components/changePassword/enterEmail';
 
 
 function App() {
@@ -24,13 +26,15 @@ function App() {
             <Route exact path='/' element={<UserDashboard/>}/>
             <Route exact path='/ebook' element={<Ebooks/>}/>
             <Route exact path='/news' element={<Newscenter/>}/>
-            <Route exact path='/passwordchange' element={<ChangePassword/>}/>
+            <Route exact path='email/passwordchange' element={<ChangePassword/>}/>
+            <Route exact path='/email' element={<EnterEmail/>}/>
             <Route exact path='/about' element={<About/>}/>
             <Route exact path='/contact' element={<Contact/>}/>
             <Route exact path='/section' element={<Section/>}/>
           </Routes>
         </div>
       </Router>
+      <ToastContainer/>
     </>
   )
 }

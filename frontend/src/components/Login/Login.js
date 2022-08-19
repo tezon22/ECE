@@ -58,6 +58,7 @@ const Login = () => {
     }
 
     dispatch(login(userData))
+    console.log(userData)
   }
 
   if (isLoading) {
@@ -109,7 +110,7 @@ const Login = () => {
                 </span>{" "}
               </div>
               <span className="forgot">
-                <a href="passwordchange">Forgot password?</a>
+                <a href="email">Forgot password?</a>
               </span>
               <button type="submit">LOG IN</button>
             </form>
