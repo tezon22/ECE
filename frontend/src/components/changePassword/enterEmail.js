@@ -3,7 +3,6 @@ import {useDispatch, useSelector} from 'react-redux'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import { getEmail } from '../../features/reset/emailRedux'
-import {toast} from 'react-toastify'
 import Spinner from '../Spinner'
 export default function EnterEmail() {
 	const [email, setEmail] = useState('')
