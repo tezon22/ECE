@@ -18,20 +18,21 @@ export default function EnterEmail() {
       navigate('/email/passwordchange')
     }
     
-  }, [gottenE, navigate, lostE])
+  }, [gottenE, navigate])
 
   const dispatch = useDispatch()
   
   const data = {email}
 
     const submit = (e) =>{
-        e.preventDefault()
+      e.preventDefault()
+         if (lostE) {
+           toast.error(message);
+         }
         dispatch(getEmail(data))
         console.log(data)
     }
-    if(lostE){
-      toast.error(message)
-    }
+ 
     if(gettingE){
       return <Spinner/>
     } 
