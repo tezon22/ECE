@@ -34,9 +34,7 @@ export default function EnterEmail() {
     }
     if(gettingE){
       return <Spinner/>
-    } else {
-      toast.error("user doesn't exist")
-    }
+    } 
     
 
    
