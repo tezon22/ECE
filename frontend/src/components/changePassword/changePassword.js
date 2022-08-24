@@ -39,7 +39,7 @@ const ChangePassword = () => {
 			toast.error(message.message)
 		}
 
-	}, [changed, failure, message, navigate])
+	}, [changed, failure, message, password, navigate])
 
 
 	const submit = (e) => {
