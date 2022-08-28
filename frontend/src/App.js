@@ -12,31 +12,37 @@ import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import UserDashboard from './pages/Userdashboard/UserDashboard';
 import EnterEmail from './components/changePassword/enterEmail';
+import ProfileScreen from './components/ProfileScreen';
 
 
 function App() {
   return (
     <>
       <Router>
-        <div className='container'>
+        <div className="container">
           <Routes>
-            <Route exact path='/home' element={<Home/>}/>
-            <Route exact path='/login' element={<Login/>}/>
-            <Route exact path='/signup' element={<Signup/>}/>
-            <Route exact path='/' element={<UserDashboard/>}/>
-            <Route exact path='/ebook' element={<Ebooks/>}/>
-            <Route exact path='/news' element={<Newscenter/>}/>
-            <Route exact path='email/passwordchange' element={<ChangePassword/>}/>
-            <Route exact path='/email' element={<EnterEmail/>}/>
-            <Route exact path='/about' element={<About/>}/>
-            <Route exact path='/contact' element={<Contact/>}/>
-            <Route exact path='/section' element={<Section/>}/>
+            <Route exact path="/home" element={<Home />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/" element={<UserDashboard />} />
+            <Route exact path="/ebook" element={<Ebooks />} />
+            <Route exact path="/news" element={<Newscenter />} />
+            <Route
+              exact
+              path="email/passwordchange"
+              element={<ChangePassword />}
+            />
+            <Route exact path="/email" element={<EnterEmail />} />
+            <Route exact path="/about" element={<About />} />
+            <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/section" element={<Section />} />
+            <Route exact path="/profilescreen" element={<ProfileScreen />} />
           </Routes>
         </div>
       </Router>
-      <ToastContainer/>
+      <ToastContainer />
     </>
-  )
+  );
 }
 
 export default App
