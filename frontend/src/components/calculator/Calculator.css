@@ -6,32 +6,31 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-   
 }
 .col_8, .col_7{
 	flex-basis: 50%;
 }
-.col_8 img{
+.col_7 img{
 	width: 100%;
 }
-.col_7{
+.col_8{
 	text-align: right;
 }
-.col_7 h1{
+.col_8 h1{
 	font-size: 32px;
 	color: #29335C;/*blue*/
 	margin-top: 12px;
 }
-.col_7 span{
+.col_8 span{
 	color: #9B2226;/*red*/
 }
-.col_7 p{
+.col_8 p{
 	color: #29335C;/*blue*/
 	font-size: 18px;
 	margin-top: 12px;
 	padding-bottom: 28px;
 }
-.col_7 a{
+.col_8 a{
 	text-decoration: none;
 	color: #9B2226;
 	background-color: #fff;
@@ -45,37 +44,34 @@
 		margin-left: 25px;
 		margin-right: 25px;
 	}
+	.calculator_row{
+    flex-wrap: wrap-reverse;
+	}
 	.col_8, .col_7{
 		flex-basis: 100%;
-        text-align: center;
+    text-align: center;
 	}
-	.col_8 img{
-		width: 100%;
-	}
-	.col_7{
+	.col_8{
 		text-align: center;
 	}
-	.col_7 h1{
+	.col_8 h1{
 		font-size: 28px;
 	}
-	.col_7 p{
+	.col_8 p{
 		font-size: 16px;
 	}
 }
 @media only screen and (max-width: 884px){
-		.col_7 h1{
+		.col_8 h1{
 			font-size: 16px;
 		}
-		.col_7 p{
-			font-size: 10px;
-		}
-		.col_7 a{
+		.col_8 p{
 			font-size: 12px;
 		}
-        .col_7 {
-            text-align: center;
-        }
-        .calculator_row {
-            flex-direction: column-reverse;
-        }
+		.col_8 a{
+			font-size: 12px;
+		}
+		.col_8 {
+				text-align: center;
+		}
 }

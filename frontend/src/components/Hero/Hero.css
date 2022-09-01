@@ -2,7 +2,7 @@
 	margin-left: 50px;
 	margin-right: 50px;
 	margin-bottom: -90px;
-	padding: 195px 20px;
+	padding: 140px 20px;
 }
 .hero_row{
 	display: flex;
@@ -57,15 +57,26 @@
 }
 .col_1 a{
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 20px;
 	color: #fff;
 	background-color: #9B2226;
-	padding: 8px 30px;
+	padding: 8px 60px;
 	border-radius: 4px;
-	text-transform: uppercase;
 }
 
-@media only screen and (max-width: 884px){
+@media only screen and (max-width: 1053px){
+	.col_1 h1{
+		font-size: 32px;
+	}
+	.col_1 p{
+		font-size: 19.5px;
+	}
+	.col_1 a{
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 700px){
 	.hero_container{
 		margin-left: 25px;
 		margin-right: 25px;
@@ -85,9 +96,6 @@
 		margin-left: 25px;
 		margin-right: 25px;
 		padding: 100px 10px;
-	}
-	.col_1, .col_2{
-		flex-basis: 100%;
 	}
 	.col_1{
 		text-align: center;
@@ -118,5 +126,22 @@
 	}
 	.vector, .vector12 {
 		display: none;
+	}
+}
+@media only screen and (max-width: 884px){
+	.hero_hide{
+		display: none;
+	}
+	.col_1 h2{
+		font-size: 20px;
+		max-width: 300px;
+	}
+	.col_1 h1{
+		font-size: 20px;
+		margin-top: 16px;
+	}
+	.col_1 p{
+		font-size: 14px;
+		margin-top: 10px;
 	}
 }
