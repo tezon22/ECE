@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c9e1bb97.css",
+    "main.js": "/static/js/main.f623d932.js",
+    "static/media/image 3.png": "/static/media/image 3.26f025dc24b34f6f11dd.png",
+    "static/media/background.png": "/static/media/background.10b2b646fe67d1c696b7.png",
+    "static/media/ECE LOGO With TEXT.png": "/static/media/ECE LOGO With TEXT.4e6e34d454604cfd24e4.png",
+    "static/media/image 2.png": "/static/media/image 2.8117259fef4b896a7eab.png",
+    "static/media/image 1.png": "/static/media/image 1.4eac613350ba22369928.png",
+    "static/media/image 5.png": "/static/media/image 5.bd49d2012048a16b9b2e.png",
+    "static/media/image 12 (1).png": "/static/media/image 12 (1).dcd47739ce24a698cc8a.png",
+    "static/media/image 4.png": "/static/media/image 4.75fbcd0807201fea03ef.png",
+    "static/media/image 16.png": "/static/media/image 16.7658cd3d01411357d5dd.png",
+    "static/media/Oval.png": "/static/media/Oval.38b703f5d42a44de797d.png",
+    "index.html": "/index.html",
+    "main.c9e1bb97.css.map": "/static/css/main.c9e1bb97.css.map",
+    "main.f623d932.js.map": "/static/js/main.f623d932.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9e1bb97.css",
+    "static/js/main.f623d932.js"
+  ]
+}
