@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Section from './pages/Section'
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
-import Ebooks from './components/E-books/Ebooks';
+import Ebooks from './components/Pdf/Pdf';
 import Newscenter from './components/Newscenter/Newscenter';
 import ChangePassword from './components/changePassword/changePassword';
 import About from './components/about/About';

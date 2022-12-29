@@ -86,11 +86,11 @@ const UserDashboard = () => {
               <img src={arrow_2} alt=" " />
             </a>
 
-            <a href="google.com" className="grid-tiles">
+            <Link to="/ebook" className="grid-tiles">
               <img src={pdf_2} alt=" " />
               <p>P.D.F / E-books</p>
               <img src={arrow_2} alt=" " />
-            </a>
+            </Link>
 
             <a href="google.com" className="grid-tiles">
               <img src={calc_2} alt=" " />
