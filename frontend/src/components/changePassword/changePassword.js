@@ -49,7 +49,7 @@ const ChangePassword = () => {
 	}
 	if (loading) {
 		return <Spinner />
-	  }
+  	}
 		
   return (
     <div className="container_pwdchange">
