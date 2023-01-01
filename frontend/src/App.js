@@ -6,6 +6,7 @@ import Section from './pages/Section'
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import Ebooks from './components/Pdf/Pdf';
+import Timetable from './components/Timetable/Timetable';
 import Newscenter from './components/Newscenter/Newscenter';
 import ChangePassword from './components/changePassword/changePassword';
 import About from './components/about/About';
@@ -26,6 +27,7 @@ function App() {
             <Route exact path="/signup" element={<Signup />} />
             <Route exact path="/" element={<UserDashboard />} />
             <Route exact path="/ebook" element={<Ebooks />} />
+            <Route exact path="/timetable" element={<Timetable />} />
             <Route exact path="/news" element={<Newscenter />} />
             <Route
               exact
