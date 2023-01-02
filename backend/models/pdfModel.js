@@ -22,4 +22,4 @@ const pdfSchema = new Schema({
   }
 })
 
-module.exports = mongoose.model("Pdfs", pdfSchema)
+module.exports = pdfSchema
