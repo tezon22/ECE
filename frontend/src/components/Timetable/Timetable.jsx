@@ -1,27 +1,20 @@
 import React from 'react'
-<<<<<<< HEAD
-
-const Pdf = () => {
-  return (
-    <div>Pdf</div>
-=======
-import {Link} from 'react-router-dom'
-
-const Pdf = () => {
+import { Link } from 'react-router-dom'
+const Timetable = () => {
   return (
       <div className="container-fluid">
           <div className="flex my-8 mx-4">
               <Link className="w-1/12 text-5xl font-bold" to="/"><i class="uil uil-previous"></i></Link>
               <div className="w-11/12 text-center text-2xl font-bold mt-2">
-                  Select your level (P.D.F)
+                  Select your level (TimeTable)
               </div>       
           </div>
-          <Link to="/L1pdf">
+          <Link to="/L1time">
               <div className="rounded-3xl text-xl bg-slate-200 text-center font-medium py-16 my-14 mx-24">
                   100 level
               </div>
           </Link>
-          <Link to="/L2pdf">
+          <Link to="/L2time">
               <div className="rounded-3xl text-xl bg-slate-200 text-center font-medium py-16 my-14 mx-24">
                   200 level
               </div>
@@ -45,8 +38,7 @@ const Pdf = () => {
               </div>
           </a>
       </div>
->>>>>>> decce0f7c1c02c44fa95bbff14a30b3052ed7b25
   )
 }
 
-export default Pdf
+export default Timetable
