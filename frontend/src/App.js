@@ -12,6 +12,10 @@ import ChangePassword from './components/changePassword/changePassword';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import UserDashboard from './pages/Userdashboard/UserDashboard';
+import L1 from './components/Pdf/L1';
+import L2 from "./components/Pdf/L2";
+import L1timetable from "./components/Timetable/L1";
+import L2timetable from "./components/Timetable/L2";
 import EnterEmail from './components/changePassword/enterEmail';
 import ProfileScreen from './components/ProfileScreen';
 
@@ -28,6 +32,11 @@ function App() {
             <Route exact path="/" element={<UserDashboard />} />
             <Route exact path="/ebook" element={<Ebooks />} />
             <Route exact path="/timetable" element={<Timetable />} />
+            <Route exact path="/L1pdf" element={<L1 />} />
+            <Route exact path="/L2pdf" element={<L2 />} />
+            <Route exact path="/L1time" element={<L1timetable />} />
+            <Route exact path="/L2time" element={<L2timetable />} />
+
             <Route exact path="/news" element={<Newscenter />} />
             <Route
               exact

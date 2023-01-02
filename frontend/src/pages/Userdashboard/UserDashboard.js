@@ -98,11 +98,11 @@ const UserDashboard = () => {
               <img src={arrow_2} alt=" " />
             </a>
 
-            <a href="google.com" className="grid-tiles">
+            <Link to="/timetable" className="grid-tiles">
               <img src={timetable} alt=" " />
               <p>Time table</p>
               <img src={arrow_2} alt=" " />
-            </a>
+            </Link>
           </section>
 
           <article className="footer-img-article">
