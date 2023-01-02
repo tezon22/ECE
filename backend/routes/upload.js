@@ -1,6 +1,6 @@
 const express = require('express')
 const router = require('./downloads')
-const pdfs = require('../models/pdfModel')
+const pdfs = require('../db')
 const route = express.Router()
 
 router.post('/', async (req, res)=>{
