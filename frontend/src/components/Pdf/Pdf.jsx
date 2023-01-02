@@ -1,4 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
+
+const Pdf = () => {
+  return (
+    <div>Pdf</div>
+=======
 import {Link} from 'react-router-dom'
 
 const Pdf = () => {
@@ -39,6 +45,7 @@ const Pdf = () => {
               </div>
           </a>
       </div>
+>>>>>>> decce0f7c1c02c44fa95bbff14a30b3052ed7b25
   )
 }
 

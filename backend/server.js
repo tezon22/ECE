@@ -1,14 +1,17 @@
 const path = require('path')
 const express = require('express')
+const downloadRoute = require("./routes/downloads")
+const uploadRoute = require('./routes/upload')
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000;
 const connectDB = require('./config/db');
+const {connectToMongoDb} = require("./db")
 const colors = require('colors')
 const cors = require('cors')
 
 
+connectToMongoDb()
 
-connectDB()
 
 const app = express()
 
