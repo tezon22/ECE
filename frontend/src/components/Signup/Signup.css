@@ -1,0 +1,213 @@
+.container_signup{
+  display:grid;
+  grid-template:auto auto/50% 50%;
+  gap:20px;
+  height:auto;
+  justify-content:center;
+  margin:30px;
+  }
+  
+  
+ .container_signup .content_1{
+  width:100%;
+  height:auto;
+  background:url('./background.png') center no-repeat;
+  background-size:180%;
+  }
+ 
+  .container_signup .content_1 .back_icon a{
+  color:#29335C;
+  font-size:25px;
+  }
+  
+  .container_signup .content_1 .get_started{
+  font-weight:600;
+  text-align:center;
+  color:#29335C;
+  background-color:#F4FFFD;
+  font-size:17px;
+  margin-top: -70px;
+  }
+ 
+  .container_signup .content_1 .header{
+  text-align:center;
+  color:#29335C;
+  font-size:48px;
+  font-weight:700;
+  margin-top: 15px;
+  }
+ 
+  .container_signup .content_1 .header span{
+  color:#9B2226;
+  }
+ 
+  .form form{
+  margin:15px auto;
+  }
+ 
+  .form form .signup_input>input::placeholder{
+  color:#29335C;
+  font-weight:600;
+  }
+ 
+  .form form .signup_input>input{
+  width:100%;
+  margin:15px 0px;
+  padding:15px;
+  border:2px solid transparent;
+  border-bottom-color:#29335C;
+  }
+ 
+  input:focus{
+  outline:transparent;
+  }
+ 
+ .form form .signup_level{
+  color:#29335C;
+  font-weight:600;
+  margin:15px 5px 10px;
+  }
+  
+  .form form .signup_level>p{
+  margin-bottom:12px;
+  font-size: 15px;
+  font-weight: 600;
+  }
+  
+  .form form .signup_level>input[type="radio"] {
+  display:none;
+  }
+  
+  label{
+  display:block;
+  width:100%;
+  font-size: 14px;
+  padding:12px;
+  border:2px solid #29335C;
+  border-radius:6px;
+  margin-bottom:10px;
+  }
+  
+  label>span{
+  display:inline-block;
+  width:15px;
+  height:15px;
+  border:3px solid #29335C;
+  border-radius:50%;
+  margin-right:8px;
+  }
+  
+  input[type="radio"]:checked + label>span{
+  background:#29335C;
+  color:white;
+  }
+ 
+  .form form button{
+  width:100%;
+  background-color:#9B2226;
+  text-align:center;
+  padding:13px;
+  margin:20px 0px;
+  color:white;
+  border:none;
+  border-radius:5px;
+  }
+ 
+  .or{
+  text-align:center;
+  color:#29335C;
+  }
+ 
+  .or hr{
+  width:35%;
+  display:inline-block;
+  margin:5px 10px;
+  border:1px solid #29335C;
+  }
+ 
+  .or span{
+  font-weight:600;
+  font-size:18px;
+  }
+ 
+  .google{
+  text-align:center;
+  margin:10px auto;
+  width:100%;
+  padding:9px;
+  background-color:#F4FFFD;
+  }
+ 
+  .google a{
+  color:#29335C;
+  font-weight:600;
+  text-decoration:none;
+  font-size:16px;
+  }
+  
+  .google a span{
+  margin-left:7px;
+  }
+ 
+  .login{
+  font-weight:600;
+  font-size:16px;
+  color:#29335C;
+  text-align:center;
+  }
+ 
+  .login a{
+  color:#9B2226;
+  font-size: 14px;
+  }
+ 
+  .container_signup .content_2{
+  width:100%;
+  height:auto;
+  background-color:#F4FFFD;
+  }
+ 
+  .container_signup .content_2 img{
+  width:100%;
+  height:100%;
+  }
+  .password{
+    position: relative;
+  }
+  .password span{
+    position: absolute;
+    bottom: 35%;
+    right: 5%;
+  }
+  .password span i{
+    font-size: 20px;
+    color: #29335C;
+  }
+
+ 
+  @media only screen and (max-width:700px){
+   .container_signup{
+   display:block;
+   height:100%;
+   max-width:100%;
+   margin:20px;
+   background:url('background.png') center no-repeat;
+   background-size:180%;
+   }
+ 
+   .container_signup .content_1{
+   background:none;
+   }
+ 
+   .container_signup .content_1 .logo{
+   margin-left:50px;
+   }
+ 
+   .container_signup .content_1 .header{
+   font-size:20px;
+   }
+ 
+   .container_signup .content_2{
+   background:none;
+   }
+  }

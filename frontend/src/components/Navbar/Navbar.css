@@ -1,0 +1,151 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+.nav{
+	background-color: #F4FFFD;
+	font-size: 16px; 
+}
+.nav_container{
+	margin-right: 60px;
+	margin-left: 20px;
+	height: 100%;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.logo{
+	width: 150px;
+	height: 50px;
+	margin: -10px;
+	background-size: cover;
+	background-position: center;
+	background-image: url('./ECE\ LOGO\ With\ TEXT.png');
+}
+.right_side{
+	float: right;
+	display: flex;
+	transition: 1s;
+}
+.right_side ul{
+	margin-right: 250px;
+}
+.right_side ul li{
+	display: inline-block;
+	margin-left: 36px;
+	margin-top: 2px;
+	font-size: 18px;
+}
+ link{
+	color: #29335C;
+	text-decoration: none;
+	font-size: 1.4rem;
+}
+.log{
+	margin-left: 36px;
+	text-decoration: none;
+	font-size: 16px;
+	color: #29335C;
+	border: 1px solid #29335C;
+	border-radius: 4px;
+	padding: 4px 30px;
+}
+.sign{
+	margin-left: 36px;
+	text-decoration: none;
+	font-size: 16px;
+	color: #fff;
+	background-color: #9B2226;
+	border-radius: 4px;
+	padding: 6px 30px;
+}
+.hamburger {
+	display: none;
+}
+@media only screen and (max-width: 1000px){
+	.right_side ul{
+		margin-right: 100px;
+	}
+}
+@media only screen and (max-width: 884px){
+	.nav-menu {
+		transform: translate(0);
+		transition: ease-in-out 0.8s;
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		justify-content: flex-start;
+		align-items: center;
+		text-align: center;
+		position: absolute;
+		right: -10px;
+		top: 50px;
+		background-color: #F4FFFD;
+		width: 70%;
+		height: 40vh;
+		z-index: 3;
+	}
+	.nav-menu ul{
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	.right_side {
+		flex-direction: column;
+		gap: 10px;
+		transition: 1s ease-in-out;
+		transform: translateX(150px);
+		position: fixed;
+	}
+	.log{
+		display: flex;
+		width: 40%;
+	}
+	.sign{
+		display: flex;
+		width: 40%;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 800px){
+	.log{
+		margin-left: 0px;
+		margin-bottom: 10px;
+		font-size: 12px;
+		padding: 10px 10px 10px 30px ;
+		text-align: center;
+		width: 100%;
+	}
+	.sign{
+		margin-left: 0px;
+		font-size: 11px;
+		padding: 10px 30px;
+		text-align: center;
+		width: 100%;
+		
+	}
+	.nav-menu ul li{
+		margin-bottom: 10px;
+	}
+	.nav_container{
+		margin-right: 10px;
+		position: relative;
+		padding: 10px;
+	}
+	.hamburger {
+		display: initial;
+		position: absolute;
+		right: 10px;
+		top: 20px;
+	}
+	.red{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+	}
+	
+}

@@ -1,0 +1,155 @@
+.container_login{
+    display:grid;
+    grid-template:auto auto/50% 50%;
+    gap:20px;
+    height:auto;
+    justify-content:center;
+    margin:0 30px;
+    position: relative;
+    }
+    .back_icon{
+      position: absolute;
+      top: 2%;
+      left: 8px;
+    }
+    .back_icon a i{
+      font-size: 40px;
+    }
+   
+   .container_login .content_1{
+    width:100%;
+    height:auto;
+    background:url('background.png') center no-repeat;
+    background-size:180%;
+    }
+   
+    .container_login .content_1 .back_icon a{
+    color:#29335C;
+    font-size:25px;
+    }
+   
+    .login_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:max-content;
+  }
+  
+  .login_logo img{
+    max-width:200px;
+    height:max-content;
+    margin-top:3px;
+    margin-bottom: 20px;
+  }
+   
+    .container_login .content_1 .welcome{
+    font-weight:600;
+    text-align:center;
+    color:#29335C;
+    background-color:#F4FFFD;
+    font-size:15px;
+    margin-top: -70px;
+    }
+   
+    .container_login .content_1 .header{
+    text-align:center;
+    color:#29335C;
+    font-size:45px;
+    font-weight:700;
+    margin-top: 15px;
+    }
+   
+    .container_login .content_1 .header span{
+    color:#9B2226;
+    }
+   
+    .form form{
+    margin:50px auto;
+    }
+   
+    .form form input::placeholder{
+    color:#29335C;
+    font-weight:600;
+    }
+    
+    .form form input{
+    width:100%;
+    margin:27px 0px;
+    padding:15px;
+    border:2px solid transparent;
+    border-bottom-color:#29335C;
+    }
+    
+    input:focus{
+    outline:transparent;
+    }
+   
+    .forgot{
+    text-align:right;
+    width:100%;
+    margin-top:-15px;
+    display: inline-block;
+    }
+   
+    .forgot a{
+    color:#9B2226;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+    }
+   
+    .form form button{
+    width:100%;
+    background-color:#9B2226;
+    text-align:center;
+    padding:13px;
+    margin:50px 0px;
+    color:white;
+    border:none;
+    border-radius:5px;
+    }
+   
+    .container_login .content_2{
+    width:100%;
+    height:auto;
+    background-color:#F4FFFD;
+    }
+    
+    .container_login .content_2 img{
+    width:100%;
+    height:100%;
+    }
+    .y{
+      margin-bottom: 20px;
+    }
+   
+    @media only screen and (max-width:700px){
+   
+    .container_login{
+    display:block;
+    height:100%;
+    max-width:100%;
+    margin:20px;
+    background:url('background.png') center no-repeat;
+    background-size:180%;
+    }
+   
+    .container_login .content_1{
+    background:none;
+    }
+   
+    .container_login .content_1 .logo{
+    margin-left:50px;
+    }
+   
+    .container_login .content_1 .header{
+    font-size:20px;
+    }
+   
+    .container_login .content_2{
+    background:none;
+    }
+    .back_icon a i{
+      font-size: 30px;
+   }
+  }
