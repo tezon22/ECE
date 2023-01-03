@@ -1,13 +1,21 @@
 const express = require("express")
 const request = require('request');
-const pdfModel = require("../models/pdfModel")
+const pdfModel = require("../db")
 
 const router = express.Router()
 
-router.get("/", (req, res)=>{
-  res.send("Welcome to the pre-download page")
+// getting all pdfs
+router.get("/", async (req, res)=>{
+  const allPdfs = await pdfModel.find()
+  if(allPdfs){
+  res.status(200).json(allPdfs)
+  }else{
+    res.status(500).json({mesage: "internal server error"})
+  }
 })
-router.get("/:id", async (req, res)=>{
+
+// getting the download link of a particular pdf
+router.get("/download/:id", async (req, res)=>{
   const id = req.params.id
   const pdf = await pdfModel.findById(id)
   try{
