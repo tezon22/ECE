@@ -14,7 +14,7 @@ router.get("/", async (req, res)=>{
   }
 })
 
-// getting the download link of a particular pdf
+// getting the download link of a particular pdfs
 router.get("/download/:id", async (req, res)=>{
   const id = req.params.id
   const pdf = await pdfModel.findById(id)
