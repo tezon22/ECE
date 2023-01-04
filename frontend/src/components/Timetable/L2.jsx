@@ -2,7 +2,7 @@ import React from 'react'
 
 const L2 = () => {
   return (
-    <div>L2jgk</div>
+    <div>200L</div>
   )
 }
 

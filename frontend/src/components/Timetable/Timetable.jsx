@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+
 const Timetable = () => {
   return (
       <div className="container-fluid text-[#29335C]">
