@@ -36,32 +36,38 @@ const UserDashboard = () => {
   return (
     <div>
       <Navbar />
-      <div className={arrows ? "extend" : "full-container full-grid"}>
+      <div className="full-grid">
         <nav className="nav-bar">
           <h1>Dashboard</h1>
           <img className="arrr" src={arrow} alt=" " />
-          <ul className={arrows ? "dragged" : "flex-list"}>
-            <li>
-              <img src={user1} alt="user" />
-              <a href="google.com">Profile</a>
-            </li>
-            <li>
-              <img src={pdf} alt="pdf" />
-              <a href="google.com">P.D.F's</a>
-            </li>
-            <li>
-              <img src={news} alt="news" />
-              <a href="google.com">News</a>
-            </li>
-            <li>
-              <img src={calc} alt="calc" />
-              <a href="google.com">Calculator</a>
-            </li>
-            <li>
-              <img src={settings} alt="settings" />
-              <a href="google.com">Settings</a>
-            </li>
-          </ul>
+          <div>
+            <ul
+              className={`${
+                arrows ? "block nav-bar" : "hidden"
+              } fixed top-0 left-0 w-64 lg:hidden  h-screen z-50 shadow-xl`}
+            >
+              <li>
+                <img src={user1} alt="user" />
+                <a href="google.com">Profile</a>
+              </li>
+              <li>
+                <img src={pdf} alt="pdf" />
+                <a href="google.com">P.D.F's</a>
+              </li>
+              <li>
+                <img src={news} alt="news" />
+                <a href="google.com">News</a>
+              </li>
+              <li>
+                <img src={calc} alt="calc" />
+                <a href="google.com">Calculator</a>
+              </li>
+              <li>
+                <img src={settings} alt="settings" />
+                <a href="google.com">Settings</a>
+              </li>
+            </ul>
+          </div>
           <button
             onClick={dragged}
             className={arrows ? "dragg" : "drag-button"}
@@ -69,7 +75,6 @@ const UserDashboard = () => {
             Activities <img src={arrow} alt=" " />
           </button>
         </nav>
-
         <main className="main-container">
           <header className="main-header">
             <Link to="/profilescreen">

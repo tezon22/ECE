@@ -146,9 +146,6 @@ button {
     align-items: center;
 }
 
-.flex-list li:nth-child(5) {
-    margin-top: 15rem;
-}
 
 
 /* This block of code below will make revealing of the hidden texts upon sidebar drag  easier using react js or whatever 🙄  */
