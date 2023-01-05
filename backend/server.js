@@ -18,7 +18,7 @@ app.use(cors())
 app.use(express.urlencoded({ extended: false}));
 
 app.use('/api/upload',uploadRoute)
-app.use('/api/download',downloadRoute)
+app.use('/api/pdf',downloadRoute)
 app.use('/api/ece',require('./routes/registerRoutes'))
 
 // Serve frontend
