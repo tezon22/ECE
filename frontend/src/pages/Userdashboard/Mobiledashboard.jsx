@@ -42,7 +42,7 @@ const Mobiledashboard = () => {
       <div
         className={`${
           click
-            ? "bg-[#29335C] w-[174px] h-[800px] text-[13px] px-4 rounded-r-[1rem] text-center font-semibold items-center justify-center text-white fixed"
+            ? "bg-[#29335C] w-[174px] h-[800px] z-10 text-[13px] px-4 rounded-r-[1rem] text-center font-semibold items-center justify-center text-white fixed"
             : "bg-[#29335C] rounded-r-[1rem] px-4  font-semibold text-center text-white w-[54px] h-[800px]"
         }`}
       >
