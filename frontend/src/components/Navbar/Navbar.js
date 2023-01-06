@@ -27,55 +27,64 @@ const Navbar = () => {
 
 
   return (
-    <div className='nav'>
+    <div className="nav">
       <div className="nav_container">
-        <div className="logo"/>
+        <div className="logo" />
         <div className="">
-          <div className={ nav?  "nav-menu" : "right_side"}>
+          <div className={nav ? "nav-menu" : "right_side"}>
             <ul>
               <div>
                 {user ? (
                   <>
-                    <li><Link to="/section">Sections</Link></li>
-                    <li><Link to="/">Info</Link></li>
+                    <li>
+                      <Link to="/">Dashboard</Link>
+                    </li>
+                    <li>
+                      <Link to="/home">Home</Link>
+                    </li>
                   </>
-                 
-                ): (
+                ) : (
                   <>
-                    <li><Link to="/home">Home</Link></li>
-                    <li><Link to="/section">Sections</Link></li>
-                    <li><Link to="/">Info</Link></li>
+                    <li>
+                      <Link to="/">Dashboard</Link>
+                    </li>
+                    <li>
+                      <Link to="/">Info</Link>
+                    </li>
+                    <li>
+                      <Link to="/sections">Section</Link>
+                    </li>
                   </>
                 )}
               </div>
             </ul>
-            <div className= 'red'>
+            <div className="red">
               {user ? (
-                <Link to="/home"  className="sign" onClick={onLogout}>
-                  LOGOUT
-                </Link>
-            
+                <>
+                  <Link to="/home" className="sign" onClick={onLogout}>
+                    LOGOUT
+                  </Link>
+                </>
               ) : (
                 <>
-                  <Link to='/login' className="log">
+                  <Link to="/login" className="log">
                     LOG IN
                   </Link>
-                  <Link  to='/signup' className="sign">
+                  <Link to="/signup" className="sign">
                     SIGN UP
                   </Link>
                 </>
               )}
             </div>
-            
           </div>
-        
-          <div onClick={Toggle} className='hamburger'>
-            {nav? <FaTimes  size={20} /> : <FaBars size={20}/>}
+
+          <div onClick={Toggle} className="hamburger">
+            {nav ? <FaTimes size={20} /> : <FaBars size={20} />}
           </div>
-       </div>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Navbar

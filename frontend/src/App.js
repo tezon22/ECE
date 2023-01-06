@@ -18,7 +18,6 @@ import L1timetable from './components/Timetable/L1';
 import L2timetable from './components/Timetable/L2';
 import EnterEmail from './components/changePassword/enterEmail';
 import ProfileScreen from './components/ProfileScreen';
-import DashboardSidebar from './pages/Userdashboard/DashboardSidebar';
 
 function App() {
 	return (
@@ -48,7 +47,6 @@ function App() {
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/section" element={<Section />} />
             <Route exact path="/profilescreen" element={<ProfileScreen />} />
-            <Route exact path="/dashboard" element={<DashboardSidebar />} />
           </Routes>
         </div>
       </Router>
