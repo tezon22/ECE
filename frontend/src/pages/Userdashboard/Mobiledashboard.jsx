@@ -98,7 +98,7 @@ const Mobiledashboard = () => {
           </div>
         </div>
         <div className="flex gap-8 justify-between">
-          <div className="text-center ml-[5rem]">
+          <div className="text-center ml-[6rem]">
             <p className="text-[#29335C]/40 font-medium text-[12px]">
               7th July, 2022.
             </p>
