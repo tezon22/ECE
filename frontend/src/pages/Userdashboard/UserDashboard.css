@@ -88,6 +88,7 @@
             position: absolute;
             left: 70px;
             top: 20px;
+            z-index: -3;
         }
 }
 /* FOR LARGE SCREENS */

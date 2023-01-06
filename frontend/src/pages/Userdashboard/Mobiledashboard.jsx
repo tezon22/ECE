@@ -19,8 +19,13 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 const Mobiledashboard = () => {
   const [nav, setNav] = useState(false);
+  const [click, setClick] = useState(false);
+
   const Toggle = () => {
     setNav(!nav);
+  };
+  const Clicked = () => {
+    setClick(!click);
   };
 
   const navigate = useNavigate();
@@ -33,17 +38,85 @@ const Mobiledashboard = () => {
     navigate("/home");
   };
   return (
-    <div className="lg:hidden flex">
-      <div className="bg-[#29335C] rounded-r-[1rem] px-4  font-semibold text-center text-white w-[54px] h-[800px]">
-        <IoIosArrowBack className="mt-11" />
-        <div className="mt-[6rem] leading-[12rem] mb-[5rem] ">
-          <FaUserCircle size={20} className="mb-[6rem]" />
-          <FaBook size={20} className="mb-[6rem]" />
-          <FaVideo size={20} className="mb-[6rem]" />
-          <FaCalculator size={20} className="mb-[6rem]" />
-        </div>
+    <div className="md:hidden flex">
+      <div
+        className={`${
+          click
+            ? "bg-[#29335C] w-[174px] h-[800px] text-[13px] px-4 rounded-r-[1rem] text-center font-semibold items-center justify-center text-white fixed"
+            : "bg-[#29335C] rounded-r-[1rem] px-4  font-semibold text-center text-white w-[54px] h-[800px]"
+        }`}
+      >
+        <button onClick={Clicked}>
+          {click ? (
+            <span className="flex items-center mt-11">
+              <p className="text-white text-[16px]">Dashboard</p>
+              <IoIosArrowBack size={20} />
+            </span>
+          ) : (
+            <IoIosArrowForward className="mt-11" />
+          )}
+        </button>
         <div>
-          <AiTwotoneSetting size={20} />
+          {click ? (
+            <>
+              <div className="mt-[6rem] ml-[1rem] text-center items-center justify-center">
+                <Link to="">
+                  <div className="flex gap-2">
+                    <h1>Profile</h1>
+                    <FaUserCircle size={20} className="mb-[4rem]" />
+                  </div>
+                </Link>
+                <Link to="/ebook">
+                  <div className="flex gap-2">
+                    <h1>PDF’S</h1>
+                    <FaBook size={20} className="mb-[4rem]" />
+                  </div>
+                </Link>
+                <Link to="">
+                  <div className="flex gap-2">
+                    <h1>Video Tutorials</h1>
+                    <FaVideo size={20} className="mb-[4rem]" />
+                  </div>
+                </Link>
+                <Link to="">
+                  <div className="flex gap-2">
+                    <h1>Calculator</h1>
+                    <FaCalculator size={20} className="mb-[6rem]" />
+                  </div>
+                </Link>
+                <div>
+                  <Link to="">
+                    <div className="flex gap-2">
+                      <h1>Settings</h1>
+                      <AiTwotoneSetting size={20} />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              <div className="mt-[6rem] leading-[12rem] mb-[5rem]">
+                <Link to="">
+                  <FaUserCircle size={20} className="mb-[6rem]" />
+                </Link>
+                <Link to="/ebook">
+                  <FaBook size={20} className="mb-[6rem]" />
+                </Link>
+                <Link to="">
+                  <FaVideo size={20} className="mb-[6rem]" />
+                </Link>
+                <Link to="">
+                  <FaCalculator size={20} className="mb-[6rem]" />
+                </Link>
+                <div>
+                  <Link to="">
+                    <AiTwotoneSetting size={20} />
+                  </Link>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
 
@@ -112,8 +185,11 @@ const Mobiledashboard = () => {
           </div>
         </div>
 
-        <section className=" mt-[2rem]  ">
-          <Link to='' className=" flex gap-4 mb-8 rounded-3xl border border-none h-[127px] bg-[#E3E5EE]">
+        <section className=" mt-[2rem] justify-center items-center ">
+          <Link
+            to=""
+            className="items-center flex gap-4 mb-8 rounded-3xl border border-none h-[127px] bg-[#E3E5EE]"
+          >
             <div>
               <img src={Video} alt="" />
             </div>
@@ -126,7 +202,10 @@ const Mobiledashboard = () => {
             </div>
           </Link>
 
-          <Link to='/ebook' className=" flex gap-4 mb-8 rounded-3xl border border-none h-[127px] bg-[#E3E5EE]">
+          <Link
+            to="/ebook"
+            className=" flex gap-4 mb-8 rounded-3xl border border-none  h-[127px]  bg-[#E3E5EE]"
+          >
             <div>
               <img src={PdfImage} alt="" />
             </div>
@@ -139,7 +218,10 @@ const Mobiledashboard = () => {
             </div>
           </Link>
 
-          <Link to='' className=" flex gap-4 mb-8 rounded-3xl border border-none h-[127px] bg-[#E3E5EE]">
+          <Link
+            to=""
+            className=" flex gap-4 mb-8 rounded-3xl border border-none  h-[127px] bg-[#E3E5EE]"
+          >
             <div>
               <img src={Calculator} alt="" />
             </div>
@@ -153,7 +235,10 @@ const Mobiledashboard = () => {
             </div>
           </Link>
 
-          <Link to='/timetable' className=" flex gap-4 mb-8 rounded-3xl border border-none h-[127px] bg-[#E3E5EE]">
+          <Link
+            to="/timetable"
+            className=" flex gap-4 mb-8 rounded-3xl border border-none  h-[127px] bg-[#E3E5EE]"
+          >
             <div>
               <img src={Timetable} alt="" />
             </div>

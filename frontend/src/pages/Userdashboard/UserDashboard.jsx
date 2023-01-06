@@ -23,11 +23,11 @@ const UserDashboard = () => {
 
   return (
     <div>
-      <div className="hidden lg:block">
+      <div className="hidden md:block">
         <Navbar/>
       </div>
       <Mobiledashboard/>
-      <div className="lg:flex all hidden ">
+      <div className="md:flex all hidden ">
         <div className="bg-[#29335C] h-[1024px] w-[20rem] text-center text-white relative">
           <h1 className="text-[25px] font-semibold mt-4">Dashboard</h1>
           <ul className="text-center ml-[3.5rem] leading-[7rem]  mt-[8rem]">
