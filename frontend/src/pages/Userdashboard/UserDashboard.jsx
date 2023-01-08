@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import { FaUserCircle, FaVideo, FaCalculator, FaBook } from "react-icons/fa";
 import { AiTwotoneSetting,AiFillSchedule } from "react-icons/ai";
 import "./UserDashboard.css";
-import footer_img from './images/image 16.png'
+import footer_img from './images/image 16.png';
 
 import { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
