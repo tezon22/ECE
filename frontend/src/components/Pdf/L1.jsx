@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {AiFillFolder} from 'react-icons/ai'
+import {AiOutlineLeft} from 'react-icons/ai'
 
 const L1 = () => {
   return (
       <div className="container-fluid text-[#29335C] lg:mx-[15%]">
           <div className="flex my-5 md:my-8 mx-4">
-              <Link className="w-1/12 text-3xl md:text-5xl font-bold" to="/ebook"><i class="uil uil-previous"></i></Link>
+              <Link className="w-1/12 text-2xl md:text-4xl font-bold" to="/ebook"><AiOutlineLeft/></Link>
               <div className="w-11/12 text-center text-[17px] md:text-2xl font-bold mt-2">
                   100 Level
               </div>       
