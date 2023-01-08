@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "proxy": "https://localhost:5000/",
+  "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
@@ -22,7 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "proxy": "https://localhost:5000/",
+    "proxy": "http://localhost:5000",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
