@@ -19,6 +19,10 @@ const UserDashboard = () => {
 
   useEffect(() => {
     dispatch(reset());
+
+    if (user == null) {
+      navigate('/home')
+    } 
   }, [user, navigate, dispatch]);
 
   return (
