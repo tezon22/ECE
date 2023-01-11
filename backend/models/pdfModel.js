@@ -19,6 +19,9 @@ const pdfSchema = new Schema({
   },
   keywords: {
     type: String
+  },
+  level: {
+    type: String
   }
 })
 
