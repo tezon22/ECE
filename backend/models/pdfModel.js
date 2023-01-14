@@ -23,6 +23,9 @@ const pdfSchema = new Schema({
   uplodedAt: {
     type: Date, 
     defualt: Date.now 
+    },
+  level: {
+    type: String
   }
 })
 

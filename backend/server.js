@@ -13,11 +13,14 @@ connectDB()
 const app = express()
 
 app.use(express.json());
+app.use(express.urlencoded());
 
 app.use(cors())
 app.use(express.urlencoded({ extended: false}));
 
 app.use('/api/upload',uploadRoute)
+
+// pdf api- both getting all 
 app.use('/api/pdf',downloadRoute)
 app.use('/api/ece',require('./routes/registerRoutes'))
 
