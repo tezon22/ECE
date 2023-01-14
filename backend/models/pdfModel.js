@@ -20,6 +20,10 @@ const pdfSchema = new Schema({
   keywords: {
     type: String
   },
+  uplodedAt: {
+    type: Date, 
+    defualt: Date.now 
+    },
   level: {
     type: String
   }
