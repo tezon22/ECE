@@ -26,6 +26,9 @@ const pdfSchema = new Schema({
     },
   level: {
     type: String
+  },
+  thumbnail: {
+    type: String
   }
 })
 
