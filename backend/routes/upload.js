@@ -4,13 +4,13 @@ const pdfs = require('../db')
 const route = express.Router()
 
 router.post('/', async (req, res)=>{
-    const {url, fileName, size, title, author, keywords, level} = req.body
+    const {url, fileName, size, title, author, keywords, level, thumbnail} = req.body
 
-    if(!url || !fileName || !size || !title || !author || !keywords || !level){
+    if(!url || !fileName || !size || !title || !author || !keywords || !level || !thumbnail){
         res.status(401).json({message: "Please fill all fields"})
     }
    const pdf = await pdfs.create({
-    url, fileName, size, title, author, keywords, level
+    url, fileName, size, title, author, keywords, level, thumbnail
    })
    if(pdf){
     res.status(200).json({message: "pdf uploaded"})
