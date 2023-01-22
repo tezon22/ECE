@@ -1,9 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {AiOutlineLeft} from 'react-icons/ai'
+import Navbar from '../Navbar/Navbar'
 
 const Pdf = () => {
-  return (
+    return (
+      <div>
+          <Navbar/>  
       <div className="container-fluid text-[#29335C] lg:mx-[15%]">
           <div className="flex my-5 md:my-8 mx-4">
               <Link className="w-1/12 md:text-4xl text-2xl font-bold" to="/"><AiOutlineLeft/></Link>
@@ -40,6 +43,7 @@ const Pdf = () => {
               </div>
           </a>
       </div>
+      </div>    
   )
 }
 

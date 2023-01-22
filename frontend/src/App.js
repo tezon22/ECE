@@ -18,35 +18,32 @@ import L1timetable from './components/Timetable/L1';
 import L2timetable from './components/Timetable/L2';
 import EnterEmail from './components/changePassword/enterEmail';
 import ProfileScreen from './components/ProfileScreen';
+import Mainpage from './components/Pdf/Mainpage';
 
 function App() {
 	return (
-		<>
-			<Router>
-				<div className='container__not-tailwind'>
-					<Routes>
-						<Route exact path='/home' element={<Home />} />
-						<Route exact path='/login' element={<Login />} />
-						<Route exact path='/signup' element={<Signup />} />
-						<Route exact path='/' element={<UserDashboard />} />
-						<Route exact path='/ebook' element={<Ebooks />} />
-						<Route exact path='/timetable' element={<Timetable />} />
-						<Route exact path='/L1pdf' element={<L1 />} />
-						<Route exact path='/L2pdf' element={<L2 />} />
-						<Route exact path='/L1time' element={<L1timetable />} />
-						<Route exact path='/L2time' element={<L2timetable />} />
-
+    <>
+      <Router>
+        <div className="container__not-tailwind">
+          <Routes>
+            <Route exact path="/home" element={<Home />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/signup" element={<Signup />} />
+            <Route exact path="/" element={<UserDashboard />} />
+            <Route exact path="/ebook" element={<Ebooks />} />
+            <Route exact path="/timetable" element={<Timetable />} />
+            <Route exact path="/L1pdf" element={<L1 />} />
+            <Route exact path="/L2pdf" element={<L2 />} />
+            <Route exact path="/L1time" element={<L1timetable />} />
+            <Route exact path="/L2time" element={<L2timetable />} />
             <Route exact path="/news" element={<Newscenter />} />
-            <Route
-              exact
-              path="email/passwordchange"
-              element={<ChangePassword />}
-            />
+            <Route exact path="email/passwordchange" element={<ChangePassword />}/>
             <Route exact path="/email" element={<EnterEmail />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/contact" element={<Contact />} />
             <Route exact path="/section" element={<Section />} />
             <Route exact path="/profilescreen" element={<ProfileScreen />} />
+            <Route exact path="/mainpage" element={<Mainpage />} />
           </Routes>
         </div>
       </Router>
