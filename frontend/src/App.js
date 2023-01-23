@@ -20,7 +20,9 @@ import EnterEmail from './components/changePassword/enterEmail';
 import ProfileScreen from './components/ProfileScreen';
 import Mainpage from './components/Pdf/Mainpage';
 
+
 function App() {
+  
 	return (
     <>
       <Router>

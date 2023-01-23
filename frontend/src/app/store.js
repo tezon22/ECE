@@ -3,6 +3,7 @@ import authReducer from '../features/auth/authSlice'
 import resetReducer from '../features/reset/resetSlice'
 import emailReducer from '../features/reset/emailRedux.js'
 import userUpdateReducer from '../features/profile/profileslice'
+import pdfReducer from '../features/pdf/Getpdfs'
 
 
 export const store = configureStore({
@@ -11,5 +12,6 @@ export const store = configureStore({
     reset: resetReducer,
     email: emailReducer,
     userUpdate: userUpdateReducer,
+    pdfs: pdfReducer,
   },
 });
