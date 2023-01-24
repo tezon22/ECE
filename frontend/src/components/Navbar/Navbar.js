@@ -5,6 +5,7 @@ import {  useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { logout, reset } from '../../features/auth/authSlice'
 import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 import {FaBars, FaTimes} from 'react-icons/fa'
 
@@ -24,7 +25,12 @@ const Navbar = () => {
     dispatch(reset())
     navigate('/home')
   }
-
+const check = () =>{
+  if(!user){
+    navigate("/login")
+    toast("Please log in before accessing Dashboard")
+  }
+}
 
   return (
     <div className="nav">
@@ -36,7 +42,7 @@ const Navbar = () => {
               <div>
                 {user ? (
                   <>
-                    <li>
+                    <li >
                       <Link to="/">Dashboard</Link>
                     </li>
                     <li>
@@ -45,7 +51,7 @@ const Navbar = () => {
                   </>
                 ) : (
                   <>
-                    <li>
+                    <li onClick={()=>{check()}}>
                       <Link to="/">Dashboard</Link>
                     </li>
                     <li>
