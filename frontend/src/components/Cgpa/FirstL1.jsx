@@ -24,11 +24,11 @@ const FirstL1 = () => {
       const calc  = calculate (mat101, feg101, phy101, ich101, ich111, bus101, phy107, gst101, gst105, gst107, gst109)
 
   return (
-    <div className="container-fluid text-[#29335C] lg:mx-[15%]">
+    <div className="text-[#29335C] lg:mx-[15%]">
           <div className="flex my-5 md:my-8 mx-4">
               <Link className="w-1/12 text-2xl md:text-4xl font-bold" to="/L1cgpa"><AiOutlineLeft/></Link>
               <div className="w-11/12 text-center text-[17px] md:text-2xl font-bold mt-2">
-                  100 Level (First Semester)
+                  100 Level (First Semester) 
               </div>       
           </div>        
           <div className="my-12">
