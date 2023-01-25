@@ -4,7 +4,7 @@ import {AiOutlineLeft} from 'react-icons/ai'
 
 const L2cgpa = () => {
   return (
-    <div className="container-fluid text-[#29335C] lg:mx-[15%]">
+    <div className="text-[#29335C] lg:mx-[15%]">
           <div className="flex mt-5 md:mt-8 mx-4 mb-28">
               <Link className="w-1/12 text-2xl md:text-4xl font-bold" to="/cgpa"><AiOutlineLeft/></Link>
               <div className="w-11/12 text-center text-[17px] md:text-2xl font-bold mt-2">
