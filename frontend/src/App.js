@@ -6,6 +6,7 @@ import Section from './pages/Section';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import Ebooks from './components/Pdf/Pdf';
+import Cgpa from './components/Cgpa/Cgpa';
 import Timetable from './components/Timetable/Timetable';
 import Newscenter from './components/Newscenter/Newscenter';
 import ChangePassword from './components/changePassword/changePassword';
@@ -16,6 +17,12 @@ import L1 from './components/Pdf/L1';
 import L2 from './components/Pdf/L2';
 import L1timetable from './components/Timetable/L1';
 import L2timetable from './components/Timetable/L2';
+import L1cgpa from './components/Cgpa/L1';
+import L2cgpa from './components/Cgpa/L2';
+import FirstL1 from './components/Cgpa/FirstL1';
+import FirstL2 from './components/Cgpa/FirstL2';
+import SecondL1 from './components/Cgpa/SecondL1';
+import SecondL2 from './components/Cgpa/SecondL2';
 import EnterEmail from './components/changePassword/enterEmail';
 import ProfileScreen from './components/ProfileScreen';
 import Mainpage from './components/Pdf/Mainpage';
@@ -34,10 +41,17 @@ function App() {
             <Route exact path="/" element={<UserDashboard />} />
             <Route exact path="/ebook" element={<Ebooks />} />
             <Route exact path="/timetable" element={<Timetable />} />
+            <Route exact path="/cgpa" element={<Cgpa />} />
             <Route exact path="/L1pdf" element={<L1 />} />
             <Route exact path="/L2pdf" element={<L2 />} />
             <Route exact path="/L1time" element={<L1timetable />} />
             <Route exact path="/L2time" element={<L2timetable />} />
+            <Route exact path="/L1cgpa" element={<L1cgpa />} />
+            <Route exact path="/L2cgpa" element={<L2cgpa />} />
+            <Route exact path="/firstL1" element={<FirstL1 />} />
+            <Route exact path="/firstL2" element={<FirstL2 />} />
+            <Route exact path="/secondL1" element={<SecondL1 />} />
+            <Route exact path="/secondL2" element={<SecondL2 />} />
             <Route exact path="/news" element={<Newscenter />} />
             <Route exact path="email/passwordchange" element={<ChangePassword />}/>
             <Route exact path="/email" element={<EnterEmail />} />

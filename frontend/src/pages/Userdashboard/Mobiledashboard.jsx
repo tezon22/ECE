@@ -78,7 +78,7 @@ const Mobiledashboard = () => {
                     <FaVideo size={20} className="mb-[4rem]" />
                   </div>
                 </Link>
-                <Link to="">
+                <Link to="/cgpa">
                   <div className="flex gap-2">
                     <h1>Calculator</h1>
                     <FaCalculator size={20} className="mb-[6rem]" />
@@ -219,7 +219,7 @@ const Mobiledashboard = () => {
           </Link>
 
           <Link
-            to=""
+            to="/cgpa"
             className=" flex gap-4 mb-8 rounded-3xl border border-none  h-[127px] bg-[#E3E5EE]"
           >
             <div>
@@ -229,7 +229,7 @@ const Mobiledashboard = () => {
             <div className="text-[#29335C] w-[40%] mt-8">
               <h1 className="text-[14px] font-semibold ">GP Calculator</h1>
               <p className="text-[8px]">
-                Calculate and recoerd your CGPA for each level with the GP
+                Calculate and record your CGPA for each level with the GP
                 Calculator
               </p>
             </div>

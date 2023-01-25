@@ -87,7 +87,7 @@ const UserDashboard = () => {
               <p className="text-[20px]">Video tutorials</p>
             </Link>
 
-            <Link to="" className="grid-tiles">
+            <Link to="/cgpa" className="grid-tiles">
               <FaCalculator size={50} />
               <p className="text-[20px] font-normal">Calculate C.G.P.A</p>
             </Link>
