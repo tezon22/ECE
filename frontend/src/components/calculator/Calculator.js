@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Calculator.css'
 import Image12 from './image 12 (1).png'
 
@@ -12,7 +13,7 @@ const Calculator = () => {
         <div className="col_7">
           <h1>Calculate your cummulative grade point average<span>(C.G.P.A)</span></h1>
           <p>come calculate your progress in school mwith just a click </p>
-          <a href="calculator">Calculator</a>
+          <Link to="/cgpa">Calculator</Link>
         </div>
       </div> 
     </div>

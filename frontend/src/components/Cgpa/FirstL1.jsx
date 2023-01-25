@@ -21,7 +21,7 @@ const FirstL1 = () => {
                   mat101 * 3 + feg101 * 2 + phy101 * 3 + ich101 * 2 + ich111 * 2 + bus101 * 2 + phy107 * 1 + gst101 * 1 + gst105 * 2 + gst107 * 2 + gst109 * 1
             )
       }
-      const calc = calculate (mat101, feg101, phy101, ich101, ich111, bus101, phy107, gst101, gst105, gst107, gst109)
+      const calc  = calculate (mat101, feg101, phy101, ich101, ich111, bus101, phy107, gst101, gst105, gst107, gst109)
 
   return (
     <div className="container-fluid text-[#29335C] lg:mx-[15%]">
@@ -104,15 +104,14 @@ const FirstL1 = () => {
                       <input className="bg-slate-200 rounded-full py-1 text-center font-bold w-[33%] mx-2" type="number" name="igbo_grd" placeholder="Enter:" value={gst109} onChange={(e) => setGst109(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))}/>
                       <input className="bg-slate-200 rounded-full py-1 text-center font-bold w-[33%] mx-2" type="number" name="igbo_unt" value={1} disabled />
                 </div>
-                <div className="md:flex my-8">
-                    <p className="md:w-1/2 md:mx-10 font-bold m-4">
-                          Total Credit Unit:<span className="bg-slate-200 py-1 rounded-full text-center ml-4 w-[50%] md:w-[40%] inline-block">21</span>
+                <div className='flex items-center'>
+                <div className="my-8 w-[50%]">
+                    <p className="md:w-1/2 md:mx-10 font-bold ">
+                          Total Credit Unit:<span className="bg-slate-200 py-1 rounded-full text-center ml-4 w-[50%]  inline-block">21</span>
                     </p>
-                    <button className="bg-[#29335C] text-slate-200 text-center w-[80%] md:w-1/2 md:ml-[20%] md:mr-16 mx-8 py-2 text-xl font-bold rounded-full mt-6" onclick="calculateCGPA()">
-                          CALCULATE
-                    </button>
                 </div>
-                <p className="my-4 text-2xl font-bold mx-4 text-right px-5">CGPA: {calc / 21} </p>
+                <p className="my-4 md:text-xl font-bold mx-4 text-right px-5 w-[50%]">CGPA: {calc / 21} </p>
+                </div>
           </div>
         
     </div>
