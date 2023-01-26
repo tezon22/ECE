@@ -26,6 +26,7 @@ import SecondL2 from './components/Cgpa/SecondL2';
 import EnterEmail from './components/changePassword/enterEmail';
 import ProfileScreen from './components/ProfileScreen';
 import Mainpage from './components/Pdf/Mainpage';
+import Download from './components/Pdf/Download';
 
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
             <Route exact path="/firstL2" element={<FirstL2 />} />
             <Route exact path="/secondL1" element={<SecondL1 />} />
             <Route exact path="/secondL2" element={<SecondL2 />} />
+            <Route exact path="/pdf/:id" element={<Download/>} />
             <Route exact path="/news" element={<Newscenter />} />
             <Route exact path="email/passwordchange" element={<ChangePassword />}/>
             <Route exact path="/email" element={<EnterEmail />} />
