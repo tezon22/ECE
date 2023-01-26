@@ -41,7 +41,7 @@ const UserDashboard = () => {
               <FaUserCircle size={20} />
             </li>
             <li className="flex gap-2  items-center">
-              <Link to="/ebooks" className="text-[18px]">
+              <Link to="/ebook" className="text-[18px]">
                P.D.F's
               </Link>
               <FaBook size={20} />
