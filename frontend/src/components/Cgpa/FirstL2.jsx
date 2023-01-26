@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom'
 import {AiOutlineLeft} from 'react-icons/ai'
 
 const FirstL2 = () => {
-            toast(<h1 className='font-bold'>READ THE INSTRUCTIONS</h1>)
+      useEffect(() => {
+            toast('READ THE INSTRUCTIONS')
           
- 
+          }, [])
+          
       const [mat201, setMat201] = useState(null)
       const [feg201, setFeg201] = useState(null)
       const [feg221, setFeg221] = useState(null)
