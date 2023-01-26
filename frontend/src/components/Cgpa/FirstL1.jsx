@@ -1,9 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import {toast} from 'react-toastify'
 import {AiOutlineLeft} from 'react-icons/ai'
 
 const FirstL1 = () => {
+      useEffect(() => {
+            toast('READ THE INSTRUCTIONS')
+          
+            
+          }, [])
       const [mat101, setMat101] = useState(null)
       const [feg101, setFeg101] = useState(null)
       const [phy101, setPhy101] = useState(null)

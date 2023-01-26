@@ -1,9 +1,12 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {toast} from 'react-toastify'
 import { Link } from 'react-router-dom'
 import {AiOutlineLeft} from 'react-icons/ai'
 
 const FirstL2 = () => {
+            toast(<h1 className='font-bold'>READ THE INSTRUCTIONS</h1>)
+          
+ 
       const [mat201, setMat201] = useState(null)
       const [feg201, setFeg201] = useState(null)
       const [feg221, setFeg221] = useState(null)
@@ -26,7 +29,7 @@ const FirstL2 = () => {
           <div className="flex my-5 md:my-8 mx-4">
               <Link className="w-1/12 text-2xl md:text-4xl font-bold" to="/L1cgpa"><AiOutlineLeft/></Link>
               <div className="w-11/12 text-center text-[17px] md:text-2xl font-bold mt-2">
-                  100 Level (First Semester)
+                  200 Level (First Semester)
               </div>       
           </div>        
           <div className="my-12">
