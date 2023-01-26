@@ -4,7 +4,6 @@ import { FaUserCircle, FaVideo, FaCalculator, FaBook } from "react-icons/fa";
 import { AiTwotoneSetting,AiFillSchedule } from "react-icons/ai";
 import "./UserDashboard.css";
 import footer_img from './images/image 16.png';
-
 import { useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -36,33 +35,33 @@ const UserDashboard = () => {
           <h1 className="text-[25px] font-semibold mt-4">Dashboard</h1>
           <ul className="text-center ml-[3.5rem] leading-[7rem]  mt-[8rem]">
             <li className="flex gap-2  items-center">
-              <a href="/" className="text-[20px]">
+              <Link to="/" className="text-[20px]">
                 Profile
-              </a>
+              </Link>
               <FaUserCircle size={20} />
             </li>
             <li className="flex gap-2  items-center">
-              <a href="/" className="text-[18px]">
-               P.D.F’s
-              </a>
+              <Link to="/ebooks" className="text-[18px]">
+               P.D.F's
+              </Link>
               <FaBook size={20} />
             </li>
             <li className="flex gap-2 items-center">
-              <a href="/" className="text-[18px]">
+              <Link to="/" className="text-[18px]">
                 Video Tutorials
-              </a>
+              </Link>
               <FaVideo size={20} />
             </li>
             <li className="flex gap-2 items-center">
-              <a href="/" className="text-[18px]">
+              <Link to="/cgpa" className="text-[18px]">
                 Calculator
-              </a>
+              </Link>
               <FaCalculator size={20} />
             </li>
             <li className="flex gap-2 items-center">
-              <a href="/" className="text-[18px]">
+              <Link to="/" className="text-[18px]">
                 Settings
-              </a>
+              </Link>
               <AiTwotoneSetting size={20} />
             </li>
           </ul>
@@ -82,7 +81,7 @@ const UserDashboard = () => {
           </div>
 
           <section className="grid-section text-[#29335C] mt-[6rem]">
-            <Link to="" className="grid-tiles">
+            <Link to="/" className="grid-tiles">
               <FaVideo size={50} />
               <p className="text-[20px]">Video tutorials</p>
             </Link>

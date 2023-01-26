@@ -60,7 +60,7 @@ const Mobiledashboard = () => {
           {click ? (
             <>
               <div className="mt-[6rem] ml-[1rem] text-center items-center justify-center">
-                <Link to="">
+                <Link to="/">
                   <div className="flex gap-2">
                     <h1>Profile</h1>
                     <FaUserCircle size={20} className="mb-[4rem]" />
@@ -68,7 +68,7 @@ const Mobiledashboard = () => {
                 </Link>
                 <Link to="/ebook">
                   <div className="flex gap-2">
-                    <h1>PDF’S</h1>
+                    <h1>PDF'S</h1>
                     <FaBook size={20} className="mb-[4rem]" />
                   </div>
                 </Link>
@@ -106,7 +106,7 @@ const Mobiledashboard = () => {
                 <Link to="">
                   <FaVideo size={20} className="mb-[6rem]" />
                 </Link>
-                <Link to="">
+                <Link to="/cgpa">
                   <FaCalculator size={20} className="mb-[6rem]" />
                 </Link>
                 <div>

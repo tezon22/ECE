@@ -1,9 +1,23 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import {AiOutlineLeft} from 'react-icons/ai'
 import Navbar from '../Navbar/Navbar'
+import { useDispatch, useSelector} from 'react-redux';
+import { getPdf } from '../../features/pdf/Getpdfs';
+
 
 const Pdf = () => {
+
+    
+    const dispatch = useDispatch()
+    useEffect(()=>{
+        dispatch(getPdf())
+    }, [dispatch])
+    
+
+    const {message} = useSelector((state)=>state.pdfs)
+    localStorage.setItem('pdfs',JSON.stringify(message))
+
     return (
       <div>
           <Navbar/>  
