@@ -28,7 +28,7 @@ const Download = () => {
         <div key={pdf._id}>    
             <div className="flex  items-center w-[94%] h-[120%] mx-auto rounded-xl my-5 py-2 px-4 bg-slate-200 shadow-3xl md:hidden">
                     <div className="h-[100px] rounded-full w-[35%]">
-                             <img className='w-[100%] h-[100%]' src={pdf.thumbnail} /> 
+                             <img className='w-[100%] h-[100%]' src={pdf.thumbnail} alt="pic" /> 
                     </div>
                     <div className="my-2 mx-1 w-[60%]">
                         <p className="text-md font-semibold truncate">{pdf.title}</p>
