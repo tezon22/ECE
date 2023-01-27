@@ -31,8 +31,8 @@ const Download = () => {
                              <img className='w-[100%] h-[100%]' src={pdf.thumbnail} /> 
                     </div>
                     <div className="my-2 mx-1 w-[60%]">
-                        <p className="text-md font-semibold truncate">{pdf.keywords}</p>
-                        <p className="text-[12px]">{pdf.size}</p>
+                        <p className="text-md font-semibold truncate">{pdf.title}</p>
+                        <p className="text-[12px]">{pdf.size} mb</p>
                     </div>
                     <div className="w-[10%] m-3">
                         <button>
@@ -48,7 +48,7 @@ const Download = () => {
                             <img className='w-[100%] h-[180px]' src={pdf.thumbnail} alt="pdf_picture" /> 
                         </div>
                         <div className=' w-[100%]'>
-                            <p className="text-xl font-semibold truncate mt-4 mb-3">{pdf.keywords}</p>
+                            <p className="text-xl font-semibold truncate mt-4 mb-3">{pdf.title}</p>
                             <div className="flex mx-4 mb-4">
                                 <div className="w-1/2">
                                     <button>
@@ -57,7 +57,7 @@ const Download = () => {
                                     </a>
                                     </button>
                                 </div>
-                                <p className="w-1/2 text-right">{pdf.size}mb</p>
+                                <p className="w-1/2 text-right">{pdf.size} mb</p>
                             </div>
                             </div>
                     </div>
