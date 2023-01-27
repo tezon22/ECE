@@ -16,7 +16,7 @@ const L2 = () => {
             <div className="flex my-5 md:my-8 mx-4">
                 <Link className="w-1/12 text-2xl md:text-4xl font-bold" to="/ebook" ><AiOutlineLeft/></Link>
                 <div className="w-11/12 text-center text-[17px] md:text-2xl font-bold mt-2">
-                    100 Level
+                    200 Level
                 </div>       
             </div>
             <div className="mx-8 md:mx-14 mb-24 md:mb-28">

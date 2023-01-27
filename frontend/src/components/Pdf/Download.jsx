@@ -26,9 +26,9 @@ const Download = () => {
                         return (
                             ((pdf.fileName.toLowerCase() === from.toLowerCase()) ? 
         <div key={pdf._id}>    
-            <div className="flex w-[94%] mx-auto rounded-xl my-5 py-2 px-4 bg-slate-200 shadow-3xl md:hidden">
-                    <div className="h-12 rounded-full w-[30%]">
-                        <img className="w-full" src="" alt="pic" />
+            <div className="flex  items-center w-[94%] h-[120%] mx-auto rounded-xl my-5 py-2 px-4 bg-slate-200 shadow-3xl md:hidden">
+                    <div className="h-[100px] rounded-full w-[35%]">
+                             <img className='w-[100%] h-[100%]' src={pdf.thumbnail} /> 
                     </div>
                     <div className="my-2 mx-1 w-[60%]">
                         <p className="text-md font-semibold truncate">{pdf.keywords}</p>
@@ -36,22 +36,30 @@ const Download = () => {
                     </div>
                     <div className="w-[10%] m-3">
                         <button>
-                            <AiOutlineDownload size={30} />
+                            <a href={pdf.url}>
+                                <AiOutlineDownload size={30}/>
+                            </a>
                         </button>
                     </div>
             </div>
-            <div className="max-[767px]:hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-12 my-16 mx-8">
-                    <div className="md:col-span-1 rounded-xl bg-slate-200 shadow-3xl my-5">
-                        <img className="w-full h-28" src="" alt="pdf_picture" />
-                        <p className="text-xl font-semibold truncate mt-4 mb-3 mx-3">{pdf.keywords}</p>
-                        <div className="flex mx-4 mb-4">
-                            <div className="w-1/2">
-                                <button>
-                                    <AiOutlineDownload size={30} />
-                                </button>
-                            </div>
-                            <p className="w-1/2 text-right">{pdf.size}</p>
+            <div className="max-[767px]:hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-12 my-16 mx-8  ">
+                    <div className="md:col-span-1 flex flex-col items-center justify-between rounded-xl bg-slate-200 shadow-3xl my-5">
+                        <div className=' w-[100%] h-[10%]'>
+                            <img className='w-[100%] h-[180px]' src={pdf.thumbnail} alt="pdf_picture" /> 
                         </div>
+                        <div className=' w-[100%]'>
+                            <p className="text-xl font-semibold truncate mt-4 mb-3">{pdf.keywords}</p>
+                            <div className="flex mx-4 mb-4">
+                                <div className="w-1/2">
+                                    <button>
+                                    <a href={pdf.url}>
+                                        <AiOutlineDownload size={30}/>
+                                    </a>
+                                    </button>
+                                </div>
+                                <p className="w-1/2 text-right">{pdf.size}mb</p>
+                            </div>
+                            </div>
                     </div>
             </div>
             </div> : ''
