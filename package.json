@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "caniuse-lite": "^1.0.30001449",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
