@@ -23,6 +23,8 @@ const UserDashboard = () => {
       navigate('/home')
     } 
   }, [user, navigate, dispatch]);
+  
+  const date = Date.now()
 
   return (
     <div>
@@ -70,7 +72,7 @@ const UserDashboard = () => {
         <div className="w-[100%] px-8 pt-6">
           <div className="flex justify-between">
             <div>
-              <p className="text-[#29335C]/40 font-medium">7th July, 2022.</p>
+              <p className="text-[#29335C]/40 font-medium">{new Intl.DateTimeFormat('en-US', {dateStyle:"full"}).format(date)}.</p>
               <h1 className="text-[#29335C] font-semibold text-[25px]">
                 Hello,{user && user.name}{" "}
               </h1>

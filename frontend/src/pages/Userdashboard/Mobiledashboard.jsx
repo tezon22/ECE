@@ -37,6 +37,8 @@ const Mobiledashboard = () => {
     dispatch(reset());
     navigate("/home");
   };
+  const date = Date.now()
+      
   return (
     <div className="md:hidden flex">
       <div
@@ -173,7 +175,7 @@ const Mobiledashboard = () => {
         <div className="flex gap-8 justify-between">
           <div className="text-center ml-[6rem]">
             <p className="text-[#29335C]/40 font-medium text-[12px]">
-              7th July, 2022.
+              {new Intl.DateTimeFormat('en-US', {dateStyle:"full"}).format(date)}.
             </p>
             <h1 className="text-[#29335C] font-semibold text-[14px]">
               Hello,{user && user.name}{" "}

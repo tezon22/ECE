@@ -45,8 +45,16 @@ const Download = () => {
                         </button>
                     </div>
             </div>
-            <div className="max-[767px]:hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-12 my-16 mx-8  ">
-                    <div className="md:col-span-1 flex flex-col items-center justify-between rounded-xl bg-slate-200 shadow-3xl my-5">
+            </div> : ''
+                            )
+                        )
+                    })}
+          </div>
+            <div className="max-[767px]:hidden grid md:grid-cols-2 lg:grid-cols-3 gap-12 mx-8">
+               {pdfs.map((pdf) =>{
+                        return (
+                            ((pdf.fileName.toLowerCase() === from.toLowerCase()) ?
+                    <div key={pdf._id} className=" flex flex-col items-center justify-between rounded-xl bg-slate-200 shadow-3xl">
                         <div className=' w-[100%] h-[10%]'>
                             <img className='w-[100%] h-[180px]' src={pdf.thumbnail} alt={pdf.title}/> 
                         </div>
@@ -63,13 +71,11 @@ const Download = () => {
                                 <p className="w-1/2 text-right">{pdf.size} mb</p>
                             </div>
                             </div>
-                    </div>
-            </div>
             </div> : ''
                             )
                         )
                     })}
-          </div>
+            </div>
       </div>              
   )
 }
