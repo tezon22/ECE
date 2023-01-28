@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import {AiFillEye, AiFillEyeInvisible, AiOutlineLeft} from 'react-icons/ai'
 import { toast } from 'react-toastify'
 import { login, reset } from '../../features/auth/authSlice'
 import "./Login.css";
@@ -74,7 +75,7 @@ const Login = () => {
         <div className="content_1">
           <div className="back_icon">
             <Link to={!user? "/home" :'/'}>
-              <i class="uil uil-previous"></i>
+              <AiOutlineLeft size={20}/>
             </Link>
           </div>
           <div className="login_logo">
@@ -105,9 +106,9 @@ const Login = () => {
                 />
                 <span onClick={change}>
                   {show ? (
-                    <i class="uil uil-eye-slash"></i>
+                    <AiFillEyeInvisible size={20}/>
                   ) : (
-                    <i class="uil uil-eye"></i>
+                    <AiFillEye size={20}/>
                   )}
                 </span>{" "}
               </div>
