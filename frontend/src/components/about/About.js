@@ -1,5 +1,4 @@
-import React from 'react'
-import './About.css'
+import React from 'react';
 import {Link} from 'react-router-dom'
 import {AiOutlineLeft} from 'react-icons/ai'
 import Navbar from '../Navbar/Navbar'
@@ -15,7 +14,7 @@ const About = () => {
                   About Us
               </div>       
           </div>
-          <div className="mb-10">
+          <div className="mb-16">
               <p className="text-[#29335C] my-8 text-center font-bold text-xl md:text-2xl">TEZON</p>
               <p className="py-2 w-[90%] md:w-[80%] mx-auto text-center font-thin">
                   With issues surrounding lack of materials for study, resources to futher one's horizon on a topic or course and easy accessibility to these and many more; this project was formed. In addition, calculating GPA for all levels in ECE -Engineering has been simplified which helps in getting accurate assessment of periodic result. 
@@ -32,6 +31,11 @@ const About = () => {
               <p className="py-2 w-[90%] md:w-[80%] text-center mx-auto font-thin">
                   ©2023
               </p>
+              <div className="my-4 text-center ">
+                  <Link to="/contact" className="text-white text-center py-2 text-lg bg-red-900 rounded-xl inline-block mx-auto w-[80%] md:w-[60%]">
+                      Contact Us
+                  </Link>
+              </div>
           </div>
           
         </div>
