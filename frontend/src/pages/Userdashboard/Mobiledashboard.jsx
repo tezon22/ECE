@@ -144,10 +144,10 @@ const Mobiledashboard = () => {
                     <Link to="/">Dashboard</Link>
                   </li>
                   <li>
-                    <Link to="/">Info</Link>
+                    <Link to="/about">About</Link>
                   </li>
                   <li>
-                    <Link to="/sections">Section</Link>
+                    <Link to="/contact">Contact</Link>
                   </li>
                 </>
               )}
