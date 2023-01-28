@@ -31,6 +31,7 @@ const Login = () => {
   )
 
   useEffect(() => {
+  
     if (isError) {
       toast.error(message)
     }
@@ -40,7 +41,7 @@ const Login = () => {
     }
 
     dispatch(reset())
-  }, [user, isError, isSuccess, message, navigate, dispatch])
+  }, [user, isSuccess,navigate, dispatch, isError, message])
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -59,6 +60,7 @@ const Login = () => {
 
     dispatch(login(userData))
     console.log(userData)
+   
   }
 
   if (isLoading) {
@@ -71,9 +73,9 @@ const Login = () => {
       <div className="container_login">
         <div className="content_1">
           <div className="back_icon">
-            <a href={!user? "/home" :'/'}>
+            <Link to={!user? "/home" :'/'}>
               <i class="uil uil-previous"></i>
-            </a>
+            </Link>
           </div>
           <div className="login_logo">
             <img src={Logo} alt="ec" />
@@ -110,7 +112,7 @@ const Login = () => {
                 </span>{" "}
               </div>
               <span className="forgot">
-                <a href="email">Forgot password?</a>
+                <Link to="/email">Forgot password?</Link>
               </span>
               <button type="submit">LOG IN</button>
             </form>
