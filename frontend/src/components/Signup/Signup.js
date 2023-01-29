@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { AiFillEye, AiFillEyeInvisible, AiOutlineLeft } from 'react-icons/ai';
 import { toast } from 'react-toastify';
 import Spinner from '../Spinner';
 import { register, reset } from '../../features/auth/authSlice';
@@ -86,7 +87,6 @@ const Signup = () => {
 						<form onSubmit={onSubmit} autoComplete='on'>
 							<div className='signup_input'>
 								<input
-									className='bg-transparent'
 									type='textbox'
 									name='name'
 									placeholder='name'
@@ -123,7 +123,6 @@ const Signup = () => {
 								<div className='password'>
 									{' '}
 									<input
-										className='bg-transparent'
 										type={show ? 'text' : 'password'}
 										name='password2'
 										placeholder='Password'
