@@ -69,7 +69,7 @@ const Login = () => {
 				<div className='content_1'>
 					<div className='back_icon'>
 						<Link to={!user ? '/home' : '/'}>
-							<i class='uil uil-previous'></i>
+							<AiOutlineLeft size={20} />
 						</Link>
 					</div>
 					<div className='login_logo'>
@@ -93,7 +93,7 @@ const Login = () => {
 									onChange={onChange}
 								/>
 								<span onClick={change}>
-									{show ? <i class='uil uil-eye-slash'></i> : <i class='uil uil-eye'></i>}
+									{show ? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20}/>}
 								</span>{' '}
 							</div>
 							<span className='forgot'>
