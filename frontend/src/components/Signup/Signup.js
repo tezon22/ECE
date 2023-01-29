@@ -73,7 +73,7 @@ const Signup = () => {
 				<div className='content_1'>
 					<div className='back_icon'>
 						<a href={!user ? '/home' : '/'}>
-							<i className='uil uil-previous'></i>
+							<AiOutlineLeft size={20} />
 						</a>
 					</div>
 					<div className='login_logo'>
@@ -114,9 +114,9 @@ const Signup = () => {
 									/>
 									<span onClick={change}>
 										{show ? (
-											<i className='uil uil-eye-slash'></i>
+											<AiFillEyeInvisible size={20}/>
 										) : (
-											<i className='uil uil-eye'></i>
+											<AiFillEye size={20} />
 										)}
 									</span>{' '}
 								</div>
@@ -131,9 +131,9 @@ const Signup = () => {
 									/>
 									<span onClick={change}>
 										{show ? (
-											<i className='uil uil-eye-slash'></i>
+											<AiFillEyeInvisible size={20} />
 										) : (
-											<i className='uil uil-eye'></i>
+											<AiFillEye size={20} />
 										)}
 									</span>{' '}
 								</div>
