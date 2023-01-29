@@ -53,7 +53,7 @@
 	text-decoration: none;
 	font-size: 16px;
 	color: var(--text-color, white);
-	background-color: var(--light-red, #9b2226);
+	background-color: var(--lighter-red, #9b2226);
 	border-radius: 4px;
 	padding: 6px 30px;
 }

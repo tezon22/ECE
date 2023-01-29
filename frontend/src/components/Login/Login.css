@@ -100,7 +100,7 @@ input:focus {
 
 .form form button {
 	width: 100%;
-	background-color: var(--light-red, #9b2226);
+	background-color: var(--lighter-red, #9b2226);
 	text-align: center;
 	padding: 13px;
 	margin: 50px 0;

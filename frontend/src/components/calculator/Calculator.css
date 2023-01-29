@@ -23,7 +23,7 @@
 	margin-top: 12px;
 }
 .col_7 span {
-	color: var(--light-red, #9b2226);
+	color: var(--lighter-red, #9b2226);
 }
 .col_7 p {
 	color: var(--lighter-blue, #29335c);
@@ -33,7 +33,7 @@
 }
 .col_7 a {
 	text-decoration: none;
-	color: var(--light-red, #9b2226);
+	color: var(--lighter-red, #9b2226);
 	background-color: var(--root-background, white);
 	padding: 8px 60px;
 	border-radius: 4px;

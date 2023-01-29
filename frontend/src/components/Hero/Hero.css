@@ -47,7 +47,7 @@
 	margin-top: 12px;
 }
 .col_1 span {
-	color: var(--light-red, #9b2226); /*red*/
+	color: var(--lighter-red, #9b2226); /*red*/
 }
 .col_1 p {
 	color: var(--lighter-blue, #29335c); /*blue*/
@@ -59,7 +59,7 @@
 	text-decoration: none;
 	font-size: 18px;
 	color: var(--text-color, #fff);
-	background-color: var(--light-red, #9b2226);
+	background-color: var(--lighter-red, #9b2226);
 	padding: 8px 30px;
 	border-radius: 4px;
 	text-transform: uppercase;
