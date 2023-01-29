@@ -15360,7 +15360,7 @@
 							children: [
 								(0, Ur.jsx)(Br, {}),
 								(0, Ur.jsxs)('div', {
-									className: 'text-[#29335C] lg:mx-[15%]',
+									className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 									children: [
 										(0, Ur.jsxs)('div', {
 											className: 'flex my-5 md:my-8 mx-4',
@@ -15454,7 +15454,7 @@
 				},
 				da = function () {
 					return (0, Ur.jsxs)('div', {
-						className: 'text-[#29335C] lg:mx-[15%]',
+						className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 						children: [
 							(0, Ur.jsxs)('div', {
 								className: 'flex my-5 mx-4',
@@ -15542,7 +15542,7 @@
 				},
 				fa = function () {
 					return (0, Ur.jsxs)('div', {
-						className: 'text-[#29335C] lg:mx-[15%]',
+						className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 						children: [
 							(0, Ur.jsxs)('div', {
 								className: 'flex my-5 mx-4',
@@ -16037,7 +16037,8 @@
 												className: 'text-center ml-[6rem]',
 												children: [
 													(0, Ur.jsxs)('p', {
-														className: 'text-[#29335C]/40 font-medium text-[12px]',
+														className:
+															'text-[var(--lighter-blue,_#29335c)]/40 font-medium text-[12px]',
 														children: [
 															new Intl.DateTimeFormat('en-US', {
 																dateStyle: 'full',
@@ -16046,7 +16047,8 @@
 														],
 													}),
 													(0, Ur.jsxs)('h1', {
-														className: 'text-[#29335C] font-semibold text-[14px]',
+														className:
+															'text-[var(--lighter-blue,_#29335c)] font-semibold text-[14px]',
 														children: ['Hello,', u && u.name, ' '],
 													}),
 												],
@@ -16066,7 +16068,7 @@
 														children: (0, Ur.jsx)('img', { src: ya, alt: '' }),
 													}),
 													(0, Ur.jsxs)('div', {
-														className: 'text-[#29335C] w-[40%] mt-8',
+														className: 'text-[var(--lighter-blue,_#29335c)] w-[40%] mt-8',
 														children: [
 															(0, Ur.jsx)('h1', {
 																className: 'text-[14px] font-semibold ',
@@ -16090,7 +16092,7 @@
 														children: (0, Ur.jsx)('img', { src: ja, alt: '' }),
 													}),
 													(0, Ur.jsxs)('div', {
-														className: 'text-[#29335C] w-[40%] mt-8',
+														className: 'text-[var(--lighter-blue,_#29335c)] w-[40%] mt-8',
 														children: [
 															(0, Ur.jsx)('h1', {
 																className: 'text-[14px] font-semibold ',
@@ -16114,7 +16116,7 @@
 														children: (0, Ur.jsx)('img', { src: wa, alt: '' }),
 													}),
 													(0, Ur.jsxs)('div', {
-														className: 'text-[#29335C] w-[40%] mt-8',
+														className: 'text-[var(--lighter-blue,_#29335c)] w-[40%] mt-8',
 														children: [
 															(0, Ur.jsx)('h1', {
 																className: 'text-[14px] font-semibold ',
@@ -16138,7 +16140,7 @@
 														children: (0, Ur.jsx)('img', { src: ba, alt: '' }),
 													}),
 													(0, Ur.jsxs)('div', {
-														className: 'text-[#29335C] w-[40%] mt-8',
+														className: 'text-[var(--lighter-blue,_#29335c)] w-[40%] mt-8',
 														children: [
 															(0, Ur.jsx)('h1', {
 																className: 'text-[14px] font-semibold ',
@@ -16259,7 +16261,8 @@
 													(0, Ur.jsxs)('div', {
 														children: [
 															(0, Ur.jsxs)('p', {
-																className: 'text-[#29335C]/40 font-medium',
+																className:
+																	'text-[var(--lighter-blue,_#29335c)]/40 font-medium',
 																children: [
 																	new Intl.DateTimeFormat('en-US', {
 																		dateStyle: 'full',
@@ -16268,7 +16271,8 @@
 																],
 															}),
 															(0, Ur.jsxs)('h1', {
-																className: 'text-[#29335C] font-semibold text-[25px]',
+																className:
+																	'text-[var(--lighter-blue,_#29335c)] font-semibold text-[25px]',
 																children: ['Hello,', r && r.name, ' '],
 															}),
 														],
@@ -16277,7 +16281,8 @@
 												],
 											}),
 											(0, Ur.jsxs)('section', {
-												className: 'grid-section text-[#29335C] mt-[6rem]',
+												className:
+													'grid-section text-[var(--lighter-blue,_#29335c)] mt-[6rem]',
 												children: [
 													(0, Ur.jsxs)(Bn, {
 														to: '/',
@@ -16357,7 +16362,7 @@
 						children: [
 							(0, Ur.jsx)(Br, {}),
 							(0, Ur.jsxs)('div', {
-								className: 'text-[#29335C] lg:mx-[15%]',
+								className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 								children: [
 									(0, Ur.jsxs)('div', {
 										className: 'flex my-5 md:my-8 mx-4',
@@ -16445,7 +16450,7 @@
 						children: [
 							(0, Ur.jsx)(Br, {}),
 							(0, Ur.jsxs)('div', {
-								className: 'text-[#29335C] lg:mx-[15%]',
+								className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 								children: [
 									(0, Ur.jsxs)('div', {
 										className: 'flex my-5 md:my-8 mx-4',
@@ -16511,7 +16516,7 @@
 				},
 				Ca = function () {
 					return (0, Ur.jsxs)('div', {
-						className: 'text-[#29335C] lg:mx-[15%]',
+						className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 						children: [
 							(0, Ur.jsxs)('div', {
 								className: 'flex my-5 md:my-8 mx-4',
@@ -16564,7 +16569,7 @@
 				},
 				ka = function () {
 					return (0, Ur.jsxs)('div', {
-						className: 'text-[#29335C] lg:mx-[15%]',
+						className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 						children: [
 							(0, Ur.jsxs)('div', {
 								className: 'flex my-5 md:my-8 mx-4',
@@ -16617,7 +16622,7 @@
 				},
 				Pa = function () {
 					return (0, Ur.jsxs)('div', {
-						className: 'text-[#29335C] lg:mx-[15%]',
+						className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 						children: [
 							(0, Ur.jsxs)('div', {
 								className: 'flex mt-5 md:mt-8 mx-4 mb-28',
@@ -16654,7 +16659,7 @@
 				},
 				Oa = function () {
 					return (0, Ur.jsxs)('div', {
-						className: 'text-[#29335C] lg:mx-[15%]',
+						className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 						children: [
 							(0, Ur.jsxs)('div', {
 								className: 'flex mt-5 md:mt-8 mx-4 mb-28',
@@ -16732,7 +16737,7 @@
 						);
 					})(n, l, s, d, m, v, b, N, A, P, T);
 					return (0, Ur.jsxs)('div', {
-						className: 'text-[#29335C] lg:mx-[15%]',
+						className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 						children: [
 							(0, Ur.jsxs)('div', {
 								className: 'flex my-5 md:my-8 mx-4',
@@ -16794,7 +16799,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -16827,7 +16832,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -16860,7 +16865,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -16893,7 +16898,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -16926,7 +16931,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -16959,7 +16964,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -16992,7 +16997,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17025,7 +17030,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17058,7 +17063,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17091,7 +17096,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17124,7 +17129,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17219,7 +17224,7 @@
 						return 3 * e + 3 * t + 2 * n + 2 * r + 2 * a + 3 * l + 2 * o + 2 * i + 2 * s;
 					})(n, l, s, d, m, v, b, N, A);
 					return (0, Ur.jsxs)('div', {
-						className: 'container-fluid text-[#29335C] lg:mx-[15%]',
+						className: 'container-fluid text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 						children: [
 							(0, Ur.jsxs)('div', {
 								className: 'flex my-5 md:my-8 mx-4',
@@ -17281,7 +17286,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17314,7 +17319,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17347,7 +17352,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17378,7 +17383,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17409,7 +17414,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17440,7 +17445,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17471,7 +17476,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17502,7 +17507,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17533,7 +17538,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17630,7 +17635,7 @@
 						return 3 * e + 2 * t + 3 * n + 2 * r + 2 * a + 2 * l + 1 * o + 1 * i + 2 * s + 1 * u;
 					})(n, l, s, d, m, v, b, N, A, P);
 					return (0, Ur.jsxs)('div', {
-						className: 'text-[#29335C] lg:mx-[15%]',
+						className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 						children: [
 							(0, Ur.jsxs)('div', {
 								className: 'flex my-5 md:my-8 mx-4',
@@ -17692,7 +17697,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17725,7 +17730,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17758,7 +17763,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17791,7 +17796,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17824,7 +17829,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17857,7 +17862,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17890,7 +17895,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17923,7 +17928,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17956,7 +17961,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -17989,7 +17994,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18087,7 +18092,7 @@
 						return 3 * e + 3 * t + 2 * n + 2 * r + 2 * a + 3 * l + 2 * o + 2 * i + 2 * s + 2 * u;
 					})(n, l, s, d, m, v, b, N, A, P);
 					return (0, Ur.jsxs)('div', {
-						className: 'text-[#29335C] lg:mx-[15%]',
+						className: 'text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]',
 						children: [
 							(0, Ur.jsxs)('div', {
 								className: 'flex my-5 md:my-8 mx-4',
@@ -18149,7 +18154,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18182,7 +18187,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18215,7 +18220,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18248,7 +18253,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18281,7 +18286,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18314,7 +18319,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18347,7 +18352,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18380,7 +18385,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18413,7 +18418,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18446,7 +18451,7 @@
 										],
 									}),
 									(0, Ur.jsxs)('div', {
-										className: 'flex my-5 text-[#29335C] mx-2 md:mx-4',
+										className: 'flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4',
 										children: [
 											(0, Ur.jsx)('input', {
 												className:
@@ -18867,7 +18872,7 @@
 					return (
 						console.log(a),
 						(0, Ur.jsxs)('div', {
-							className: 'text-[#29335C]',
+							className: 'text-[var(--lighter-blue,_#29335c)]',
 							children: [
 								(0, Ur.jsxs)('div', {
 									className: 'flex mt-5 mb-7 mx-4',

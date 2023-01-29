@@ -35,7 +35,7 @@ const SecondL2 = () => {
 	const calc = calculate(mat202, feg202, feg242, feg212, feg214, feg215, feg280, feg282, csc202, bus204);
 
 	return (
-		<div className='text-[#29335C] lg:mx-[15%]'>
+		<div className='text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]'>
 			<div className='flex my-5 md:my-8 mx-4'>
 				<Link className='w-1/12 text-2xl md:text-4xl font-bold' to='/L2cgpa'>
 					<AiOutlineLeft />
@@ -64,7 +64,7 @@ const SecondL2 = () => {
 					<p className='w-[33%] text-center md:text-xl font-bold py-3'>Grades</p>
 					<p className='w-[33%] text-center md:text-xl font-bold py-3'>Credit Units</p>
 				</div>
-				<div className='flex my-5 text-[#29335C] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'
@@ -89,7 +89,7 @@ const SecondL2 = () => {
 						disabled
 					/>
 				</div>
-				<div className='flex my-5 text-[#29335C] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'
@@ -114,7 +114,7 @@ const SecondL2 = () => {
 						disabled
 					/>
 				</div>
-				<div className='flex my-5 text-[#29335C] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'
@@ -139,7 +139,7 @@ const SecondL2 = () => {
 						disabled
 					/>
 				</div>
-				<div className='flex my-5 text-[#29335C] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'
@@ -164,7 +164,7 @@ const SecondL2 = () => {
 						disabled
 					/>
 				</div>
-				<div className='flex my-5 text-[#29335C] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'
@@ -189,7 +189,7 @@ const SecondL2 = () => {
 						disabled
 					/>
 				</div>
-				<div className='flex my-5 text-[#29335C] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'
@@ -214,7 +214,7 @@ const SecondL2 = () => {
 						disabled
 					/>
 				</div>
-				<div className='flex my-5 text-[#29335C] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'
@@ -239,7 +239,7 @@ const SecondL2 = () => {
 						disabled
 					/>
 				</div>
-				<div className='flex my-5 text-[#29335C] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'
@@ -264,7 +264,7 @@ const SecondL2 = () => {
 						disabled
 					/>
 				</div>
-				<div className='flex my-5 text-[#29335C] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'
@@ -289,7 +289,7 @@ const SecondL2 = () => {
 						disabled
 					/>
 				</div>
-				<div className='flex my-5 text-[#29335C] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'

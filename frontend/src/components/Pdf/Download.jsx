@@ -14,7 +14,7 @@ const Download = () => {
 	const end = location.pathname[11];
 	console.log(end);
 	return (
-		<div className='text-[#29335C]'>
+		<div className='text-[var(--lighter-blue,_#29335c)]'>
 			<div className='flex mt-5 mb-7 mx-4'>
 				<Link
 					className='w-1/12 text-2xl md:text-4xl font-bold'

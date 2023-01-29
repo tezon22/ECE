@@ -17,7 +17,7 @@ const Pdf = () => {
 	return (
 		<div>
 			<Navbar />
-			<div className='text-[#29335C] lg:mx-[15%]'>
+			<div className='text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]'>
 				<div className='flex my-5 md:my-8 mx-4'>
 					<Link className='w-1/12 md:text-4xl text-2xl font-bold' to='/'>
 						<AiOutlineLeft />
