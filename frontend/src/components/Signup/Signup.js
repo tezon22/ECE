@@ -8,6 +8,7 @@ import { register, reset } from '../../features/auth/authSlice';
 import './Signup.css';
 import Logo from '../Navbar/ECE LOGO With TEXT.png';
 import Image2 from './image 2.png';
+import { Link } from 'react-router-dom';
 
 const Signup = () => {
 	const [show, setShow] = useState(false);
@@ -72,9 +73,9 @@ const Signup = () => {
 			<div className='container_signup'>
 				<div className='content_1'>
 					<div className='back_icon'>
-						<a href={!user ? '/home' : '/'}>
+						<Link to={!user ? '/home' : '/'}>
 							<AiOutlineLeft size={20} />
-						</a>
+						</Link>
 					</div>
 					<div className='login_logo'>
 						<img src={Logo} alt='ece' />
@@ -175,13 +176,13 @@ const Signup = () => {
 						<hr />
 					</div>
 					<div className='google'>
-						<a href='login'>
+						<Link to=''>
 							<i className='fa-brands fa-google'></i>
 							<span>Sign up with Google</span>
-						</a>
+						</Link>
 					</div>
 					<p className='login'>
-						Already have an account? <a href='login'>LOG IN</a>
+						Already have an account? <Link to='/login'>LOG IN</Link>
 					</p>
 				</div>
 				<div className='content_2'>
