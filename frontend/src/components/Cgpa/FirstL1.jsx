@@ -90,7 +90,7 @@ const FirstL1 = () => {
 					<p className='w-[33%] text-center md:text-xl font-bold py-3'>Grades</p>
 					<p className='w-[33%] text-center md:text-xl font-bold py-3'>Credit Units</p>
 				</div>
-				<div className='flex my-5 text-[var(--lighter-blue,_#29335c)] mx-2 md:mx-4'>
+				<div className='flex my-5 text-[var(--lighter-blue,_#29335C)] mx-2 md:mx-4'>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
 						type='text'
