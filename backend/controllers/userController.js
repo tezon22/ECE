@@ -80,22 +80,56 @@ const getMe = asyncHandler(async (req, res) => {
 
 //reset password
 const resetPassword = asyncHandler( async (req,res) =>{
-   const { email, password} = req.body
-   const salt = await bcrypt.genSalt(10)
-   const securePassword = await bcrypt.hash(password,salt)
-   const user = await User.findOneAndUpdate({email}, 
-    {$set:{password: securePassword}},{new:true}, (err,data) =>{
-        if(data){
-            (res.status(200).json({message: 'password updated'}))
-        }else{
-            throw err
-        }
-    }).clone().catch((err) =>{console.log(err)}) 
+  const { email } = req.body;
   
-   if(!user){
-    res.status(400).json({message: "email does not exist"})
-   }
+  // Find user with the given email
+  const user = await User.findOne({ email });
+  if (!user) return res.status(400).send({ error: 'Email not found' });
+  
+  // Generate a reset password token
+  const resetpasswordToken = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: '1h' });
+  
+  // Save the reset password token and email in the database
+  user.resetPasswordToken = resetpasswordToken;
+  user.resetPasswordExpires = Date.now() + 3600000; // 1 hour
+  await user.save();
+  
+  // Send the reset password link to the user's email
+  const resetPasswordLink = `http://localhost:3000/reset-password/${resetpasswordToken}`;
+  sendResetPasswordEmail(email, resetPasswordLink);
+  
+  res.send({ message: 'Password reset email sent' });
 })
+// get token
+const resetpasswordToken = asyncHandler( async (req,res) =>{
+  const { password } = req.body;
+  const { token } = req.params;
+  
+  // Verify the reset password token
+  try {
+    const { email } = jwt.verify(token, process.env.JWT_SECRET);
+    
+    // Find the user with the given email
+    const user = await User.findOne({ email });
+    if (!user) return res.status(400).send({ error: 'Email not found' });
+    
+    // Check if the reset password token is valid and not expired
+    if (!user.resetPasswordToken || user.resetPasswordExpires < Date.now()) {
+      return res.status(400).send({ error: 'Token is invalid or has expired' });
+    }
+    
+    // Update the user's password
+    user.password = password;
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpires = undefined;
+    await user.save();
+    
+    res.send({ message: 'Password reset successfully' });
+  } catch (error) {
+    return res.status(400).send({ error: 'Token is invalid or has expired' });
+  }
+})
+
 // get oldUser id
 const oldUser = asyncHandler(async (req, res) => {
   const {email} = req.body
@@ -154,6 +188,7 @@ module.exports = {
   loginUser,
   getMe,
   resetPassword,
+  resetpasswordToken,
   oldUser,
   updateUserProfile,
 };

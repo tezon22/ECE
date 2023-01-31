@@ -7,12 +7,14 @@ const {
   resetPassword,
   oldUser,
   updateUserProfile,
+  resetpasswordToken,
 } = require("../controllers/userController");
 const { protect } = require("../middleware/authMiddleware");
 
 router.post("/", registerUser);
 router.post("/login", loginUser);
-router.patch("/resetPassword/:id", resetPassword);
+router.post("/resetpassword/", resetPassword);
+router.post("/resetpassword/:token", resetpasswordToken);
 router.post("/email", oldUser);
 router.get("/me", protect, getMe);
 router.route("/profile").post(protect, updateUserProfile);
