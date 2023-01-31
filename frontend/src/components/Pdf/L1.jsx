@@ -19,11 +19,11 @@ const L1 = () => {
 					<div className='w-11/12 text-center text-[17px] md:text-2xl font-bold mt-2'>100 Level</div>
 				</div>
 				<div className='mx-8 md:mx-14 mb-24 md:mb-28'>
-					<p className='font-semibold md:text-2xl mt-10 md:mt-14 mb-6 md:mb-8'>First Semester</p>
+					<p className='font-semibold text-2xl md:text-3xl mt-10 md:mt-14 mb-6 md:mb-8'>First Semester</p>
 					{courses1.map((course1) => {
 						return (
 							<Link to={{ pathname: `/pdf/${course1}` }} state={{ from: course1 }} key={course1}>
-								<div className='my-6 md:my-8 p-3 md:p-4 bg-[var(--light-black,_rgb(226,232,240))] rounded-full font-semibold text-sm md:text-xl'>
+								<div className='my-6 md:my-8 p-3 md:p-4 bg-[var(--light-black,_rgb(226,232,240))] rounded-full font-semibold text-xl md:text-2xl'>
 									{course1}{' '}
 									<span className='text-xl md:text-2xl float-right'>
 										<AiFillFolder />
@@ -32,11 +32,11 @@ const L1 = () => {
 							</Link>
 						);
 					})}
-					<p className='font-semibold md:text-2xl mt-10 md:mt-14 mb-6 md:mb-8'>Second Semester</p>
+					<p className='font-semibold text-2xl md:text-3xl mt-10 md:mt-14 mb-6 md:mb-8'>Second Semester</p>
 					{courses2.map((course2) => {
 						return (
 							<Link to={`/pdf/${course2}`} state={{ from: course2 }} key={course2}>
-								<div className='my-6 md:my-8 p-3 md:p-4 bg-[var(--light-black,_rgb(226,232,240))] rounded-full font-semibold text-sm md:text-xl'>
+								<div className='my-6 md:my-8 p-3 md:p-4 bg-[var(--light-black,_rgb(226,232,240))] rounded-full font-semibold text-xl md:text-2xl'>
 									{course2}{' '}
 									<span className='text-xl md:text-2xl float-right'>
 										<AiFillFolder />
