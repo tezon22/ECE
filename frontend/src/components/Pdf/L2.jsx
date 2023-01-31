@@ -13,7 +13,7 @@ const L2 = () => {
 		'FEG 213',
 		'FEG 250',
 		'FEG 281',
-		'ICH 201',
+		'ICH 221',
 		'CSC 201',
 	];
 	const courses2 = [
