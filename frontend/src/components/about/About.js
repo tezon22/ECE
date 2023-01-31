@@ -9,13 +9,13 @@ const About = () => {
 			<Navbar />
 			<div className='md:mx-[10%]'>
 				<div className='flex text-[var(--lighter-blue,_#29335c)] my-5 md:my-8 mx-4'>
-					<Link className='w-[5%] md:text-3xl text-xl font-bold' to='/home'>
-						<AiOutlineLeft />
+					<Link className='w-[5%] font-bold' to='/home'>
+						<AiOutlineLeft size={20} />
 					</Link>
-					<div className='w-[95%] text-center text-xl md:text-2xl font-bold'>About Us</div>
+					<div className='w-[95%] text-center text-3xl md:text-4xl font-bold'>About Us</div>
 				</div>
 				<div className='mb-16'>
-					<p className='text-[var(--lighter-blue,_#29335c)] my-8 text-center font-bold text-xl md:text-2xl'>
+					<p className='text-[var(--lighter-blue,_#29335c)] my-8 text-center font-bold text-2xl md:text-3xl'>
 						TEZON
 					</p>
 					<p className='py-2 w-[90%] md:w-[80%] mx-auto text-center font-thin'>
@@ -42,7 +42,7 @@ const About = () => {
 					<div className='my-4 text-center '>
 						<Link
 							to='/contact'
-							className='text-white text-center py-2 text-lg bg-red-900 rounded-xl inline-block mx-auto w-[80%] md:w-[60%]'
+							className='text-white text-center py-2 text-3xl bg-red-900 rounded-xl inline-block mx-auto w-[80%] md:w-[60%]'
 						>
 							Contact Us
 						</Link>

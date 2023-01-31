@@ -10,13 +10,13 @@ const Contact = () => {
 			<Navbar />
 			<div className='md:mx-[10%]'>
 				<div className='flex text-[var(--lighter-blue,_#29335C)] my-5 md:my-8 mx-4'>
-					<Link className='w-[5%] md:text-3xl text-xl font-bold' to='/home'>
+					<Link className='w-[5%] md:text-3xl text-2xl font-bold' to='/home'>
 						<AiOutlineLeft />
 					</Link>
-					<div className='w-[95%] text-center text-xl md:text-2xl font-bold'>Contact Us</div>
+					<div className='w-[95%] text-center text-3xl font-bold'>Contact Us</div>
 				</div>
 				<div>
-					<p className='text-center text-xl mt-20 text-[var(--lighter-red,_rgb(127,29,29))] font-semibold pb-6'>
+					<p className='text-center text-2xl mt-20 text-[var(--lighter-red,_rgb(127,29,29))] font-semibold pb-6'>
 						Reach out to us today.
 					</p>
 					<form
@@ -50,7 +50,7 @@ const Contact = () => {
 							></textarea>
 						</div>
 						<div className='my-5 text-center'>
-							<button className='py-2 bg-red-900 w-[70%] mx-auto inline-block text-white text-lg'>
+							<button className='py-2 bg-red-900 w-[70%] mx-auto inline-block text-white text-xl'>
 								SUBMIT
 							</button>
 						</div>
