@@ -10,16 +10,14 @@ const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password, pic} = req.body
 
   if (!name || !email || !password) {
-    res.status(400)
-    throw new Error('Please add all fields')
+    res.status(400).json({ message : 'Please add all fields'})
   }
 
   // Check if user exists
   const userExists = await User.findOne({ email })
 
   if (userExists) {
-    res.status(400)
-    throw new Error('User already exists')
+    res.status(400).json({ message : 'User already exists'})
   }
 
   // Hash password
@@ -43,8 +41,7 @@ const registerUser = asyncHandler(async (req, res) => {
       token: generateToken(user._id),
     });
   } else {
-    res.status(400)
-    throw new Error('Invalid user data')
+    res.status(400).json({ message : 'Invalide User Data'})
   }
 })
 
@@ -66,8 +63,7 @@ const loginUser = asyncHandler(async (req, res) => {
       token: generateToken(user._id),
     });
   } else {
-    res.status(400)
-    throw new Error('Invalid credentials')
+    res.status(400).json({ message : 'Invalid Credentials'})
   }
 })
 
@@ -173,7 +169,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
     });
   } else {
     res.status(404);
-    throw new Error("User Not Found");
+    res.status(400).json({ message : 'User not Found'})
   }
 });
 // Generate JWT

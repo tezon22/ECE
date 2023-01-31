@@ -2,47 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  margin: 0;
-  background-image: url(../src/assests/Images/background.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-} 
+[data-theme='dark'] {
+	--root-background: rgb(26, 27, 28);
+	--light-black: rgb(35, 38, 39);
+	--dark-green: rgb(10, 42, 38);
+	--light-blue: rgb(60, 74, 128);
+	--lighter-blue: rgb(140, 157, 180);
+	--trans-blue: rgba(141, 157, 180, 0.4);
+	--darker-blue: rgb(32, 38, 64);
+	--light-red: rgb(108, 28, 31);
+	--lighter-red: rgb(186, 90, 93);
+	--btn-background: rgb(27, 28, 29);
+	--input-background: rgb(58, 60, 6);
+	--text-color: rgb(193, 191, 189);
+}
 
-*{
+* {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Inter', sans-serif;
-	
 }
+
+/* html.theme-transition {
+	transition: all 750ms ease-in-out;
+} */
+
+html,
+body {
+	font-size: 62.5%;
+	background-color: var(--root-background, initial);
+	color: var(--text-color, initial);
+}
+
+body {
+	font-size: 1.6rem;
+	margin: 0;
+	background-image: url(../src/assests/Images/background.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+input {
+	background-color: var(--input-background, initial);
+	color: var(--text-color, black);
+}
+
 .loadingSpinnerContainer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 5000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .loadingSpinner {
-  width: 64px;
-  height: 64px;
-  border: 8px solid;
-  border-color: #000 transparent #555 transparent;
-  border-radius: 50%;
-  animation: spin 1.2s linear infinite;
+	width: 64px;
+	height: 64px;
+	border: 8px solid;
+	border-color: #000 transparent #555 transparent;
+	border-radius: 50%;
+	animation: spin 1.2s linear infinite;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
