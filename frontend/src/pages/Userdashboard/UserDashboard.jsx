@@ -33,9 +33,9 @@ const UserDashboard = () => {
 			</div>
 			<Mobiledashboard />
 			<div className='md:flex all hidden '>
-				<div className='bg-[var(--darker-blue,_rgb(41,51,92))] h-[1024px] w-[20rem] text-center text-[var(--text-color,_white)] relative'>
+				<div className='bg-[var(--darker-blue,_rgb(41,51,92))] h-[1024px] w-[25rem] text-center text-[var(--text-color,_white)] relative'>
 					<h1 className='text-[25px] font-semibold mt-4'>Dashboard</h1>
-					<ul className='text-center ml-[3.5rem] leading-[7rem]  mt-[8rem]'>
+					<ul className='text-center ml-[3.5rem] leading-[9rem]  mt-[8rem]'>
 						<li className='flex gap-2  items-center'>
 							<Link to='/' className='text-[20px]'>
 								Profile

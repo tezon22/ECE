@@ -27,14 +27,14 @@ import EnterEmail from './components/changePassword/enterEmail';
 import ProfileScreen from './components/ProfileScreen';
 import Mainpage from './components/Pdf/Mainpage';
 import Download from './components/Pdf/Download';
-import DarkModeButton from './components/DarkModeButton';
+// import DarkModeButton from './components/DarkModeButton';
 
 function App() {
 	return (
 		<>
 			<Router>
 				<div className='container__not-tailwind'>
-					<DarkModeButton />
+					{/* <DarkModeButton /> */}
 					<Routes>
 						<Route exact path='/home' element={<Home />} />
 						<Route exact path='/login' element={<Login />} />
