@@ -32,11 +32,11 @@ const UserDashboard = () => {
 				<Navbar />
 			</div>
 			<Mobiledashboard />
-			<div className='md:flex all hidden '>
-				<div className='bg-[var(--darker-blue,_rgb(41,51,92))] h-[1024px] w-[25rem] text-center text-[var(--text-color,_white)] relative'>
-					<h1 className='text-[25px] font-semibold mt-4'>Dashboard</h1>
-					<ul className='text-center ml-[3rem] leading-[7rem]  mt-[8rem]'>
-						<li className='flex gap-2  items-center'>
+			<div className='md:flex all hidden'>
+				<div className='bg-[var(--darker-blue,_rgb(41,51,92))] w-[25rem] text-[var(--text-color,_white)] flex flex-col items-center gap-[20rem] pt-[5rem] text-center'>
+					<h1 className='text-[25px] font-semibold'>Dashboard</h1>
+					<ul className='flex flex-col gap-[4rem]'>
+						<li className='flex gap-2 items-center'>
 							<Link to='/' className='text-[20px]'>
 								Profile
 							</Link>
@@ -69,7 +69,7 @@ const UserDashboard = () => {
 					</ul>
 				</div>
 
-				<div className='w-[100%] px-8 pt-6'>
+				<div className='w-[100%] flex flex-col p-[4rem_4rem_0]'>
 					<div className='flex justify-between'>
 						<div>
 							<p className='text-[var(--trans-blue,_rgb(41,51,92,0.4))] font-medium'>
@@ -84,7 +84,7 @@ const UserDashboard = () => {
 						</div>
 					</div>
 
-					<section className='grid-section text-[var(--lighter-blue,_rgb(41,51,92))] mt-[6rem]'>
+					<section className='grid-section self-center mt-[12rem] text-[var(--lighter-blue,_rgb(41,51,92))]'>
 						<Link to='/' className='grid-tiles'>
 							<FaVideo size={50} />
 							<p className='text-[20px]'>Video tutorials</p>

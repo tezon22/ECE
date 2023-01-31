@@ -13,6 +13,25 @@ const Pdf = () => {
 
 	const { message } = useSelector((state) => state.pdfs);
 	localStorage.setItem('pdfs', JSON.stringify(message));
+	const levels = [
+		{ level: '100 level', link: '/L1pdf', availability: '' },
+		{ level: '200 level', link: '/L2pdf', availability: '' },
+		{ level: '300 level', link: '#', availability: 'Not Available now' },
+		{ level: '400 level', link: '#', availability: 'Not Available now' },
+		{ level: '500 level', link: '#', availability: 'Not Available now' },
+	];
+
+	const renderedList = levels.map((items) => {
+		const { level, link, availability } = items;
+		return (
+			<Link key={level} to={link}>
+				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] my-8 md:my-14 mx-10 md:mx-24'>
+					<p className='text-center font-medium pt-10 md:pt-16 pb-2 md:pb-5'>{level}</p>
+					<p className='p-2 md:p-4 text-right text-[10px] font-light'> {availability} </p>
+				</div>
+			</Link>
+		);
+	});
 
 	return (
 		<div>
@@ -26,34 +45,7 @@ const Pdf = () => {
 						Select your level (P.D.F)
 					</div>
 				</div>
-				<Link to='/L1pdf'>
-					<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-10 md:py-16 my-8 md:my-14 mx-10 md:mx-24'>
-						100 level
-					</div>
-				</Link>
-				<Link to='/L2pdf'>
-					<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-10 md:py-16 my-8 md:my-14 mx-10 md:mx-24'>
-						200 level
-					</div>
-				</Link>
-				<a href='#a'>
-					<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] my-8 md:my-14 mx-10 md:mx-24'>
-						<p className='text-center font-medium pt-10 md:pt-16 pb-2 md:pb-5'>300 level</p>
-						<p className='p-2 md:p-4 text-right text-[10px] font-light'>Not Available now</p>
-					</div>
-				</a>
-				<a href='#a'>
-					<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] my-8 md:my-14 mx-10 md:mx-24'>
-						<p className='text-center font-medium pt-10 md:pt-16 pb-2 md:pb-5'>400 level</p>
-						<p className='p-2 md:p-4 text-right text-[10px] font-light'>Not Available now</p>
-					</div>
-				</a>
-				<a href='#a'>
-					<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] my-8 md:my-14 mx-10 md:mx-24'>
-						<p className='text-center font-medium pt-10 md:pt-16 pb-2 md:pb-5'>500 level</p>
-						<p className='p-2 md:p-4 text-right text-[10px] font-light'>Not Available now</p>
-					</div>
-				</a>
+				{renderedList}
 			</div>
 		</div>
 	);
