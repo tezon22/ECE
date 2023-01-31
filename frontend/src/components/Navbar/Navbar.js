@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import DarkModeButton from '../DarkModeButton'
-// import Logo from './ECE LOGO With TEXT.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -70,12 +68,9 @@ const Navbar = () => {
 						<div className='red'>
 							{user ? (
 								<>
-								<div className='flex items-center gap-2'>
 									<Link to='/home' className='sign' onClick={onLogout}>
 										LOGOUT
 									</Link>
-									<DarkModeButton/>
-								</div>
 								</>
 							) : (
 								<>
