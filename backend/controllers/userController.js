@@ -76,7 +76,7 @@ const getMe = asyncHandler(async (req, res) => {
 })
 
 //reset password
-const resetPassword = asyncHandler( async (req,res) =>{
+const resetpassword = asyncHandler( async (req,res) =>{
   const { email } = req.body;
   
   // Find user with the given email
@@ -92,7 +92,7 @@ const resetPassword = asyncHandler( async (req,res) =>{
   await user.save();
   
   // Send the reset password link to the user's email
-  const resetPasswordLink = `http://localhost:3000/resetpassword/${resetpasswordToken}`;
+  const resetPasswordLink = `http://localhost:5000/resetpassword/${resetpasswordToken}`;
   sendResetPasswordEmail(email, resetPasswordLink);
   
   res.send({ message: 'Password reset link sent. Check your email' });
@@ -134,8 +134,8 @@ async function sendResetPasswordEmail(to, resetPasswordLink) {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "your-email-address@gmail.com", // generated ethereal user
-      pass: "your-email-password", // generated ethereal password
+      user: "tezonteam@gmail.com", // generated ethereal user
+      pass: "tezonece22", // generated ethereal password
     },
   });
 
@@ -210,7 +210,7 @@ module.exports = {
   registerUser,
   loginUser,
   getMe,
-  resetPassword,
+  resetpassword,
   resetpasswordToken,
   oldUser,
   updateUserProfile,

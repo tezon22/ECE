@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {useNavigate} from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { resetPassword } from '../../features/reset/resetSlice'
+import { resetpassword } from '../../features/reset/resetSlice'
 import Spinner from '../Spinner'
 import './changePassword.css'
 import {AiFillEye, AiFillEyeInvisible, AiOutlineLeft} from 'react-icons/ai'
@@ -47,7 +47,7 @@ const ChangePassword = () => {
 	const submit = (e) => {
 		e.preventDefault()
 		const data = {email, password}
-		dispatch(resetPassword(data))
+		dispatch(resetpassword(data))
 	}
 	if (loading) {
 		return <Spinner />

@@ -1,12 +1,23 @@
-import axios from 'axios'
+// import axios from 'axios'
 
-const API_URL = '/api/ece/resetPassword/'
 
-// Register user
-const resetPassword = async (data, id) => {
- const response = await axios.put(API_URL + id, data)
- 
-  return response.data
-}
+// // Register user
+// export const resetpassword = (email) => (dispatch) => {
+//   dispatch({ type: "RESET_PASSWORD_REQUEST" });
 
-export default resetPassword
+//   return axios
+//   .post("/resetpassword", { email })
+//   .then((res) => {
+//     dispatch({
+//       type: "RESET_PASSWORD_SUCCESS",
+//       payload: res.data.message,
+//     });
+//   })
+//   .catch((err) => {
+//     dispatch({
+//       type: "RESET_PASSWORD_FAILURE",
+//       payload: err.response.data.message,
+//     });
+//   })
+// }
+
