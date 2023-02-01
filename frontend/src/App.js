@@ -35,7 +35,6 @@ function App() {
 		<>
 			<Router>
 				<div className='container__not-tailwind'>
-					{/* <DarkModeButton /> */}
 					<Routes>
 						<Route exact path='/home' element={<Home />} />
 						<Route exact path='/login' element={<Login />} />
@@ -56,6 +55,7 @@ function App() {
 						<Route exact path='/secondL2' element={<SecondL2 />} />
 						<Route exact path='/pdf/:id' element={<Download />} />
 						<Route exact path='/news' element={<Newscenter />} />
+						<Route exact path='/settings' element={<Settings />} />
 						<Route exact path='email/passwordchange' element={<ChangePassword />} />
 						<Route exact path='/email' element={<EnterEmail />} />
 						<Route exact path='/about' element={<About />} />
