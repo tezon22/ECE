@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import useLocalStorage from 'use-local-storage';
 import { FaSun } from 'react-icons/fa';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
@@ -24,7 +24,7 @@ const DarkModeButton = () => {
 	}, [theme]);
 
 	return (
-		<button className='bg-[rgb(32,38,64)] rounded-[5rem] absolute' onClick={themeSetter}>
+		<button className='bg-[rgb(32,38,64)] rounded-[5rem]' onClick={themeSetter}>
 			<div className='relative flex gap-[0.6rem] items-center justify-between [padding-inline:0.6rem_0.5rem] [padding-block:0.3rem] w-[5.4rem] h-[2.8rem] '>
 				<FaSun color='yellow' fontSize={'1.6rem'} />
 				<BsFillMoonStarsFill color='pink' fontSize={'1.4rem'} />

@@ -27,6 +27,7 @@ import EnterEmail from './components/changePassword/enterEmail';
 import ProfileScreen from './components/ProfileScreen';
 import Mainpage from './components/Pdf/Mainpage';
 import Download from './components/Pdf/Download';
+import Settings from './components/Settings/Settings';
 
 function App() {
 	return (
@@ -53,6 +54,7 @@ function App() {
 						<Route exact path='/secondL2' element={<SecondL2 />} />
 						<Route exact path='/pdf/:id' element={<Download />} />
 						<Route exact path='/news' element={<Newscenter />} />
+						<Route exact path='/settings' element={<Settings />} />
 						<Route exact path='email/passwordchange' element={<ChangePassword />} />
 						<Route exact path='/email' element={<EnterEmail />} />
 						<Route exact path='/about' element={<About />} />

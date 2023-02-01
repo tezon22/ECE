@@ -61,7 +61,7 @@ const UserDashboard = () => {
 							<FaCalculator size={20} />
 						</li>
 						<li className='flex gap-2 items-center'>
-							<Link to='/' className='text-[18px]'>
+							<Link to='/settings' className='text-[18px]'>
 								Settings
 							</Link>
 							<AiTwotoneSetting size={20} />
