@@ -87,7 +87,7 @@ const Mobiledashboard = () => {
 									</div>
 								</Link>
 								<div>
-									<Link to=''>
+									<Link to='/settings'>
 										<div className='flex gap-2'>
 											<h1>Settings</h1>
 											<AiTwotoneSetting size={20} />
@@ -112,7 +112,7 @@ const Mobiledashboard = () => {
 									<FaCalculator size={20} className='mb-[6rem]' />
 								</Link>
 								<div>
-									<Link to=''>
+									<Link to='/settings'>
 										<AiTwotoneSetting size={20} />
 									</Link>
 								</div>

@@ -27,6 +27,7 @@ import EnterEmail from './components/changePassword/enterEmail';
 import ProfileScreen from './components/ProfileScreen';
 import Mainpage from './components/Pdf/Mainpage';
 import Download from './components/Pdf/Download';
+import Settings from './components/Settings/Settings';
 // import DarkModeButton from './components/DarkModeButton';
 
 function App() {
@@ -62,6 +63,7 @@ function App() {
 						<Route exact path='/section' element={<Section />} />
 						<Route exact path='/profilescreen' element={<ProfileScreen />} />
 						<Route exact path='/mainpage' element={<Mainpage />} />
+						<Route exact path='/settings' element={<Settings />} />
 					</Routes>
 				</div>
 			</Router>

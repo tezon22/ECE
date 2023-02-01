@@ -34,6 +34,34 @@ const SecondL2 = () => {
 	}
 	const calc = calculate(mat202, feg202, feg242, feg212, feg214, feg215, feg280, feg282, csc202, bus204);
 
+	const courses = [mat202, feg202, feg242, feg212, feg214, feg215, feg280, feg282, csc202, bus204]
+	const checkLetter = (x) => {
+		switch (x) {
+			case 'a' || 'A':
+				x = 5;
+				break;
+			case 'b' || 'B': 
+				x = 4	
+				break;
+			case 'c' || 'C':
+				x = 3	
+				break;
+			case 'd' || 'D':
+				x = 2	
+				break;
+			case 'e' || 'E':
+				x = 1	
+				break;
+			case 'f' || 'F':
+				x = 0	
+				break;
+		
+			default: 
+				return 'Grade ranges from A-F'
+				
+		}
+	}
+	console.log(courses)
 	return (
 		<div className='text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]'>
 			<div className='flex my-5 md:my-8 mx-4'>
@@ -73,12 +101,12 @@ const SecondL2 = () => {
 					/>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
-						type='number'
+						type='text'
 						name='mat_grd'
 						placeholder='Enter:'
 						value={mat202}
 						onChange={(e) =>
-							setMat202(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))
+						setMat202(e.target.value.toUpperCase()) 
 						}
 					/>
 					<input
@@ -98,12 +126,12 @@ const SecondL2 = () => {
 					/>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
-						type='number'
+						type='text'
 						name='feg1_grd'
 						placeholder='Enter:'
 						value={feg202}
 						onChange={(e) =>
-							setFeg202(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))
+						setFeg202(e.target.value.toUpperCase())
 						}
 					/>
 					<input
@@ -123,12 +151,12 @@ const SecondL2 = () => {
 					/>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
-						type='number'
+						type='text'
 						name='feg2_grd'
 						placeholder='Enter:'
 						value={feg242}
 						onChange={(e) =>
-							setFeg242(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))
+						setFeg242(e.target.value.toUpperCase())
 						}
 					/>
 					<input
@@ -148,12 +176,12 @@ const SecondL2 = () => {
 					/>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
-						type='number'
+						type='text'
 						name='feg3_grd'
 						placeholder='Enter:'
 						value={feg212}
 						onChange={(e) =>
-							setFeg212(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))
+						setFeg212(e.target.value.toUpperCase())
 						}
 					/>
 					<input
@@ -173,12 +201,12 @@ const SecondL2 = () => {
 					/>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
-						type='number'
+						type='text'
 						name='feg4_grd'
 						placeholder='Enter:'
 						value={feg214}
 						onChange={(e) =>
-							setFeg214(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))
+						setFeg214(e.target.value.toUpperCase())
 						}
 					/>
 					<input
@@ -198,12 +226,12 @@ const SecondL2 = () => {
 					/>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
-						type='number'
+						type='text'
 						name='feg5_grd'
 						placeholder='Enter:'
 						value={feg215}
 						onChange={(e) =>
-							setFeg215(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))
+						setFeg215(e.target.value.toUpperCase())
 						}
 					/>
 					<input
@@ -223,12 +251,12 @@ const SecondL2 = () => {
 					/>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
-						type='number'
+						type='text'
 						name='feg6_grd'
 						placeholder='Enter:'
 						value={feg280}
 						onChange={(e) =>
-							setFeg280(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))
+						setFeg280(e.target.value.toUpperCase())
 						}
 					/>
 					<input
@@ -248,12 +276,12 @@ const SecondL2 = () => {
 					/>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
-						type='number'
+						type='text'
 						name='feg7_grd'
 						placeholder='Enter:'
 						value={feg282}
 						onChange={(e) =>
-							setFeg282(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))
+						setFeg282(e.target.value.toUpperCase())
 						}
 					/>
 					<input
@@ -273,12 +301,12 @@ const SecondL2 = () => {
 					/>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
-						type='number'
+						type='text'
 						name='csc_grd'
 						placeholder='Enter:'
 						value={csc202}
 						onChange={(e) =>
-							setCsc202(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))
+						setCsc202(e.target.value.toUpperCase())
 						}
 					/>
 					<input
@@ -298,12 +326,12 @@ const SecondL2 = () => {
 					/>
 					<input
 						className='bg-[var(--light-black,_rgb(226,232,240))] rounded-full py-1 text-center font-bold w-[33%] mx-2'
-						type='number'
+						type='text'
 						name='bus_grd'
 						placeholder='Enter:'
 						value={bus204}
 						onChange={(e) =>
-							setBus204(e.target.value < 6 ? e.target.value : toast('Grade no dey pass 5'))
+						setBus204(e.target.value.toUpperCase())
 						}
 					/>
 					<input
