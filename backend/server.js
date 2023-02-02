@@ -2,6 +2,8 @@ const path = require('path');
 const express = require('express');
 const downloadRoute = require('./routes/downloads');
 const uploadRoute = require('./routes/upload');
+const forgotPasswordRoute = require('./routes/forgotPassword');
+const resetPasswordRoute = require('./routes/resetPassword');
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000;
 const connectDB = require('./config/db');
@@ -18,6 +20,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/upload', uploadRoute);
+app.use('/api', forgotPasswordRoute);
+app.use('/api', resetPasswordRoute);
+
 
 // pdf api- both getting all
 app.use('/api/pdf', downloadRoute);

@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const crypto = require("crypto");
+const Joi = require("joi");
 
 const userSchema = new mongoose.Schema(
   {
@@ -14,11 +14,8 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: [true, "Please add a password"],
+      required: [true, 'Please provide a password'],
     },
-    passwordChangedAt: Date,
-    passwordResetToken: String,
-    passwordResetExpires: Date,
     pic: {
       type: String,
       required: true,
@@ -35,18 +32,15 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-userSchema.methods.createPasswordResetToken = function () {
-  const resetToken = crypto.randomBytes(32).toString("hex");
+const User = mongoose.model("user", userSchema);
 
-  this.passwordResetToken = crypto
-    .createMash("sha256")
-    .update(resetToken)
-    .digest("hex");
+const validate = (user) => {
+  const schema = Joi.object({
+    name: Joi.string(). required(),
+    email: Joi.string().email().required(),
+    password: Joi.string().required
+  });
+  return schema.validate(user);
+}
 
-    console.log({resetToken}, this.passwordResetToken);
-  this.passwordResetExpires = Date.now() * 10 * 60 * 1000;
-
-  return resetToken;
-};
-
-module.exports = mongoose.model("User", userSchema);
+module.exports = { User, validate };
