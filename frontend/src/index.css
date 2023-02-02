@@ -4,7 +4,7 @@
 
 html[data-theme='dark'] {
 	--root-background: rgb(26, 27, 28);
-	--light-black: rgb(35, 38, 39);
+	--light-black: rgb(34, 38, 39);
 	--dark-green: rgb(10, 42, 38);
 	--light-blue: rgb(60, 74, 128);
 	--lighter-blue: rgb(140, 157, 180);
