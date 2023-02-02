@@ -40,9 +40,9 @@ body {
 body {
 	font-size: 1.6rem;
 	margin: 0;
-	background-image: url(../src/assests/Images/background.png);
+	background-image: url(../src/assests/Images/background.svg);
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 }
 
 input {
