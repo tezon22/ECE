@@ -92,6 +92,7 @@ const Contact = () => {
                     cols="10"
                     placeholder="Comment"
     								name="message"
+										required
                   ></textarea>
                 </div>
                 <div className="my-5 text-center">

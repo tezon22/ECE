@@ -4,17 +4,17 @@ const {
   registerUser,
   loginUser,
   getMe,
-  resetpassword,
+  resetPassword,
   oldUser,
   updateUserProfile,
-  resetpasswordToken,
+  forgotPassword,
 } = require("../controllers/userController");
 const { protect } = require("../middleware/authMiddleware");
 
 router.post("/", registerUser);
 router.post("/login", loginUser);
-router.post("/resetpassword", resetpassword);
-router.post("/resetpassword/:token", resetpasswordToken);
+router.post("/forgotPassword ", forgotPassword);
+router.post("/resetPassword", resetPassword);
 router.post("/email", oldUser);
 router.get("/me", protect, getMe);
 router.route("/profile").post(protect, updateUserProfile);

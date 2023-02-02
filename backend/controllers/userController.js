@@ -76,82 +76,21 @@ const getMe = asyncHandler(async (req, res) => {
 })
 
 //reset password
-const resetpassword = asyncHandler( async (req,res) =>{
-  const { email } = req.body;
-  
-  // Find user with the given email
-  const user = await User.findOne({ email });
-  if (!user) return res.status(400).send({ error: 'Email not found' });
-  
-  // Generate a reset password token
-  const resetpasswordToken = jwt.sign({ email }, process.env.JWT_SECRET, { expiresIn: '1h' });
-  
-  // Save the reset password token and email in the database
-  user.resetpasswordToken = resetpasswordToken;
-  user.resetpasswordExpires = Date.now() + 3600000; // 1 hour
-  await user.save();
-  
-  // Send the reset password link to the user's email
-  const resetPasswordLink = `http://localhost:5000/resetpassword/${resetpasswordToken}`;
-  sendResetPasswordEmail(email, resetPasswordLink);
-  
-  res.send({ message: 'Password reset link sent. Check your email' });
-})
-// get token
-const resetpasswordToken = asyncHandler( async (req,res) =>{
-  const { password } = req.body;
-  const { token } = req.params;
-  
-  // Verify the reset password token
-  try {
-    const { email } = jwt.verify(token, process.env.JWT_SECRET);
-    
-    // Find the user with the given email
-    const user = await User.findOne({ email });
-    if (!user) return res.status(400).send({ error: 'Email not found' });
-    
-    // Check if the reset password token is valid and not expired
-    if (!user.resetpasswordToken || user.resetpasswordExpires < Date.now()) {
-      return res.status(400).send({ error: 'Token is invalid or has expired' });
-    }
-    
-    // Update the user's password
-    user.password = password;
-    user.resetpasswordToken = undefined;
-    user.resetpasswordExpires = undefined;
-    await user.save();
-    
-    res.send({ message: 'Password reset successfully' });
-  } catch (error) {
-    return res.status(400).send({ error: 'Token is invalid or has expired' });
+exports.forgotPassword = catchAsync(async (req, res, next) => {
+  // get the user based on POSTed email
+  const user = await User.findOne({ email: req.body.email});
+  if(!user) {
+    return next(new AppError('There is no user with the email address', 404));
   }
-})
 
-async function sendResetPasswordEmail(to, resetPasswordLink) {
-  // Create transporter object using Gmail SMTP
-  let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true for 465, false for other ports
-    auth: {
-      user: "tezonteam@gmail.com", // generated ethereal user
-      pass: "tezonece22", // generated ethereal password
-    },
-  });
+  // generate the random token
+  const resetToken = user.createPasswordResetToken();
+  await user.save();
 
-  // Define email options
-  let mailOptions = {
-    from: "tezonteam@gmail.com",
-    to: to,
-    subject: "Reset Password",
-    text: `Follow the link to reset your password: ${resetPasswordLink}`,
-  };
+  // send it back to user's email
+});
 
-  // Send email
-  let info = await transporter.sendMail(mailOptions);
-
-  console.log("Message sent: %s", info.messageId);
-}
+exports.resetPassword = (req, res, next) => {}
 
 // get oldUser id
 const oldUser = asyncHandler(async (req, res) => {
@@ -209,9 +148,9 @@ const generateToken = (id) => {
 module.exports = {
   registerUser,
   loginUser,
+  forgotPassword,
+  resetPassword,
   getMe,
-  resetpassword,
-  resetpasswordToken,
   oldUser,
   updateUserProfile,
 };
