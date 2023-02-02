@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
-const nodemailer = require("nodemailer");
 const asyncHandler = require('express-async-handler')
 const User = require('../models/userModel')
 
@@ -42,7 +41,7 @@ const registerUser = asyncHandler(async (req, res) => {
       token: generateToken(user._id),
     });
   } else {
-    res.status(400).json({ message : 'Invalide User Data'})
+    res.status(400).json({ message : 'Invalid User Data'})
   }
 })
 
@@ -75,22 +74,6 @@ const getMe = asyncHandler(async (req, res) => {
   res.status(200).json(req.user)
 })
 
-//reset password
-exports.forgotPassword = catchAsync(async (req, res, next) => {
-  // get the user based on POSTed email
-  const user = await User.findOne({ email: req.body.email});
-  if(!user) {
-    return next(new AppError('There is no user with the email address', 404));
-  }
-
-  // generate the random token
-  const resetToken = user.createPasswordResetToken();
-  await user.save();
-
-  // send it back to user's email
-});
-
-exports.resetPassword = (req, res, next) => {}
 
 // get oldUser id
 const oldUser = asyncHandler(async (req, res) => {
@@ -148,8 +131,6 @@ const generateToken = (id) => {
 module.exports = {
   registerUser,
   loginUser,
-  forgotPassword,
-  resetPassword,
   getMe,
   oldUser,
   updateUserProfile,
