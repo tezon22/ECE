@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-[data-theme='dark'] {
+html[data-theme='dark'] {
 	--root-background: rgb(26, 27, 28);
 	--light-black: rgb(35, 38, 39);
 	--dark-green: rgb(10, 42, 38);
@@ -18,16 +18,17 @@
 	--text-color: rgb(193, 191, 189);
 }
 
+html.theme-transition,
+html.theme-transition * {
+	transition: all 600ms ease-in-out;
+}
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	font-family: 'Inter', sans-serif;
 }
-
-/* html.theme-transition {
-	transition: all 750ms ease-in-out;
-} */
 
 html,
 body {

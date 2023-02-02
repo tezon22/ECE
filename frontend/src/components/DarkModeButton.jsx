@@ -15,10 +15,12 @@ const DarkModeButton = ({ display }) => {
 	useEffect(() => {
 		document.documentElement.setAttribute('data-theme', theme);
 		document.documentElement.classList.add('theme-transition');
-		window.setTimeout(function () {
+
+		setTimeout(() => {
 			document.documentElement.classList.remove('theme-transition');
 		}, 1000);
-		return () => window.clearTimeout;
+
+		return () => clearTimeout();
 	}, [theme]);
 
 	return (

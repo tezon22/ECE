@@ -66,8 +66,8 @@ function App() {
 					</Routes>
 				</div>
 			</Router>
-			<DarkModeButton display={'hidden'} />
 			<ToastContainer />
+			<DarkModeButton display={'hidden'} />
 		</>
 	);
 }

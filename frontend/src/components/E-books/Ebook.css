@@ -1,3 +1,7 @@
+html[data-theme-dark] {
+	--text-color: #f4fffd;
+}
+
 .e_envelope {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -39,7 +43,6 @@
 	padding-bottom: 28px;
 }
 .col_4 a {
-	--text-color: rgb(244, 255, 253);
 	text-decoration: none;
 	color: var(--text-color, #9b2226);
 	background-color: var(--light-red, white);
