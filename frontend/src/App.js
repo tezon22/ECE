@@ -28,6 +28,7 @@ import ProfileScreen from './components/ProfileScreen';
 import Mainpage from './components/Pdf/Mainpage';
 import Download from './components/Pdf/Download';
 import Settings from './components/Settings/Settings';
+import DarkModeButton from './components/DarkModeButton';
 
 function App() {
 	return (
@@ -66,6 +67,7 @@ function App() {
 				</div>
 			</Router>
 			<ToastContainer />
+			<DarkModeButton display={'hidden'} />
 		</>
 	);
 }
