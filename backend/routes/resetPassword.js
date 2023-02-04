@@ -2,13 +2,12 @@ const express = require("express");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const bcrypt = require("bcryptjs");
-const {User} = require("../models/userModel");
+const User = require("../models/userModel");
 const Token = require("../models/tokenModel");
-const AppError = require("../utils/appError");
 const router = express.Router();
 
 
-router.patch("/resetpassword/:token", async (req, res, next) => {
+router.post("/resetpassword/:token", async (req, res, next) => {
   try {
     const schema = Joi.object({ password: Joi.string().required() });
     const { error } = schema.validate(req.body);
