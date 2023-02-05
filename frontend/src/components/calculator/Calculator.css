@@ -6,7 +6,6 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-   
 }
 .col_8, .col_7{
 	flex-basis: 50%;
@@ -47,7 +46,7 @@
 	}
 	.col_8, .col_7{
 		flex-basis: 100%;
-        text-align: center;
+    text-align: center;
 	}
 	.col_8 img{
 		width: 100%;
@@ -64,10 +63,10 @@
 }
 @media only screen and (max-width: 884px){
 		.col_7 h1{
-			font-size: 16px;
+			font-size: 19px;
 		}
 		.col_7 p{
-			font-size: 10px;
+			font-size: 14px;
 		}
 		.col_7 a{
 			font-size: 12px;
@@ -75,7 +74,5 @@
         .col_7 {
             text-align: center;
         }
-        .calculator_row {
-            flex-direction: column-reverse;
-        }
+    
 }

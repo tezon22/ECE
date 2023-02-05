@@ -64,9 +64,20 @@
 .hamburger {
 	display: none;
 }
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1130px){
 	.right_side ul{
 		margin-right: 100px;
+	}
+}
+@media only screen and (max-width: 1053px){
+	.right_side ul{
+		margin-right: 2px;
+	}
+	.log{
+		margin-left: 28px;
+	}
+	.sign{
+		margin-left: 28px;
 	}
 }
 @media only screen and (max-width: 884px){
