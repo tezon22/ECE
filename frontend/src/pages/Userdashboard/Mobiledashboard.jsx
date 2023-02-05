@@ -61,29 +61,29 @@ const Mobiledashboard = () => {
 				<div>
 					{click ? (
 						<>
-							<div className='mt-[6rem] ml-[1rem] text-center items-center justify-center'>
+							<div className='mt-[9rem] ml-[1rem] flex flex-col gap-[7rem] text-center items-center justify-center'>
 								<Link to='/'>
 									<div className='flex gap-2'>
 										<h1>Profile</h1>
-										<FaUserCircle size={20} className='mb-[4rem]' />
+										<FaUserCircle size={20} />
 									</div>
 								</Link>
 								<Link to='/ebook'>
 									<div className='flex gap-2'>
 										<h1>PDF'S</h1>
-										<FaBook size={20} className='mb-[4rem]' />
+										<FaBook size={20} />
 									</div>
 								</Link>
 								<Link to=''>
 									<div className='flex gap-2'>
 										<h1>Video Tutorials</h1>
-										<FaVideo size={20} className='mb-[4rem]' />
+										<FaVideo size={20} />
 									</div>
 								</Link>
 								<Link to='/cgpa'>
 									<div className='flex gap-2'>
 										<h1>Calculator</h1>
-										<FaCalculator size={20} className='mb-[6rem]' />
+										<FaCalculator size={20} />
 									</div>
 								</Link>
 								<div>
@@ -190,7 +190,7 @@ const Mobiledashboard = () => {
 				<section className=' mt-[2rem] justify-center items-center '>
 					<Link
 						to=''
-						className='items-center flex gap-4 mb-8 rounded-3xl border border-none h-[127px] bg-[#E3E5EE]'
+						className='items-center flex gap-4 mb-8 rounded-3xl border border-none h-[127px] bg-[var(--light-black,_#E3E5EE)]'
 					>
 						<div>
 							<img src={Video} alt='' />
@@ -206,7 +206,7 @@ const Mobiledashboard = () => {
 
 					<Link
 						to='/ebook'
-						className=' flex gap-4 mb-8 rounded-3xl border border-none  h-[127px]  bg-[#E3E5EE]'
+						className=' flex gap-4 mb-8 rounded-3xl border border-none  h-[127px]  bg-[var(--light-black,_#E3E5EE)]'
 					>
 						<div>
 							<img src={PdfImage} alt='' />
@@ -222,7 +222,7 @@ const Mobiledashboard = () => {
 
 					<Link
 						to='/cgpa'
-						className=' flex gap-4 mb-8 rounded-3xl border border-none  h-[127px] bg-[#E3E5EE]'
+						className=' flex gap-4 mb-8 rounded-3xl border border-none  h-[127px] bg-[var(--light-black,_#E3E5EE)]'
 					>
 						<div>
 							<img src={Calculator} alt='' />
@@ -238,7 +238,7 @@ const Mobiledashboard = () => {
 
 					<Link
 						to='/timetable'
-						className=' flex gap-4 mb-8 rounded-3xl border border-none  h-[127px] bg-[#E3E5EE]'
+						className=' flex gap-4 mb-8 rounded-3xl border border-none  h-[127px] bg-[var(--light-black,_#E3E5EE)]'
 					>
 						<div>
 							<img src={Timetable} alt='' />

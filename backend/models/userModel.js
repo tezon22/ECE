@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
-      required: [true, "Please add a password"],
+      required: [true, 'Please provide a password'],
     },
     pic: {
       type: String,
@@ -24,11 +24,12 @@ const userSchema = new mongoose.Schema(
     admin: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   {
     timestamps: true,
   }
 );
 
-module.exports = mongoose.model("User", userSchema);
+
+module.exports = mongoose.model("user", userSchema);

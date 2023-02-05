@@ -1,3 +1,4 @@
+
 .e_envelope {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -40,9 +41,9 @@
 }
 .col_4 a {
 	text-decoration: none;
-	color: var(--lighter-red, #9b2226);
-	background-color: var(--root-background, white);
-	padding: 8px 60px;
+	color: var(--text-color, #9b2226);
+	background-color: var(--light-red, white);
+	padding: 8px 50px;
 	border-radius: 4px;
 	border: 1px solid #9b2226;
 	font-size: 20px;
