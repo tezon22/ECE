@@ -1,5 +1,5 @@
 import DarkModeButton from '../DarkModeButton';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom'
 
 const Settings = () => {
 	const xButton = (
