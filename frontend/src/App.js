@@ -63,6 +63,7 @@ function App() {
 						<Route exact path='/section' element={<Section />} />
 						<Route exact path='/profilescreen' element={<ProfileScreen />} />
 						<Route exact path='/mainpage' element={<Mainpage />} />
+						<Route exact path='/settings' element={<Settings />} />
 					</Routes>
 				</div>
 			</Router>

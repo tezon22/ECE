@@ -26,7 +26,8 @@ const Download = () => {
 			</div>
 			<div>
 				{pdfs.map((pdf) => {
-					return pdf.fileName  ? (
+
+					return( pdf.fileName === from) ? (
 						<div key={pdf._id}>
 							<div className='flex  items-center w-[94%] h-[120%] mx-auto rounded-xl my-5 py-2 px-4 bg-[var(--light-black,_rgb(226,232,240))] shadow-3xl md:hidden'>
 								<div className='h-[100px] rounded-full w-[35%]'>
@@ -52,7 +53,9 @@ const Download = () => {
 			</div>
 			<div className='max-[767px]:hidden grid md:grid-cols-3 lg:grid-cols-4 gap-12 w-[90%] mx-auto mt-10'>
 				{pdfs.map((pdf) => {
-					return pdf.fileName ? (
+
+
+					return (pdf.fileName === from )? (
 						<div key={pdf._id}
 							className=' flex flex-col items-center justify-between rounded-xl bg-[var(--light-black,_rgb(226,232,240))] shadow-3xl'>
 							<div className=' w-[100%] h-[10%]'>
