@@ -6,7 +6,7 @@ export default function resetpassword(email) {
     dispatch({ type: "RESET_PASSWORD_REQUEST" });
 
     return axios
-      .post("/resetpassword", { email })
+      .post("/password-reset", { email })
       .then((res) => {
         dispatch({
           type: "RESET_PASSWORD_SUCCESS",
