@@ -37,7 +37,7 @@ const UserDashboard = () => {
 					<h1 className='text-[25px] font-semibold'>Dashboard</h1>
 					<ul className='flex flex-col gap-[9rem]'>
 						<li className='flex gap-2 items-center'>
-							<Link to='/' className='text-[20px]'>
+							<Link to='/profile' className='text-[20px]'>
 								Profile
 							</Link>
 							<FaUserCircle size={20} />

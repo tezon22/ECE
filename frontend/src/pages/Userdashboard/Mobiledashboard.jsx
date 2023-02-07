@@ -62,7 +62,7 @@ const Mobiledashboard = () => {
 					{click ? (
 						<>
 							<div className='mt-[9rem] ml-[1rem] flex flex-col gap-[7rem] text-center items-center justify-center'>
-								<Link to='/'>
+								<Link to='/profile'>
 									<div className='flex gap-2'>
 										<h1>Profile</h1>
 										<FaUserCircle size={20} />
@@ -99,7 +99,7 @@ const Mobiledashboard = () => {
 					) : (
 						<>
 							<div className='mt-[6rem] leading-[12rem] mb-[5rem]'>
-								<Link to=''>
+								<Link to='/profile'>
 									<FaUserCircle size={20} className='mb-[6rem]' />
 								</Link>
 								<Link to='/ebook'>

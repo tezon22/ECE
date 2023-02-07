@@ -9,9 +9,10 @@ import Ebooks from "./components/Pdf/Pdf";
 import Cgpa from "./components/Cgpa/Cgpa";
 import Timetable from "./components/Timetable/Timetable";
 import Newscenter from "./components/Newscenter/Newscenter";
-import ChangePassword from "./components/changePassword/ChangePassword";
+import ChangePassword from "./components/changePassword/changePassword";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
+import Profile from "./components/Profile/Profile";
 import UserDashboard from "./pages/Userdashboard/UserDashboard";
 import L1 from "./components/Pdf/L1";
 import L2 from "./components/Pdf/L2";
@@ -60,6 +61,7 @@ function App() {
             <Route exact path="/email" element={<EnterEmail />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/section" element={<Section />} />
             <Route exact path="/profilescreen" element={<ProfileScreen />} />
             <Route exact path="/mainpage" element={<Mainpage />} />
