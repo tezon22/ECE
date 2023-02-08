@@ -7,10 +7,12 @@ import { AiOutlineLeft } from "react-icons/ai";
 import Navbar from "../Navbar/Navbar";
 
 const Result = () => {
-  return(
-    <p className="py-4">Your message has been successfully sent. we will contact you soon</p>
-  )
-}
+  return (
+    <p className="py-4">
+      Your message has been successfully sent. we will contact you soon
+    </p>
+  );
+};
 
 const Contact = () => {
   const form = useRef();
@@ -56,57 +58,59 @@ const Contact = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-16">
           <div className="col-span-1">
-              <p className="text-center text-2xl md:text-3xl text-[var(--lighter-red,_rgb(127,29,29))] font-semibold pb-6">
-                Reach out to us today.
-              </p>
-              <form
-                ref={form}
-                onSubmit={sendEmail}
-                className="mb-20 pt-3 pb-16 w-[90%] text-[var(--lighter-blue,_#29335C)] mx-auto"
-                action=""
-                method="post"
-              >
-                <div className="w-full">
-                  <input
-                    className="pl-3 py-[15px] text-2xl w-full font-bold border-b-2 border-[var(--lighter-blue,_#29335C)] placeholder:text-[var(--lighter-blue,_#29335C)] my-[27px]"
-                    type="text"
-                    placeholder="Full Name"
-                    required
-    								name="name"
-                  />
-                </div>
-                <div className="w-full">
-                  <input
-                    className="pl-3 py-[15px] text-2xl w-full font-bold border-b-2 border-[var(--lighter-blue,_#29335C)] placeholder:text-[var(--lighter-blue,_#29335C)] mb-[27px]"
-                    type="email"
-                    placeholder="Email"
-                    required
-    								name="email"
-                  />
-                </div>
-                <div className="w-full">
-                  <textarea
-                    className="pl-3 py-[15px] text-2xl w-full font-bold border-b-2 border-[var(--lighter-blue,_#29335C)] bg-[var(--textarea-background)] placeholder:text-[var(--lighter-blue,_#29335C)] mb-[27px]"
-                    type="text"
-                    rows="5"
-                    cols="10"
-                    placeholder="Comment"
-    								name="message"
-										required
-                  ></textarea>
-                </div>
-                <div className="my-5 text-center">
-                  <button className="py-3 bg-red-900 w-[70%] mx-auto inline-block text-white text-2xl">
-                    SUBMIT
-                  </button>
-    							<div className="row">
-                  {result ? <Result/> : null}
-                </div>
-                </div>
-              </form>
+            <p className="text-center text-2xl md:text-3xl text-[var(--lighter-red,_rgb(127,29,29))] font-semibold pb-6">
+              Reach out to us today.
+            </p>
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="mb-20 pt-3 pb-16 w-[90%] text-[var(--lighter-blue,_#29335C)] mx-auto"
+              action=""
+              method="post"
+            >
+              <div className="w-full">
+                <input
+                  className="pl-3 py-[15px] text-2xl w-full font-bold border-b-2 border-[var(--lighter-blue,_#29335C)] placeholder:text-[var(--lighter-blue,_#29335C)] my-[27px]"
+                  type="text"
+                  placeholder="Full Name"
+                  required
+                  name="name"
+                />
+              </div>
+              <div className="w-full">
+                <input
+                  className="pl-3 py-[15px] text-2xl w-full font-bold border-b-2 border-[var(--lighter-blue,_#29335C)] placeholder:text-[var(--lighter-blue,_#29335C)] mb-[27px]"
+                  type="email"
+                  placeholder="Email"
+                  required
+                  name="email"
+                />
+              </div>
+              <div className="w-full">
+                <textarea
+                  className="pl-3 py-[15px] text-2xl w-full font-bold border-b-2 border-[var(--lighter-blue,_#29335C)] bg-[var(--textarea-background)] placeholder:text-[var(--lighter-blue,_#29335C)] mb-[27px]"
+                  type="text"
+                  rows="5"
+                  cols="10"
+                  placeholder="Comment"
+                  name="message"
+                  required
+                ></textarea>
+              </div>
+              <div className="my-5 text-center">
+                <button className="py-4 bg-red w-[70%] mx-auto inline-block text-white text-2xl">
+                  SUBMIT
+                </button>
+                <div className="row">{result ? <Result /> : null}</div>
+              </div>
+            </form>
           </div>
           <div className="md:mt-24 md:mb-40">
-              <img className="w-full h-full" src={ContactImage} alt="conatact_image"/>
+            <img
+              className="w-full h-full"
+              src={ContactImage}
+              alt="conatact_image"
+            />
           </div>
         </div>
       </div>

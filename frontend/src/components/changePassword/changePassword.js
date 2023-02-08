@@ -1,9 +1,4 @@
-import React, {useState, useEffect} from 'react'
-import {useDispatch, useSelector} from 'react-redux'
-import {useNavigate} from 'react-router-dom'
-import { toast } from 'react-toastify'
-import { resetpassword } from '../../features/reset/resetSlice'
-import Spinner from '../Spinner'
+import React, {useState} from 'react'
 import './changePassword.css'
 import {AiFillEye, AiFillEyeInvisible, AiOutlineLeft} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
@@ -19,7 +14,7 @@ const ChangePassword = () => {
 		password2: '',
 	})
 
-	const {email, password, password2} = form
+	const {password, password2} = form
 
 	
 	const Onchange = (e) =>{
@@ -27,34 +22,9 @@ const ChangePassword = () => {
 			...prevState,
 			[e.target.name] : e.target.value
 		}))
-	}
-	const {loading, changed, failure, message} = useSelector((state) => state.reset)
-	const dispatch = useDispatch()
-	const navigate = useNavigate()
-
-	useEffect(() =>{
-		if(changed){
-			toast.success(<h1>password, successfully changed to {password}</h1>)
-			navigate('/login')
-		}
-		if(failure){
-			toast.error(message.message)
-		}
-
-	}, [changed, failure, message, password, navigate])
-
-
-	const submit = (e) => {
-		e.preventDefault()
-		const data = {email, password}
-		dispatch(resetpassword(data))
-	}
-	if (loading) {
-		return <Spinner />
-  	}
-		
+	}	
   return (
-    <div className="mt-7 w-[90%] mx-auto md:w-[80%]">
+    <div className="mt-7 w-[90%] mx-auto md:w-[80%] ">
       <div className='flex text-[#29335C] mt-20 mb-5 mx-4'>
 					<Link className='w-[5%] md:text-3xl text-3xl font-bold' to='/login'>
 						<AiOutlineLeft />
@@ -62,8 +32,7 @@ const ChangePassword = () => {
 					<div className='w-[95%] text-center text-3xl font-bold'>Change Password</div>
 			</div>
       <div className="form md:w-[50%] mx-auto" >
-      	<form method="put" action=" " onSubmit={submit}>
-	        	<input type="email" name="email" value={email} placeholder="E-mail" onChange={Onchange} required /><br/>
+      	<form method="put" action=" " >
 	        	<div className="password">  
 						<input type={show? "text" : "password"} value={password} name="password" onChange={Onchange} placeholder="New password" required/>
 	              		<span onClick={change}>{show? <AiFillEyeInvisible size={20} /> : <AiFillEye size={20}/>}</span>
