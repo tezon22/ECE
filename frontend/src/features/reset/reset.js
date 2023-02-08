@@ -1,23 +1,12 @@
-// import axios from 'axios'
+import axios from 'axios'
 
+const API_URL = '/api/password-reset/:userId/:token'
 
-// // Register user
-// export const resetpassword = (email) => (dispatch) => {
-//   dispatch({ type: "RESET_PASSWORD_REQUEST" });
+// Register user
+export const resetService  = async (data) => {
+  const response = await axios.post(API_URL, data)
 
-//   return axios
-//   .post("/resetpassword", { email })
-//   .then((res) => {
-//     dispatch({
-//       type: "RESET_PASSWORD_SUCCESS",
-//       payload: res.data.message,
-//     });
-//   })
-//   .catch((err) => {
-//     dispatch({
-//       type: "RESET_PASSWORD_FAILURE",
-//       payload: err.response.data.message,
-//     });
-//   })
-// }
+  return response.data
+}
+
 

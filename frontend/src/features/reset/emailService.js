@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = '/api/ece/email'
+const API_URL = '/api/password-reset'
 
 // Register user
 export const emailService = async (olddata) => {
