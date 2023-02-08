@@ -1,22 +1,43 @@
-import React, { useState } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { toast } from "react-toastify";
-// import { useNavigate } from "react-router-dom";
-// import { getEmail } from "../../features/reset/emailRedux";
-// import Spinner from "../Spinner";
-import resetpassword  from "../../features/actions/Resetpassword";
-import { Link } from "react-router-dom";
-import { connect } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { getEmail } from "../../features/reset/emailRedux";
+import Spinner from "../Spinner";
+import { Link } from "react-router-dom"
 import { AiOutlineLeft } from "react-icons/ai";
 
-const EnterEmail = ({ resetpassword, resetpasswordData = {} }) => {
+const EnterEmail = () => {
   const [email, setEmail] = useState("");
-  const { loading, message, error } = resetpasswordData;
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    resetpassword(email);
+  const { gettingE, gottenE, lostE, message } = useSelector(
+    (state) => state.email
+  );
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (gottenE) {
+      toast.success('Check your Email for the reset password link')
+      navigate("/home");
+    }
+  }, [gottenE, navigate]);
+
+  const dispatch = useDispatch();
+
+  const data = { email };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (lostE) {
+      toast.error(message);
+    }
+    dispatch(getEmail(data));
+    console.log(data);
   };
+
+  if (gettingE) {
+    return <Spinner />;
+  }
+
 
   return (
     <div className="mt-7 w-[90%] mx-auto md:w-[80%]">
@@ -41,17 +62,10 @@ const EnterEmail = ({ resetpassword, resetpasswordData = {} }) => {
           />
           <br />
           <button type="submit">Send Reset Passworrd Link</button>
-          {loading && <p>Loading...</p>}
-          {message && <p>{message}</p>}
-          {error && <p>{error}</p>}
         </form>
       </div>
     </div>
   );
 };
 
-const mapStateToProps = (state) => ({
-  resetpasswordData: state.resetpassword,
-});
-
-export default connect(mapStateToProps, { resetpassword })(EnterEmail);
+export default EnterEmail
