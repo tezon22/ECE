@@ -10,7 +10,7 @@ const Download = () => {
 	const books = localStorage.getItem('pdfs');
 
 	const pdfs = JSON.parse(books);
-	console.log(pdfs);
+	console.log(typeof pdfs);
 	const end = location.pathname[11];
 	console.log(from);
 	return (
