@@ -1,5 +1,6 @@
 const express = require("express");
 const sendEmail = require("./../utils/email");
+const bcrypt = require('bcryptjs')
 const crypto = require("crypto");
 const User = require("../models/userModel");
 const Token = require("../models/tokenModel");
@@ -49,14 +50,19 @@ router.post("/:userId/:token", async (req, res) => {
     });
     if (!token) return res.status(400).send("Invalid link or expired");
 
-    user.password = req.body.password;
+    const {password } =  req.body
 
+  const salt = await bcrypt.genSalt(10)
+  const hashedPassword = await bcrypt.hash(password, salt)
+
+     user.password = hashedPassword;
+    
     await user.save();
     await token.delete();
 
-    res.send("password reset sucessfully.");
+    res.send(`password reset sucessfully.`);
   } catch (error) {
-    res.send("An error occured");
+    res.send(error);
     console.log(error);
   }
 });
