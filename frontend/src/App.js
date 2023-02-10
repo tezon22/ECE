@@ -57,7 +57,7 @@ function App() {
             <Route exact path="/pdf/:id" element={<Download />} />
             <Route exact path="/news" element={<Newscenter />} />
             <Route exact path="/settings" element={<Settings />} />
-            <Route exact path="/password-reset/:id/:id" element={<ChangePassword />} />
+            <Route exact path="/password-reset/:id/:token" element={<ChangePassword />} />
             <Route exact path="/email" element={<EnterEmail />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/contact" element={<Contact />} />
