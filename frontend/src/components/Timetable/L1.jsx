@@ -9,28 +9,12 @@ const L1 = () => {
 				<Link className='w-1/12 text-2xl md:text-4xl font-bold' to='/timetable'>
 					<AiOutlineLeft />
 				</Link>
-				<div className='w-11/12 text-center text-[17px] md:text-2xl font-bold mt-2'>100 Level</div>
+				<div className='w-11/12 text-center text-[22px] md:text-[27px] font-bold mt-2'>100 Level</div>
 			</div>
-			<Link to=''>
-				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-12 md:py-16 my-7 md:my-14 mx-10 md:mx-20'>
-					First Semester Lectures
-				</div>
-			</Link>
-			<Link to=''>
-				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-12 md:py-16 my-7 md:my-14 mx-10 md:mx-20'>
-					First Semester Exams
-				</div>
-			</Link>
-			<Link to=''>
-				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-12 md:py-16 my-7 md:my-14 mx-10 md:mx-20'>
-					Second Semester Lectures
-				</div>
-			</Link>
-			<Link to=''>
-				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-12 md:py-16 my-7 md:my-14 mx-10 md:mx-20'>
-					Second Semester Exams
-				</div>
-			</Link>
+            <p className='text-center text-[17px] md:text-[20px] mt-10 md:mt-16 font-bold'>Lecture TimeTable</p>
+            <div className='rounded-2xl md:rounded-3xl md:w-[80%] mt-5 mb-10 md:mb-16 w-[90%] mx-auto py-6'>
+                <img className="w-full" src='' alt="timetable1_img" />
+            </div>
 		</div>
 	);
 };
