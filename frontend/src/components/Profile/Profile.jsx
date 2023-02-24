@@ -64,7 +64,7 @@ const Profile = () => {
                                   <div className="mb-24 flex flex-col gap-3">
                                         <p className="text-3xl md:text-4xl font-semibold">Password</p>
                                         <p>
-                                              <Link to="" className="text-2xl md:text-3xl text-[var(--lighter-red,_rgb(127,29,29))]">Change Password</Link>
+                                              <Link to="/email" className="text-2xl md:text-3xl text-[var(--lighter-red,_rgb(127,29,29))]">Change Password</Link>
                                         </p>
                                   </div>
                                   <div className="my-5 max-[767px]:w-[80%] mx-auto max-[767px]:text-center">
