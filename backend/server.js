@@ -3,6 +3,7 @@ const express = require('express');
 const downloadRoute = require('./routes/downloads');
 const uploadRoute = require('./routes/upload');
 const forgotPasswordRoute = require('./routes/forgotPassword');
+const profilepicsRoute = require('./routes/profilepicsRoute');
 const dotenv = require('dotenv').config();
 const port = process.env.PORT || 5000;
 const connectDB = require('./config/db');
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/api/upload', uploadRoute);
 app.use('/api/password-reset', forgotPasswordRoute);
+app.use('/api/uploadpics', profilepicsRoute);
 
 
 // pdf api- both getting all
