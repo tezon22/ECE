@@ -27,6 +27,7 @@
     "mongoose": "^6.5.0",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.1",
+    "react-overlays": "^5.2.1",
     "request": "^2.88.2",
     "validator": "^13.7.0"
   },
