@@ -1,26 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineLeft } from "react-icons/ai";
-import { FaUserCircle } from 'react-icons/fa';
-import Modal from "react-overlays/Modal"
+import { FaUserCircle } from "react-icons/fa";
 import Navbar from "../Navbar/Navbar";
-import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { logout, reset } from '../../features/auth/authSlice';
-import UpdateForm from "./UpdateForm";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { logout, reset } from "../../features/auth/authSlice";
 
 const Profile = () => {
-      const navigate = useNavigate();
-      const dispatch = useDispatch();
-      const { user } = useSelector((state) => state.auth);
-      const [showModal, setShowModal] = useState(false);
-
-      const renderBackdrop = (props) => <div className="fixed z-[1040] inset-0 bg-[#555] opacity-50" {...props} />
-
-      let handleClose = () => setShowModal(false);
-      let handleSuccess = () => {
-        console.log("success");
-      }
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.auth);
 
       const onLogout = () => {
         		dispatch(logout());
