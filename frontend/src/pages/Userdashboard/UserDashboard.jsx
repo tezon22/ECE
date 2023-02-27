@@ -9,6 +9,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { reset } from '../../features/auth/authSlice';
 import Mobiledashboard from './Mobiledashboard';
+import Avatar from '../../components/avatar/Avatar';
 
 const UserDashboard = () => {
 	const navigate = useNavigate();
@@ -79,9 +80,7 @@ const UserDashboard = () => {
 								Hello,{user && user.name}{' '}
 							</h1>
 						</div>
-						<div>
-							<FaUserCircle size={50} />
-						</div>
+						<Avatar/>
 					</div>
 
 					<section className='grid-section self-center mt-[12rem] text-[var(--lighter-blue,_rgb(41,51,92))]'>

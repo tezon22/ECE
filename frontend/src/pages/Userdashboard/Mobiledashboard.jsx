@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 import './UserDashboard.css';
 
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Avatar from '../../components/avatar/Avatar';
 
 const Mobiledashboard = () => {
 	const [nav, setNav] = useState(false);
@@ -181,10 +182,7 @@ const Mobiledashboard = () => {
 							Hello,{user && user.name}{' '}
 						</h1>
 					</div>
-
-					<div>
-						<FaUserCircle size={35} />
-					</div>
+					<Avatar/>
 				</div>
 
 				<section className=' mt-[2rem] justify-center items-center '>

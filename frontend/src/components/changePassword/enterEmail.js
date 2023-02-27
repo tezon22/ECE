@@ -31,7 +31,6 @@ const EnterEmail = () => {
       toast.error(message);
     }
     dispatch(getEmail(data));
-    console.log(data);
   };
 
   if (gettingE) {

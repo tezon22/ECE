@@ -1,18 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
 import Navbar from '../Navbar/Navbar';
-import { useDispatch, useSelector } from 'react-redux';
-import { getPdf } from '../../features/pdf/Getpdfs';
+
 
 const Pdf = () => {
-	const dispatch = useDispatch();
-	useEffect(() => {
-		dispatch(getPdf());
-	}, [dispatch]);
-
-	const { message } = useSelector((state) => state.pdfs);
-	localStorage.setItem('pdfs', JSON.stringify(message));
+	
+	
 	const levels = [
 		{ level: '100 level', link: '/L1pdf', availability: '' },
 		{ level: '200 level', link: '/L2pdf', availability: '' },
@@ -33,6 +27,7 @@ const Pdf = () => {
 		);
 	});
 
+	
 	return (
 		<div>
 			<Navbar />
