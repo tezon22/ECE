@@ -8,6 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { logout, reset } from '../../features/auth/authSlice';
 import UpdateForm from "./UpdateForm";
+import Avatar from "../avatar/Avatar";
 
 const Profile = () => {
       const navigate = useNavigate();
@@ -43,13 +44,7 @@ const Profile = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-7 md:my-20 py-5 text-[var(--lighter-blue,_#29335c)]">
                       
                             {/* This is the profile picture div*/}
-                            <div className="text-center">
-                                  <div className="text-center">
-                                        <div className="text-center bg-slate-300 rounded-full mx-auto inline-block p-3 md:p-16">
-                                              <FaUserCircle size={55} />
-                                        </div>
-                                  </div>
-                            </div>
+                            <Avatar/>
                             
                             {/*This is the user info edit page*/}
                             <div className="max-[767px]:text-center max-[767px]:mt-7">

@@ -17,6 +17,7 @@ const userSchema = new mongoose.Schema(
     },
     pic: {
       type: String,
+      default: null
     },
     admin: {
       type: Boolean,
