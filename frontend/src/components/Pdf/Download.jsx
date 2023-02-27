@@ -6,22 +6,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getPdf } from '../../features/pdf/Getpdfs';
 import Spinner from '../Spinner';
 const Download = () => {
+	const dispatch = useDispatch();
+	useEffect(() => {
+		dispatch(getPdf());
+		
+	}, [dispatch]);
 	const location = useLocation();
 	const { from } = location.state;
 	const { message, loading } = useSelector((state) => state.pdfs);
 	const end = location.pathname[11];
 	console.log(from);
-	const dispatch = useDispatch();
 
-	useEffect(() => {
-		dispatch(getPdf());
-		
-	}, [dispatch]);
 
 	if(loading){
 		return <Spinner/>
 	}
-	console.log(typeof message)
+	console.log(message)
 	return (
 		<div className='text-[var(--lighter-blue,_#29335c)]'>
 			<div className='flex mt-5 mb-7 mx-4'>
@@ -90,7 +90,7 @@ const Download = () => {
 				})}
 			</div>
 		</div>
-	);
+	 );
 };
 
 export default Download;
