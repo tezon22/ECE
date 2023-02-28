@@ -13,15 +13,14 @@ const Avatar = () => {
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(getImages(id))
-   
-  }, [id,dispatch])
-  setTimeout(()=>{
-    setImage(pic.message)
-  }, 3000)
+    setTimeout(()=>{
+      setImage(pic.message)
+    }, 3000)
+  }, [])
   if(loading){
     return <Spinner/>
   }
-console.log(image)
+console.log(id)
   return (
     <div className="text-center">
     <div className="text-center">
