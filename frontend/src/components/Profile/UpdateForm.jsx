@@ -21,19 +21,18 @@ const UpdateForm = () => {
             body,id
           }
           dispatch(uploadImages(data))
+          toast.success()
         }else{
           toast('Select an image')
         }
       }
-      useEffect(() => {
-        if(changed){
-          toast.success('Picture has been successfully uploaded')
-         }
-         if(failed){
-          toast.success('Picture was not uploaded, please try again')
-         }
-      }, [changed, failed])
-      
+     
+      if(failed){
+        toast.success('Picture was not uploaded, please try again')
+       }
+      if(changed){
+        toast.success('Picture has been successfully uploaded')
+       }
 
       if(loading){
         return <Spinner/>
@@ -61,12 +60,12 @@ const UpdateForm = () => {
             </form>
         </div>
         <div className="w-[85%] mb-8 mx-auto">
-                                    <div className="text-right inline-block w-[50%]">
-                                        <button onClick={(e) => onSubmit()} className="bg-[var(--lighter-blue,_#29335c)] text-white text-center py-3 px-[20%] rounded-lg ">
-                                            Update
-                                        </button>
-                                    </div>
-                                </div>
+          <div className="right-[10%] bottom-8 absolute w-[50%] text-right">
+              <button onClick={(e) => onSubmit()} className="bg-[var(--lighter-blue,_#29335c)] text-white text-center py-3 px-[20%] rounded-lg ">
+                  Update
+              </button>
+          </div>
+        </div>
         </>
         
     );

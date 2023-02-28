@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineLeft } from "react-icons/ai";
-import { FaUserCircle } from 'react-icons/fa';
 import Modal from "react-overlays/Modal"
 import Navbar from "../Navbar/Navbar";
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,9 +18,6 @@ const Profile = () => {
       const renderBackdrop = (props) => <div className="fixed z-[1040] inset-0 bg-[#555] opacity-50" {...props} />
 
       let handleClose = () => setShowModal(false);
-      let handleSuccess = () => {
-        console.log("success");
-      }
 
       const onLogout = () => {
         		dispatch(logout());
@@ -86,11 +82,11 @@ const Profile = () => {
                                             Cancel
                                         </button>
                                     </div>
-                                    <div className="text-right inline-block w-[50%]">
+                                    {/* <div className="text-right inline-block w-[50%]">
                                         <button onClick={handleSuccess} className="bg-[var(--lighter-blue,_#29335c)] text-white text-center py-3 px-[20%] rounded-lg ">
                                             Update
                                         </button>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                             
