@@ -19,7 +19,8 @@ const initialState = {
     loading:false,
     changed: false,
     failed: false,
-    message: ''
+    message: '',
+    image: null,
 }
 export const imageSlice=createSlice({
     name: 'uploadImage',

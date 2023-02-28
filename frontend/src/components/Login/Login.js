@@ -56,7 +56,6 @@ const Login = () => {
 		};
 
 		dispatch(login(userData));
-		console.log(userData);
 	};
 
 	if (isLoading) {

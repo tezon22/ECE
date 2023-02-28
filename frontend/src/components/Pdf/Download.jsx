@@ -1,16 +1,12 @@
-import React, { useEffect }  from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { AiOutlineLeft } from 'react-icons/ai';
-import { useDispatch, useSelector } from 'react-redux';
-import { getPdf } from '../../features/pdf/Getpdfs';
+import { useSelector } from 'react-redux';
 import Spinner from '../Spinner';
 const Download = () => {
-	const dispatch = useDispatch();
-	useEffect(() => {
-		dispatch(getPdf());
-		
-	}, [dispatch]);
+	
+
 	const location = useLocation();
 	const { from } = location.state;
 	const { message, loading } = useSelector((state) => state.pdfs);

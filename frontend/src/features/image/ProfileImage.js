@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice  } from "@reduxjs/toolkit";
 import {getImage}  from './imageService'
 
-export const getImages = createAsyncThunk("pdf/getImages", async(data, thunkAPI) =>{
+export const getImages = createAsyncThunk("image/getImages", async(data, thunkAPI) =>{
     try {
         return  getImage(data)
       } catch (error) {
@@ -23,7 +23,7 @@ const initialState = {
     message: ''
 }
 export const imageSlice=createSlice({
-    name: 'pdf',
+    name: 'image',
     initialState, 
     extraReducers:{
         [getImages.pending] : (state) =>{
