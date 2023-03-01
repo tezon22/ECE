@@ -1,26 +1,30 @@
 import React, {useEffect, useState} from 'react'
 import { FaUserCircle } from 'react-icons/fa'
 import { useSelector, useDispatch } from 'react-redux'
-import { getImages } from '../../features/image/ProfileImage'
-import Spinner from '../Spinner'
-
+import axios from 'axios'
 
 const Avatar = () => {
+  const API_URL = 'http://localhost:5000/api/uploadpics/'
   const {user} = useSelector((state=> state.auth))
-  const {pic, loading} = useSelector((state)=> state.image)
   const[ image, setImage ]= useState('')
-  const id = user._id
-  const dispatch = useDispatch()
+  
   useEffect(()=>{
-    dispatch(getImages(id))
-    setTimeout(()=>{
-      setImage(pic.message)
-    }, 3000)
+   
+   if(user){
+    const id = user._id
+     const getImage = async (id) => {
+       const response = await axios.get(API_URL + id)
+       
+       setImage(response.data.message)
+      }
+      getImage(id)
+   }else{
+    setImage('')
+   }
   }, [])
-  if(loading){
-    return <Spinner/>
-  }
-console.log(id)
+
+ 
+
   return (
     <div className="text-center">
     <div className="text-center">
