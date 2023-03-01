@@ -8,8 +8,8 @@ const Avatar = () => {
   return (
     <div className="text-center">
     <div className="text-center">
-      {  pic == null? <div className="text-center bg-slate-300 rounded-full mx-auto inline-block p-3 md:p-16">
-              <FaUserCircle className='text-[35px] md:text-[55px]' />
+      {  pic === null ? <div className="text-center bg-slate-300 rounded-full mx-auto inline-block p-3 md:p-16">
+              <FaUserCircle className='text-[35px] md:text-[55px] mx-auto' />
         </div>:
          <img src={pic} alt='Profile' className='rounded-[50%]' width={70}/>
         }
