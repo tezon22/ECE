@@ -6,7 +6,7 @@ import Navbar from '../Navbar/Navbar';
 
 const L1 = () => {
 	const courses1 = ['MAT 101', 'FEG 101', 'PHY 101', 'ICH 101', 'ICH 111'];
-	const courses2 = ['MAT 102', 'FEG 102', 'PHY 102', 'ICH 102', 'ICH 112', 'FEG 103'];
+	const courses2 = ['MAT 102', 'FEG 102', 'PHY 102', 'ICH 102', 'FEG 103'];
 	return (
 		<div>
 			<Navbar />
