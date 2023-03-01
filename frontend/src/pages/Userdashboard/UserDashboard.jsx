@@ -11,6 +11,7 @@ import { reset } from '../../features/auth/authSlice';
 import Mobiledashboard from './Mobiledashboard';
 import Avatar from '../../components/avatar/Avatar';
 
+
 const UserDashboard = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -19,7 +20,7 @@ const UserDashboard = () => {
 
 	useEffect(() => {
 		dispatch(reset());
-
+	
 		if (user == null) {
 			navigate('/home');
 		}

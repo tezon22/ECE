@@ -7,6 +7,7 @@ const UpdateForm = () => {
   const [pic, setPic] = useState(null);
 
   const { user } = useSelector((state) => state.auth);
+<<<<<<< HEAD
   const { name, email } = user;
   const { loading, changed, failed } = useSelector(
     (state) => state.uploadimages
@@ -36,6 +37,34 @@ const UpdateForm = () => {
       toast.success("Picture was not uploaded, please try again");
     }
   }, [changed, failed]);
+=======
+  const {name, email} = user
+  const {  loading, changed, failed } = useSelector((state) => state.uploadimages);
+  const dispatch = useDispatch()
+      const id = user._id
+      const onSubmit = () =>{
+        if (pic.type === "image/jpeg" || pic.type === "image/png") {
+          const body = new FormData();
+          body.append("file", pic);
+          body.append("upload_preset", "waqeqob4");
+          body.append("cloud_name", "dscbiu2km");
+          const data ={
+            body,id
+          }
+          dispatch(uploadImages(data))
+          toast.success()
+        }else{
+          toast('Select an image')
+        }
+      }
+     
+      if(failed){
+        toast.success('Picture was not uploaded, please try again')
+       }
+      if(changed){
+        toast.success('Picture has been successfully uploaded')
+       }
+>>>>>>> c5be719910d2aebf29b41336476543648609ce62
 
   if (loading) {
     return <Spinner />;
@@ -87,9 +116,22 @@ const UpdateForm = () => {
             Update
           </button>
         </div>
+<<<<<<< HEAD
       </div>
     </>
   );
+=======
+        <div className="w-[85%] mb-8 mx-auto">
+          <div className="right-[10%] bottom-8 absolute w-[50%] text-right">
+              <button onClick={(e) => onSubmit()} className="bg-[var(--lighter-blue,_#29335c)] text-white text-center py-3 px-[20%] rounded-lg ">
+                  Update
+              </button>
+          </div>
+        </div>
+        </>
+        
+    );
+>>>>>>> c5be719910d2aebf29b41336476543648609ce62
 };
 
 export default UpdateForm;
