@@ -4,9 +4,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import axios from 'axios'
 
 const Avatar = () => {
-  const API_URL = 'http://localhost:5000/api/uploadpics/'
   const {user} = useSelector((state=> state.auth))
   const[ image, setImage ]= useState('')
+  const API_URL = 'api/uploadpics/'
   
   useEffect(()=>{
    
