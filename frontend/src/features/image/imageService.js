@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5000/api/uploadpics/'
+const API_URL = 'api/uploadpics/'
 
 // Get profile image
 export const getImage = async (id) => {
