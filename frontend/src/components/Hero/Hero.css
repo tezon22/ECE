@@ -34,6 +34,7 @@
 	background: var(--dark-green, #f4fffd);
 	text-align: center;
 	max-width: 450px;
+    margin-inline: auto;
 	padding: 20px;
 	color: var(--lighter-blue, #29335c);
 	font-family: 'Aeros', sans-serif;
