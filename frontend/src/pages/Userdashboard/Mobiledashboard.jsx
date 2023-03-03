@@ -9,38 +9,39 @@ import Timetable from './images/image 22.png';
 import Calculator from './images/image 21.png';
 import PdfImage from './images/image 20.png';
 
-import { useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
-import { logout, reset } from '../../features/auth/authSlice';
+// import { useNavigate } from 'react-router-dom';
+import { useSelector} from 'react-redux';
+// import { logout, reset } from '../../features/auth/authSlice';
 import { Link } from 'react-router-dom';
 import './UserDashboard.css';
 
-import { FaBars, FaTimes } from 'react-icons/fa';
+// import { FaBars, FaTimes } from 'react-icons/fa';
+import Avatar from '../../components/avatar/Avatar';
 
 const Mobiledashboard = () => {
-	const [nav, setNav] = useState(false);
+	// const [nav, setNav] = useState(false);
 	const [click, setClick] = useState(false);
 
-	const Toggle = () => {
-		setNav(!nav);
-	};
+	// const Toggle = () => {
+	// 	setNav(!nav);
+	// };
 	const Clicked = () => {
 		setClick(!click);
 	};
 
-	const navigate = useNavigate();
-	const dispatch = useDispatch();
+	// const navigate = useNavigate();
+	// const dispatch = useDispatch();
 	const { user } = useSelector((state) => state.auth);
 
-	const onLogout = () => {
-		dispatch(logout());
-		dispatch(reset());
-		navigate('/home');
-	};
+	// const onLogout = () => {
+	// 	dispatch(logout());
+	// 	dispatch(reset());
+	// 	navigate('/home');
+	// };
 	const date = Date.now();
 
 	return (
-		<div className='md:hidden flex'>
+		<div className='lg:hidden flex'>
 			<div
 				className={`${
 					click
@@ -62,7 +63,7 @@ const Mobiledashboard = () => {
 					{click ? (
 						<>
 							<div className='mt-[9rem] ml-[1rem] flex flex-col gap-[7rem] text-center items-center justify-center'>
-								<Link to='/'>
+								<Link to='/profile'>
 									<div className='flex gap-2'>
 										<h1>Profile</h1>
 										<FaUserCircle size={20} />
@@ -99,7 +100,7 @@ const Mobiledashboard = () => {
 					) : (
 						<>
 							<div className='mt-[6rem] leading-[12rem] mb-[5rem]'>
-								<Link to=''>
+								<Link to='/profile'>
 									<FaUserCircle size={20} className='mb-[6rem]' />
 								</Link>
 								<Link to='/ebook'>
@@ -123,7 +124,7 @@ const Mobiledashboard = () => {
 			</div>
 
 			<div className=' w-[100%] mt-8 px-2 '>
-				<div onClick={Toggle} className='hamburge mt-6'>
+				{/* <div onClick={Toggle} className=' hamburge mt-6'>
 					{nav ? <FaTimes size={20} /> : <FaBars size={20} />}
 				</div>
 				<div className={nav ? 'nav-men right-1' : 'hidden'}>
@@ -171,7 +172,7 @@ const Mobiledashboard = () => {
 							</>
 						)}
 					</div>
-				</div>
+				</div> */}
 				<div className='flex gap-8 justify-between'>
 					<div className='text-center ml-[6rem]'>
 						<p className='text-[var(--lighter-blue,_#29335c)]/40 font-medium text-[12px]'>
@@ -181,10 +182,7 @@ const Mobiledashboard = () => {
 							Hello,{user && user.name}{' '}
 						</h1>
 					</div>
-
-					<div>
-						<FaUserCircle size={35} />
-					</div>
+					<Avatar/>
 				</div>
 
 				<section className=' mt-[2rem] justify-center items-center '>

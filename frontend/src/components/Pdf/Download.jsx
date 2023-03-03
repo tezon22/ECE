@@ -2,17 +2,22 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { AiOutlineLeft } from 'react-icons/ai';
-
+import { useSelector } from 'react-redux';
+import Spinner from '../Spinner';
 const Download = () => {
+	
+
 	const location = useLocation();
 	const { from } = location.state;
-
-	const books = localStorage.getItem('pdfs');
-
-	const pdfs = JSON.parse(books);
-	console.log(pdfs);
+	const { message, loading } = useSelector((state) => state.pdfs);
 	const end = location.pathname[11];
 	console.log(from);
+
+
+	if(loading){
+		return <Spinner/>
+	}
+	console.log(message)
 	return (
 		<div className='text-[var(--lighter-blue,_#29335c)]'>
 			<div className='flex mt-5 mb-7 mx-4'>
@@ -25,7 +30,7 @@ const Download = () => {
 				<div className='w-11/12 text-center md:text-2xl font-bold mt-2'>{from} PDFs</div>
 			</div>
 			<div>
-				{pdfs.map((pdf) => {
+				{message.map((pdf) => {
 
 					return( pdf.fileName === from) ? (
 						<div key={pdf._id}>
@@ -52,7 +57,7 @@ const Download = () => {
 				})}
 			</div>
 			<div className='max-[767px]:hidden grid md:grid-cols-3 lg:grid-cols-4 gap-12 w-[90%] mx-auto mt-10'>
-				{pdfs.map((pdf) => {
+				{message.map((pdf) => {
 
 
 					return (pdf.fileName === from )? (
@@ -81,7 +86,7 @@ const Download = () => {
 				})}
 			</div>
 		</div>
-	);
+	 );
 };
 
 export default Download;

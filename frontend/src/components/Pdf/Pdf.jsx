@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect }   from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
 import Navbar from '../Navbar/Navbar';
-import { useDispatch, useSelector } from 'react-redux';
 import { getPdf } from '../../features/pdf/Getpdfs';
+import { useDispatch, useSelector } from 'react-redux';
+import Spinner from '../Spinner';
 
 const Pdf = () => {
 	const dispatch = useDispatch();
 	useEffect(() => {
 		dispatch(getPdf());
+		
 	}, [dispatch]);
-
-	const { message } = useSelector((state) => state.pdfs);
-	localStorage.setItem('pdfs', JSON.stringify(message));
+	const { loading } = useSelector((state) => state.pdfs);
 	const levels = [
 		{ level: '100 level', link: '/L1pdf', availability: '' },
 		{ level: '200 level', link: '/L2pdf', availability: '' },
@@ -23,6 +23,10 @@ const Pdf = () => {
 
 	const renderedList = levels.map((items) => {
 		const { level, link, availability } = items;
+
+		if(loading){
+			return <Spinner/>
+		}
 		return (
 			<Link key={level} to={link}>
 				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] my-8 md:my-14 mx-10 md:mx-24'>
@@ -33,6 +37,7 @@ const Pdf = () => {
 		);
 	});
 
+	
 	return (
 		<div>
 			<Navbar />

@@ -7,6 +7,7 @@ const getPdfs = async () => {
  const response = await axios.get(API_URL)
  
   return(response.data) 
+  // console.log(response.data)
 }
 
 export default getPdfs

@@ -9,6 +9,8 @@ import { useNavigate, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { reset } from '../../features/auth/authSlice';
 import Mobiledashboard from './Mobiledashboard';
+import Avatar from '../../components/avatar/Avatar';
+
 
 const UserDashboard = () => {
 	const navigate = useNavigate();
@@ -18,7 +20,7 @@ const UserDashboard = () => {
 
 	useEffect(() => {
 		dispatch(reset());
-
+	
 		if (user == null) {
 			navigate('/home');
 		}
@@ -28,16 +30,16 @@ const UserDashboard = () => {
 
 	return (
 		<div>
-			<div className='hidden md:block'>
+			<div className='max-[1022px]:hidden lg:block'>
 				<Navbar />
 			</div>
 			<Mobiledashboard />
-			<div className='md:flex all hidden'>
+			<div className='lg:flex all hidden'>
 				<div className='bg-[var(--darker-blue,_rgb(41,51,92))] w-[25rem] text-[var(--text-color,_white)] flex flex-col items-center gap-[17rem] pt-[5rem] text-center'>
 					<h1 className='text-[25px] font-semibold'>Dashboard</h1>
 					<ul className='flex flex-col gap-[9rem]'>
 						<li className='flex gap-2 items-center'>
-							<Link to='/' className='text-[20px]'>
+							<Link to='/profile' className='text-[20px]'>
 								Profile
 							</Link>
 							<FaUserCircle size={20} />
@@ -79,9 +81,7 @@ const UserDashboard = () => {
 								Hello,{user && user.name}{' '}
 							</h1>
 						</div>
-						<div>
-							<FaUserCircle size={50} />
-						</div>
+						<Avatar/>
 					</div>
 
 					<section className='grid-section self-center mt-[12rem] text-[var(--lighter-blue,_rgb(41,51,92))]'>

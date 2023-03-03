@@ -4,6 +4,8 @@ import resetReducer from '../features/reset/resetSlice'
 import emailReducer from '../features/reset/emailRedux.js'
 import userUpdateReducer from '../features/profile/profileslice'
 import pdfReducer from '../features/pdf/Getpdfs'
+import uploadReducer from '../features/image/Uploadimage'
+import imageReducer from '../features/image/ProfileImage'
 
 
 export const store = configureStore({
@@ -13,5 +15,7 @@ export const store = configureStore({
     email: emailReducer,
     userUpdate: userUpdateReducer,
     pdfs: pdfReducer,
+    uploadimages: uploadReducer,
+    image: imageReducer
   },
 });
