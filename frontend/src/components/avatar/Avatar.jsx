@@ -1,13 +1,14 @@
 import React, {useEffect, useState} from 'react'
 import { FaUserCircle } from 'react-icons/fa'
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector} from 'react-redux'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 const Avatar = () => {
   const {user} = useSelector((state=> state.auth))
   const[ image, setImage ]= useState('')
   const API_URL = 'api/uploadpics/'
-  
+
   useEffect(()=>{
    
    if(user){
@@ -23,10 +24,10 @@ const Avatar = () => {
    }
   }, [])
 
- 
+
 
   return (
-    <div className="text-center">
+    <Link to='/profile' className="text-center">
     <div className="text-center">
        <div className="text-center rounded-full mx-auto inline-block">
               {image === '' ?<FaUserCircle className='text-[35px] md:text-[55px]' />:
@@ -35,7 +36,7 @@ const Avatar = () => {
         </div>
           
     </div>
-</div>
+</Link>
   )
 }
 
