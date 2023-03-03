@@ -30,9 +30,7 @@ const UserDashboard = () => {
 
 	return (
 		<div>
-			<div className='max-[1022px]:hidden lg:block'>
-				<Navbar />
-			</div>
+			<Navbar />
 			<Mobiledashboard />
 			<div className='lg:flex all hidden'>
 				<div className='bg-[var(--darker-blue,_rgb(41,51,92))] w-[25rem] text-[var(--text-color,_white)] flex flex-col items-center gap-[17rem] pt-[5rem] text-center'>
