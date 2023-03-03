@@ -29,9 +29,9 @@ const Avatar = () => {
   return (
     <Link to='/profile' className="text-center">
     <div className="text-center">
-       <div className="text-center rounded-full mx-auto inline-block">
+       <div className="text-center rounded-full mx-4 inline-block">
               {image === '' ?<FaUserCircle className='text-[35px] md:text-[55px]' />:
-              <img src={image} alt='Profile' className='rounded-[50%] max-h-24' width={60}/> 
+              <img src={image} alt='Profile' className='rounded-[50%] max-h-20 lg:max-h-24 w-20 lg:w-24'/> 
               }
         </div>
           
