@@ -60,10 +60,19 @@
 .hamburger {
 	display: none;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1019px) {
 	.right_side ul {
-		margin-right: 100px;
+		margin-right: 70px;
 	}
+    .right_side ul li{
+        margin-left: 20px;
+    }
+    .sign {
+        margin-left: 15px;
+    }
+    .log {
+        margin-left: 3px;
+    }
 }
 @media only screen and (max-width: 800px) {
 	.nav-menu {
@@ -105,7 +114,7 @@
 		text-align: center;
 	}
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 800px) {
 	.log {
 		margin-left: 0px;
 		margin-bottom: 10px;
