@@ -29,15 +29,8 @@ const Mobiledashboard = () => {
 		setClick(!click);
 	};
 
-	// const navigate = useNavigate();
-	// const dispatch = useDispatch();
 	const { user } = useSelector((state) => state.auth);
 
-	// const onLogout = () => {
-	// 	dispatch(logout());
-	// 	dispatch(reset());
-	// 	navigate('/home');
-	// };
 	const date = Date.now();
 
 	return (
@@ -124,55 +117,6 @@ const Mobiledashboard = () => {
 			</div>
 
 			<div className=' w-[100%] mt-8 px-2 '>
-				{/* <div onClick={Toggle} className=' hamburge mt-6'>
-					{nav ? <FaTimes size={20} /> : <FaBars size={20} />}
-				</div>
-				<div className={nav ? 'nav-men right-1' : 'hidden'}>
-					<ul>
-						<div>
-							{user ? (
-								<>
-									<li>
-										<Link to='/'>Dashboard</Link>
-									</li>
-									<li>
-										<Link to='/home'>Home</Link>
-									</li>
-								</>
-							) : (
-								<>
-									<li>
-										<Link to='/'>Dashboard</Link>
-									</li>
-									<li>
-										<Link to='/about'>About</Link>
-									</li>
-									<li>
-										<Link to='/contact'>Contact</Link>
-									</li>
-								</>
-							)}
-						</div>
-					</ul>
-					<div className='red'>
-						{user ? (
-							<>
-								<Link to='/home' className='sign' onClick={onLogout}>
-									LOGOUT
-								</Link>
-							</>
-						) : (
-							<>
-								<Link to='/login' className='log'>
-									LOG IN
-								</Link>
-								<Link to='/signup' className='sign'>
-									SIGN UP
-								</Link>
-							</>
-						)}
-					</div>
-				</div> */}
 				<div className='flex gap-8 justify-between'>
 					<div className='text-center ml-[6rem]'>
 						<p className='text-[var(--lighter-blue,_#29335c)]/40 font-medium text-[12px]'>

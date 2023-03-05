@@ -90,7 +90,7 @@ const Signup = () => {
 								<input
 									type='textbox'
 									name='name'
-									placeholder='name'
+									placeholder='Name'
 									required
 									onChange={onChange}
 									value={name}
@@ -185,7 +185,7 @@ const Signup = () => {
 						Already have an account? <Link to='/login'>LOG IN</Link>
 					</p>
 				</div>
-				<div className='content_2'>
+				<div className='md:mt-36 md:mb-40 content_2'>
 					<img src={Image2} alt='ima' />
 				</div>
 			</div>
