@@ -1,8 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { reset } from '../../features/auth/authSlice';
 import { AiOutlineLeft } from 'react-icons/ai';
 
 const Cgpa = () => {
+  
+  const navigate = useNavigate();
+	const dispatch = useDispatch();
+	const { user } = useSelector((state) => state.auth);
+
+	useEffect(() => {
+		dispatch(reset());
+		
+		if (user == null) {
+			navigate('/home');
+		}
+	}, [user, navigate, dispatch]);
+  
 	return (
 		<div className='text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]'>
 			<div className='flex my-5 mx-4'>
