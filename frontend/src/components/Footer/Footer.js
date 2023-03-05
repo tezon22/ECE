@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div>
       <section>
-        <footer className="max-[767px]:px-3 pb-3">
+        <footer className="max-[767px]:px-3 pb-12">
           <div className ="col_9">
             <img src={Tezonlogo} alt='tezon'/>
           </div>
