@@ -1,9 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import './Calculator.css';
 import Image12 from './image 12 (1).png';
 
 const Calculator = () => {
+
+    const navigate = useNavigate();
+    const { user } = useSelector((state) => state.auth);
+
+    const check = () => {
+		if (!user) {
+			navigate('/login');
+			toast('Please log in before accessing Calculator');
+		}
+	};
+
 	return (
 		<div className='calculator_container'>
 			<div className='calculator_row'>
@@ -15,7 +28,13 @@ const Calculator = () => {
 						Calculate your cummulative grade point average<span>(C.G.P.A)</span>
 					</h1>
 					<p>Come calculate your progress in school with just a click👨‍💻</p>
-					<Link to='/cgpa'>Calculator</Link>
+                    <div onClick={() => { 
+                                check(); 
+                                }}
+                    >
+                        <Link to='/cgpa'>Calculator</Link>
+                    </div>
+					
 				</div>
 			</div>
 		</div>

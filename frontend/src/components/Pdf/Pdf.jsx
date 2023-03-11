@@ -1,17 +1,25 @@
 import React, { useEffect }   from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
 import Navbar from '../Navbar/Navbar';
 import { getPdf } from '../../features/pdf/Getpdfs';
 import { useDispatch, useSelector } from 'react-redux';
+import { reset } from '../../features/auth/authSlice';
 import Spinner from '../Spinner';
 
 const Pdf = () => {
+  const navigate = useNavigate();
 	const dispatch = useDispatch();
+	const { user } = useSelector((state) => state.auth);
+
 	useEffect(() => {
-		dispatch(getPdf());
+		dispatch(getPdf(), reset());
 		
-	}, [dispatch]);
+		if (user == null) {
+			navigate('/home');
+		}
+	}, [user, navigate, dispatch]);
+		
 	const { loading } = useSelector((state) => state.pdfs);
 	const levels = [
 		{ level: '100 level', link: '/L1pdf', availability: '' },

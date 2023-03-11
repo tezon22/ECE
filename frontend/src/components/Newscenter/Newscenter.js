@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Newscenter.css";
 import Image4 from "./image 4.png";
 
@@ -14,7 +15,7 @@ const Newscenter = () => {
             Get steady information and news, lecture timetable updates, newly
             uploaded PDFs and more
           </p>
-          <a href="/news">News Center</a>
+          <Link to="">News Center</Link>
         </div>
         <div className="col_6">
           <img src={Image4} alt="image4" />

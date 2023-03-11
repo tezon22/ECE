@@ -18,9 +18,9 @@ html[data-theme='dark'] {
 	--text-color: rgb(193, 191, 189);
 }
 
-html.theme-transition,
-html.theme-transition * {
-	transition: all 600ms ease-in-out;
+theme-transition,
+theme-transition * {
+	transition: background-color 500ms ease-in-out;
 }
 
 * {
@@ -76,6 +76,7 @@ input {
 	0% {
 		transform: rotate(0deg);
 	}
+
 	100% {
 		transform: rotate(360deg);
 	}
