@@ -2,7 +2,6 @@
 	display: grid;
 	grid-template: auto auto/50% 50%;
 	gap: 20px;
-	height: auto;
 	justify-content: center;
 	margin: 0 30px;
 	position: relative;
@@ -18,7 +17,6 @@
 
 .container_login .content_1 {
 	width: 100%;
-	height: auto;
 	background: url('background.png') center no-repeat;
 	background-size: 180%;
 }
@@ -32,12 +30,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: max-content;
 }
 
 .login_logo img {
 	max-width: 200px;
-	height: max-content;
 	margin-top: 3px;
 	margin-bottom: 20px;
 }
@@ -117,7 +113,6 @@ input:focus {
 
 .container_login .content_2 img {
 	width: 100%;
-	height: 100%;
 }
 .y {
 	margin-bottom: 20px;
@@ -126,7 +121,6 @@ input:focus {
 @media only screen and (max-width: 700px) {
 	.container_login {
 		display: block;
-		height: 100%;
 		max-width: 100%;
 		margin: 20px;
 		background: url('background.png') center no-repeat;
