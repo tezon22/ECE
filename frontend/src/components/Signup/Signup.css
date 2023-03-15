@@ -2,14 +2,12 @@
 	display: grid;
 	grid-template: auto auto/50% 50%;
 	gap: 20px;
-	height: auto;
 	justify-content: center;
 	margin: 30px;
 }
 
 .container_signup .content_1 {
 	width: 100%;
-	height: auto;
 	background: url('./background.png') center no-repeat;
 	background-size: 180%;
 }
@@ -162,13 +160,11 @@ input[type='radio']:checked + label > span {
 
 .container_signup .content_2 {
 	width: 100%;
-	height: auto;
 	background-color: var(--dark-green, #f4fffd);
 }
 
 .container_signup .content_2 img {
 	width: 100%;
-	height: 100%;
 }
 .password {
 	position: relative;
@@ -186,7 +182,6 @@ input[type='radio']:checked + label > span {
 @media only screen and (max-width: 700px) {
 	.container_signup {
 		display: block;
-		height: 100%;
 		max-width: 100%;
 		margin: 20px;
 		background: url('background.png') center no-repeat;
