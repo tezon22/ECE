@@ -18,6 +18,7 @@ import L1 from "./components/Pdf/L1";
 import L2 from "./components/Pdf/L2";
 import L1timetable from "./components/Timetable/L1";
 import L2timetable from "./components/Timetable/L2";
+import L3timetable from "./components/Timetable/L3";
 import L1cgpa from "./components/Cgpa/L1";
 import L2cgpa from "./components/Cgpa/L2";
 import FirstL1 from "./components/Cgpa/FirstL1";
@@ -48,6 +49,7 @@ function App() {
             <Route exact path="/L2pdf" element={<L2 />} />
             <Route exact path="/L1time" element={<L1timetable />} />
             <Route exact path="/L2time" element={<L2timetable />} />
+            <Route exact path="/L3time" element={<L3timetable />} />
             <Route exact path="/L1cgpa" element={<L1cgpa />} />
             <Route exact path="/L2cgpa" element={<L2cgpa />} />
             <Route exact path="/firstL1" element={<FirstL1 />} />
