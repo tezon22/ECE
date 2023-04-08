@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.264c8e75.css",
-    "main.js": "/static/js/main.1892aa6f.js",
+    "main.js": "/static/js/main.bdffb247.js",
     "static/media/image 3.png": "/static/media/image 3.26f025dc24b34f6f11dd.png",
     "static/media/background.png": "/static/media/background.10b2b646fe67d1c696b7.png",
     "static/media/ECE LOGO With TEXT.png": "/static/media/ECE LOGO With TEXT.4e6e34d454604cfd24e4.png",
@@ -12,21 +12,22 @@
     "static/media/image 12 (1).png": "/static/media/image 12 (1).dcd47739ce24a698cc8a.png",
     "static/media/image 4.png": "/static/media/image 4.75fbcd0807201fea03ef.png",
     "static/media/image 22.png": "/static/media/image 22.05bf26ba6f6fc714f85e.png",
+    "static/media/examL3.png": "/static/media/examL3.f6f58982d4c3b0093f9e.png",
     "static/media/image 21.png": "/static/media/image 21.7cc21ced951224f916dc.png",
     "static/media/unsplash_eAiNt7N5FaA.png": "/static/media/unsplash_eAiNt7N5FaA.42b1755d36eb64c99739.png",
     "static/media/image 16.png": "/static/media/image 16.7658cd3d01411357d5dd.png",
     "static/media/image 20.png": "/static/media/image 20.f419a625d8d97c4a114e.png",
-    "static/media/examL2.png": "/static/media/examL2.249c011564aefc1bffb4.png",
+    "static/media/examL2.png": "/static/media/examL2.085224a9cd2f6bc7f949.png",
     "static/media/timetable2.png": "/static/media/timetable2.a696fc1d873d04b17f34.png",
-    "static/media/examL1.png": "/static/media/examL1.7ab22a7061c3fdbd5daa.png",
+    "static/media/examL1.png": "/static/media/examL1.9bf3f66f342a2c3e3605.png",
     "static/media/Oval.png": "/static/media/Oval.38b703f5d42a44de797d.png",
     "static/media/contact_svg.webp": "/static/media/contact_svg.f2892f54a75d54f784f5.webp",
     "index.html": "/index.html",
     "main.264c8e75.css.map": "/static/css/main.264c8e75.css.map",
-    "main.1892aa6f.js.map": "/static/js/main.1892aa6f.js.map"
+    "main.bdffb247.js.map": "/static/js/main.bdffb247.js.map"
   },
   "entrypoints": [
     "static/css/main.264c8e75.css",
-    "static/js/main.1892aa6f.js"
+    "static/js/main.bdffb247.js"
   ]
 }
