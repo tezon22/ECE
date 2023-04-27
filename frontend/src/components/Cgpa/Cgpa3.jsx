@@ -1,16 +1,57 @@
 import React, {useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AiOutlineLeft } from 'react-icons/ai';
 import Courses from './Courses';
+import Spinner from '../Spinner';
 
 const Demo = () => {
+	const {id, lv} = useParams()
 	const [cgpa, setCgpa] = useState(0)
+	const [session, setSession] = useState([])
+	
     useEffect(() => {
         toast('READ THE INSTRUCTIONS');
-	}, []);
+		switch (id) {
+			case 'firstL1' :
+				setSession([100, 1])
+					break;
+			case 'secondL1' :
+				setSession([100, 2])
+					break;
+			case 'firstL2' :
+				setSession([200, 1])
+					break;
+			case 'secondL2' :
+				setSession([200, 2])
+					break;
+			case 'firstL3' :
+				setSession([300, 1])
+					break;
+			case 'secondL3' :
+				setSession([300, 2])
+					break;
+			case 'firstL4' :
+				setSession([400, 1])
+					break;
+			case 'secondL4' :
+				setSession([400, 2])
+					break;
+			case 'firstL5' :
+				setSession([500, 1])
+					break;
+			case 'secondL5' :
+				setSession([500, 2])
+					break;
+		
+			default:
+				break;
+		}
+	}, [id]);
+	
+	
     // To get the list of courses and total credits
-     const first = Courses.filter((item) => item.Session[0] === 200 && item.Session[1] === 2  )
+     const first = Courses.filter((item) => item.Session[0] === session[0] && item.Session[1] === session[1]  )
      const credits = first.map((item)=>{return item.Credit})
      const Total_credit = credits.reduce((acc, curr) =>{
         return acc + curr
@@ -52,14 +93,15 @@ const Demo = () => {
         for(var i=0; i< grade.length; i++) {
             sum += grade[i]*credits[i];
         }
-       setCgpa(sum/ Total_credit)
-	   console.log(grade)
-    
+       setCgpa(sum/ Total_credit)    
     }
+	if(session.length === 0){
+		return <Spinner/>
+	}
 	return (
 		<div className='text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]'>
 			<div className='flex my-5 md:my-8 mx-4'>
-				<Link className='w-1/12 text-2xl md:text-4xl font-bold' to='/L1cgpa'>
+				<Link className='w-1/12 text-2xl md:text-4xl font-bold' to={`/cgpa/${lv}`}>
 					<AiOutlineLeft />
 				</Link>
 				<div className='w-11/12 text-center text-[17px] md:text-2xl font-bold mt-2'>
