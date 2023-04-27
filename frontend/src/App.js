@@ -27,10 +27,10 @@ import SecondL1 from "./components/Cgpa/SecondL1";
 import SecondL2 from "./components/Cgpa/SecondL2";
 import EnterEmail from "./components/changePassword/enterEmail";
 import ProfileScreen from "./components/ProfileScreen";
-import Mainpage from "./components/Pdf/Mainpage";
 import Download from "./components/Pdf/Download";
 import Settings from "./components/Settings/Settings";
 import DarkModeButton from "./components/DarkModeButton";
+import Demo from "./components/Cgpa/Demo";
 
 function App() {
   return (
@@ -58,7 +58,6 @@ function App() {
             <Route exact path="/secondL2" element={<SecondL2 />} />
             <Route exact path="/pdf/:id" element={<Download />} />
             <Route exact path="/news" element={<Newscenter />} />
-            <Route exact path="/settings" element={<Settings />} />
             <Route exact path="/password-reset/:id/:token" element={<ChangePassword />} />
             <Route exact path="/email" element={<EnterEmail />} />
             <Route exact path="/about" element={<About />} />
@@ -66,8 +65,8 @@ function App() {
             <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/section" element={<Section />} />
             <Route exact path="/profilescreen" element={<ProfileScreen />} />
-            <Route exact path="/mainpage" element={<Mainpage />} />
             <Route exact path="/settings" element={<Settings />} />
+            <Route exact path="/demo" element={<Demo />} />
           </Routes>
         </div>
       </Router>
