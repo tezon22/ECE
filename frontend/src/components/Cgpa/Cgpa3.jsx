@@ -60,22 +60,28 @@ const Demo = () => {
     function grades(e){
         let grade 
        switch (e) {
-            case 'a':
+            case 'a' :
+            case 'A':
                 grade = 5
                 break;
             case 'b':
+            case 'B':
                 grade = 4
                 break;
             case 'c':
+            case 'C':
                 grade = 3
                 break;
             case 'd':
+            case 'D':
                 grade = 2
                 break;
             case 'e':
+            case 'E':
                 grade = 1
                 break;
-            case 'f':
+            case 'f' :
+            case 'F' :
                 grade = 0
                 break;
         
@@ -93,7 +99,10 @@ const Demo = () => {
         for(var i=0; i< grade.length; i++) {
             sum += grade[i]*credits[i];
         }
-       setCgpa(sum/ Total_credit)    
+       setCgpa(sum/ Total_credit)  
+	   grade = []
+	   toast('Reload if you need to recalculate')
+	   console.log(grade)  
     }
 	if(session.length === 0){
 		return <Spinner/>

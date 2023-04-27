@@ -28,7 +28,6 @@ const Courses = [
 {Course: "FEG 215", Value:null, Credit:3, Session: [200, 2]},
 {Course: "FEG 201", Value:null, Credit:3, Session: [200, 1]},
 {Course: "FEG 202", Value:null, Credit:3, Session: [200, 2]},
-{Course: "FEG 221", Value:null, Credit:2, Session: [200, 1]},
 {Course: "CSE 201", Value:null, Credit:2, Session: [200, 1]},
 {Course: "CSE 202", Value:null, Credit:2, Session: [200, 2]},
 {Course: "ICH 221", Value:null, Credit:2, Session: [200, 1]},
