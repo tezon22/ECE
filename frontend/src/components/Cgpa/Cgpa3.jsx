@@ -175,7 +175,7 @@ const Cgpa3 = () => {
 						CGPA:{cgpa.toFixed(2)}
 					</p>
 				</div>
-                    <button onClick={calculate} className='px-[30px] py-[6px] w-[25%] bg-red text-white text-center mx-auto flex justify-center'>Submit</button>
+                    <button onClick={calculate} className='px-[30px] py-[6px] w-[25%] bg-red text-white text-center mx-auto flex justify-center rounded-[4px]'>Submit</button>
 			</div>
 		</div>
 	);
