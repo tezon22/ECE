@@ -5,7 +5,7 @@ import { AiOutlineLeft } from 'react-icons/ai';
 import Courses from './Courses';
 import Spinner from '../Spinner';
 
-const Demo = () => {
+const Cgpa3 = () => {
 	const {id, lv} = useParams()
 	const [cgpa, setCgpa] = useState(0)
 	const [session, setSession] = useState([])
@@ -172,7 +172,7 @@ const Demo = () => {
 						</p>
 					</div>
 					<p className='my-4 md:text-xl font-bold mx-4 text-right px-5 w-[50%]'>
-						CGPA:{cgpa}
+						CGPA:{cgpa.toFixed(2)}
 					</p>
                     <button onClick={calculate}>Submit</button>
 				</div>
@@ -181,4 +181,4 @@ const Demo = () => {
 	);
 };
 
-export default Demo;
+export default Cgpa3;
