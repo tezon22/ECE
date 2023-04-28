@@ -6,6 +6,13 @@ import { AiOutlineLeft } from 'react-icons/ai';
 
 const Cgpa = () => {
   
+	const levels = [
+		{level:'100 Level', link: '/cgpa/1'},
+		{level:'200 Level', link: '/cgpa/2'},
+		{level:'300 Level', link: '/cgpa/3'},
+		{level:'400 Level', link: '/cgpa/4'},
+		{level:'500 Level', link: '/cgpa/5'},
+	]
   const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const { user } = useSelector((state) => state.auth);
@@ -26,34 +33,15 @@ const Cgpa = () => {
 				</Link>
 				<div className='w-11/12 text-center md:text-2xl font-bold mt-2'>Select your level (CGPA)</div>
 			</div>
-			<Link to='/L1cgpa'>
+			{levels.map((item)=>{
+				return (
+					<Link to={item.link}>
 				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-10 md:py-16 my-8 md:my-14 mx-10 md:mx-24'>
-					100 level
+					{item.level}
 				</div>
-			</Link>
-			<Link to='/L2cgpa'>
-				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-10 md:py-16 my-8 md:my-14 mx-10 md:mx-24'>
-					200 level
-				</div>
-			</Link>
-			<a href='#a'>
-				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] my-8 md:my-14 mx-10 md:mx-24'>
-					<p className='text-center font-medium pt-10 md:pt-16 pb-2 md:pb-5'>300 level</p>
-					<p className='p-2 md:p-4 text-right text-[10px] font-light'>Not Available now</p>
-				</div>
-			</a>
-			<a href='#a'>
-				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] my-8 md:my-14 mx-10 md:mx-24'>
-					<p className='text-center font-medium pt-10 md:pt-16 pb-2 md:pb-5'>400 level</p>
-					<p className='p-2 md:p-4 text-right text-[10px] font-light'>Not Available now</p>
-				</div>
-			</a>
-			<a href='#a'>
-				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] my-8 md:my-14 mx-10 md:mx-24'>
-					<p className='text-center font-medium pt-10 md:pt-16 pb-2 md:pb-5'>500 level</p>
-					<p className='p-2 md:p-4 text-right text-[10px] font-light'>Not Available now</p>
-				</div>
-			</a>
+				</Link>
+				)
+			})}
 		</div>
 	);
 };

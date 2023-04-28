@@ -1,0 +1,63 @@
+import React, {useState, useEffect} from 'react';
+import { Link, useParams } from 'react-router-dom';
+import { AiOutlineLeft } from 'react-icons/ai';
+import Spinner from '../Spinner';
+
+const Cgpa2 = () => {
+	const {lv} = useParams()
+	
+	const [semester, setSemester] = useState([])
+	useEffect(() => {
+		switch (lv) {
+			case "1" :
+				setSemester(['100', 'firstL1', 'secondL1'])
+					break;
+			case  "2":
+				setSemester(['200', 'firstL2','secondL2'])
+					break;
+			case  "3":
+				setSemester(['300', 'firstL3', 'secondL3'])
+					break;
+			case "4" :
+				setSemester(['400', 'firstL4', 'firstL4'])
+					break;
+			case "5" :
+				setSemester(['500', 'firstL5', 'secondL5'])
+					break;
+		
+			default:
+				break;
+		}
+	}, [])
+	
+	
+	console.log(lv,semester)
+	if(semester.length === 0){
+		return <Spinner/>
+	}
+	
+	return (
+		<div className='text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]'>
+			<div className='flex mt-5 md:mt-8 mx-4 mb-28'>
+				<Link className='w-1/12 text-2xl md:text-4xl font-bold' to='/cgpa'>
+					<AiOutlineLeft />
+				</Link>
+				<div className='w-11/12 text-center text-[17px] md:text-2xl font-bold mt-2'>
+					{semester[0]} Level (CGPA)
+				</div>
+			</div>
+			<Link to={semester[1]}>
+				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-12 md:py-16 my-7 md:my-14 mx-10 md:mx-20'>
+					First Semester
+				</div>
+			</Link>
+			<Link to={semester[2]}>
+				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-12 md:py-16 my-7 md:my-14 mx-10 md:mx-20'>
+					Second Semester
+				</div>
+			</Link>
+		</div>
+	);
+};
+
+export default Cgpa2;
