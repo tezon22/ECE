@@ -29,6 +29,10 @@ const pdfSchema = new Schema({
   },
   thumbnail: {
     type: String
+  },
+  fileType: {
+    type: String,
+    default: "pdf"
   }
 })
 
