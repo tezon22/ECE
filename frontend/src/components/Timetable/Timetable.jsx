@@ -23,12 +23,11 @@ const Timetable = () => {
 					200 level
 				</div>
 			</Link>
-			<a href='#a'>
-				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] my-8 md:my-14 mx-10 md:mx-24'>
-					<p className='text-center font-medium pt-10 md:pt-16 pb-2 md:pb-5'>300 level</p>
-					<p className='p-2 md:p-4 text-right text-[10px] font-light'>Not Available now</p>
+			<Link to='/L3time'>
+				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-10 md:py-16 my-8 md:my-14 mx-10 md:mx-24'>
+					300 level
 				</div>
-			</a>
+			</Link>
 			<a href='#a'>
 				<div className='rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] my-8 md:my-14 mx-10 md:mx-24'>
 					<p className='text-center font-medium pt-10 md:pt-16 pb-2 md:pb-5'>400 level</p>
