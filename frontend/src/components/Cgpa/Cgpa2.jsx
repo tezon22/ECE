@@ -1,41 +1,25 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
 import Spinner from '../Spinner';
 
+// Declared outside component to avoid recreation every re-render
+const SEMESTER_LOOKUP = {
+	1: ['100', 'firstL1', 'secondL1'],
+	2: ['200', 'firstL2', 'secondL2'],
+	3: ['300', 'firstL3', 'secondL3'],
+	4: ['400', 'firstL4', 'secondL4'],
+	5: ['500', 'firstL5', 'secondL5'],
+};
+
 const Cgpa2 = () => {
-	const {lv} = useParams()
-	
-	const [semester, setSemester] = useState([])
-	useEffect(() => {
-		switch (lv) {
-			case "1" :
-				setSemester(['100', 'firstL1', 'secondL1'])
-					break;
-			case  "2":
-				setSemester(['200', 'firstL2','secondL2'])
-					break;
-			case  "3":
-				setSemester(['300', 'firstL3', 'secondL3'])
-					break;
-			case "4" :
-				setSemester(['400', 'firstL4', 'firstL4'])
-					break;
-			case "5" :
-				setSemester(['500', 'firstL5', 'secondL5'])
-					break;
-		
-			default:
-				break;
-		}
-	}, [])
-	
-	
-	console.log(lv,semester)
+	const { lv } = useParams()
+	const [semester] = useState(() => SEMESTER_LOOKUP[lv] ?? []);
+
 	if(semester.length === 0){
 		return <Spinner/>
 	}
-	
+
 	return (
 		<div className='text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]'>
 			<div className='flex mt-5 md:mt-8 mx-4 mb-28'>
