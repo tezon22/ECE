@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AiOutlineLeft } from 'react-icons/ai';
@@ -34,14 +34,14 @@ const GRADE_LOOKUP = {
 };
 
 const Cgpa3 = () => {
-	const { id, lv } = useParams();
+	const {level, levelSemester } = useParams();
 	const [session, setSession] = useState([]);
 	const [cgpa, setCgpa] = useState(0);
 
 	useEffect(() => {
 		toast('READ THE INSTRUCTIONS');
-		setSession(SESSION_LOOKUP[id]);
-	}, [id]);
+		setSession(SESSION_LOOKUP[levelSemester]);
+	}, [levelSemester]);
 
 	// Getting the list of courses and total credits
 	const courseData = Courses.filter((item) => item.Session[0] === session[0] && item.Session[1] === session[1]);
@@ -82,7 +82,7 @@ const Cgpa3 = () => {
 	return (
 		<div className="text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]">
 			<div className="flex my-5 md:my-8 mx-4">
-				<Link className="w-1/12 text-2xl md:text-4xl font-bold" to={`/cgpa/${lv}`}>
+				<Link className="w-1/12 text-2xl md:text-4xl font-bold" to={`/cgpa/${level}`}>
 					<AiOutlineLeft />
 				</Link>
 				<div className="w-11/12 text-center text-[17px] md:text-2xl font-bold mt-2">

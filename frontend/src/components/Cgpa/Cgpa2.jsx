@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
 import Spinner from '../Spinner';
@@ -13,8 +13,8 @@ const SEMESTER_LOOKUP = {
 };
 
 const Cgpa2 = () => {
-	const { lv } = useParams()
-	const [semester] = useState(() => SEMESTER_LOOKUP[lv] ?? []);
+	const { level } = useParams()
+	const [semester] = useState(() => SEMESTER_LOOKUP[level] ?? []);
 
 	if(semester.length === 0){
 		return <Spinner/>

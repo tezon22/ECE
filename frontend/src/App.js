@@ -1,34 +1,34 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Home from "./pages/Home";
-import Section from "./pages/Section";
-import Login from "./components/Login/Login";
-import Signup from "./components/Signup/Signup";
-import Ebooks from "./components/Pdf/Pdf";
-import Cgpa from "./components/Cgpa/Cgpa";
-import Timetable from "./components/Timetable/Timetable";
-import Newscenter from "./components/Newscenter/Newscenter";
-import ChangePassword from "./components/changePassword/changePassword";
-import About from "./components/about/About";
-import Contact from "./components/contact/Contact";
-import Profile from "./components/Profile/Profile";
-import UserDashboard from "./pages/Userdashboard/UserDashboard";
-import L1 from "./components/Pdf/L1";
-import L2 from "./components/Pdf/L2";
-import L1timetable from "./components/Timetable/L1";
-import L2timetable from "./components/Timetable/L2";
-import L3timetable from "./components/Timetable/L3";
-import EnterEmail from "./components/changePassword/enterEmail";
-import ProfileScreen from "./components/ProfileScreen";
-import Download from "./components/Pdf/Download";
-import Settings from "./components/Settings/Settings";
-import DarkModeButton from "./components/DarkModeButton";
-import Cgpa3 from "./components/Cgpa/Cgpa3";
-import Cgpa2 from "./components/Cgpa/Cgpa2";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Home from './pages/Home';
+import Section from './pages/Section';
+import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
+import Ebooks from './components/Pdf/Pdf';
+import Cgpa from './components/Cgpa/Cgpa';
+import Timetable from './components/Timetable/Timetable';
+import Newscenter from './components/Newscenter/Newscenter';
+import ChangePassword from './components/changePassword/changePassword';
+import About from './components/about/About';
+import Contact from './components/contact/Contact';
+import Profile from './components/Profile/Profile';
+import UserDashboard from './pages/Userdashboard/UserDashboard';
+import L1 from './components/Pdf/L1';
+import L2 from './components/Pdf/L2';
+import L1timetable from './components/Timetable/L1';
+import L2timetable from './components/Timetable/L2';
+import L3timetable from './components/Timetable/L3';
+import EnterEmail from './components/changePassword/enterEmail';
+import ProfileScreen from './components/ProfileScreen';
+import Download from './components/Pdf/Download';
+import Settings from './components/Settings/Settings';
+import DarkModeButton from './components/DarkModeButton';
+import Cgpa3 from './components/Cgpa/Cgpa3';
+import Cgpa2 from './components/Cgpa/Cgpa2';
 
 function App() {
-  return (
+	return (
 		<>
 			<Router>
 				<div className="container__not-tailwind">
@@ -63,7 +63,7 @@ function App() {
 			<ToastContainer />
 			<DarkModeButton display={'hidden'} />
 		</>
-  );
+	);
 }
 
 export default App;
