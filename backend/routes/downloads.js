@@ -26,6 +26,9 @@ router.get("/download/:id", async (req, res)=>{
     if(fileType === "docx"){
       res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
       res.setHeader('Content-Disposition', `attachment; filename=${pdf.fileName}.docx`);
+    }else if(fileType === "jpg"){
+      res.setHeader('Content-Type', 'image/jpeg');
+      res.setHeader('Content-Disposition', `attachment; filename=${pdf.fileName}.jpg`);
     }else{
       res.setHeader('Content-Type', 'application/pdf');
       res.setHeader('Content-Disposition', `attachment; filename=${pdf.fileName}.pdf`);
