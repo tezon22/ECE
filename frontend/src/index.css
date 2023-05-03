@@ -41,8 +41,7 @@ body {
 	font-size: 1.6rem;
 	margin: 0;
 	background-image: url(../src/assests/Images/background.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: fill;
 }
 
 input {
