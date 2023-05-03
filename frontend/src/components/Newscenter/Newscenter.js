@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Newscenter.css";
-import Image4 from "./image 4.png";
+import Image4 from "./image 4.svg";
 
 const Newscenter = () => {
   return (
