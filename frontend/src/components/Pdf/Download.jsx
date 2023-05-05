@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link,useLocation, useParams } from 'react-router-dom';
+import { Link,useParams } from 'react-router-dom';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 const Download = () => {
 	const [pdfs, setPdfs] = useState([])
 	const {id} = useParams()
-	const location = useLocation();
 	const {  loading } = useSelector((state) => state.pdfs);
 	useEffect(() => {
 		setPdfs(JSON.parse(localStorage.getItem('pdfs')))

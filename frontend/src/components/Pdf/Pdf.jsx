@@ -13,7 +13,7 @@ const Pdf = () => {
 	const { user } = useSelector((state) => state.auth);
 
 	useEffect(() => {
-		// dispatch(getPdf(), reset());
+		dispatch(getPdf(), reset());
 		
 		if (user == null) {
 			navigate('/home');
