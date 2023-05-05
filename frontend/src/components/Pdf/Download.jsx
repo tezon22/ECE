@@ -10,7 +10,6 @@ const Download = () => {
 	const {id} = useParams()
 	const location = useLocation();
 	const {  loading } = useSelector((state) => state.pdfs);
-	const end = location.pathname[11];
 	useEffect(() => {
 		setPdfs(JSON.parse(localStorage.getItem('pdfs')))
 	}, [])
@@ -19,12 +18,13 @@ const Download = () => {
 		return <Spinner/>
 	}
 
+	console.log(id[4])
 	return (
 		<div className='text-[var(--lighter-blue,_#29335c)]'>
 			<div className='flex mt-5 mb-7 mx-4'>
 				<Link
 					className='w-1/12 text-2xl md:text-4xl font-bold'
-					to={end === '1' ? '/L1pdf' : '/L2pdf'}
+					to={`/ebook/${id[4]}00`}
 				>
 					<AiOutlineLeft />
 				</Link>
