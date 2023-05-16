@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AiOutlineLeft } from 'react-icons/ai';
-import Courses from './Courses';
+import Courses from '../../assests/Courses';
 import Spinner from '../Spinner';
 
 const SESSION_LOOKUP = {

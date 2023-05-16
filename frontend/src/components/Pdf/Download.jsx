@@ -1,29 +1,29 @@
 import React from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import { Link,useParams } from 'react-router-dom';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
 import Spinner from '../Spinner';
+import { useEffect, useState } from 'react';
 const Download = () => {
+	const [pdfs, setPdfs] = useState([])
 	const {id} = useParams()
-
-	const location = useLocation();
 	const {  loading } = useSelector((state) => state.pdfs);
-	const pdfs =JSON.parse(localStorage.getItem('pdfs'))
-	const end = location.pathname[11];
-	console.log(id);
-
+	useEffect(() => {
+		setPdfs(JSON.parse(localStorage.getItem('pdfs')))
+	}, [])
 
 	if(loading){
 		return <Spinner/>
 	}
-	console.log(pdfs)
+
+	console.log(id[4])
 	return (
 		<div className='text-[var(--lighter-blue,_#29335c)]'>
 			<div className='flex mt-5 mb-7 mx-4'>
 				<Link
 					className='w-1/12 text-2xl md:text-4xl font-bold'
-					to={end === '1' ? '/L1pdf' : '/L2pdf'}
+					to={`/ebook/${id[4]}00`}
 				>
 					<AiOutlineLeft />
 				</Link>

@@ -22,11 +22,11 @@ const Pdf = () => {
 		
 	const { loading } = useSelector((state) => state.pdfs);
 	const levels = [
-		{ level: '100 level', link: '/L1pdf', availability: '' },
-		{ level: '200 level', link: '/L2pdf', availability: '' },
-		{ level: '300 level', link: '#', availability: 'Not Available now' },
-		{ level: '400 level', link: '#', availability: 'Not Available now' },
-		{ level: '500 level', link: '#', availability: 'Not Available now' },
+		{ level: '100 level', link: '/ebook/100', availability: '' },
+		{ level: '200 level', link: '/ebook/200', availability: '' },
+		{ level: '300 level', link: '/ebook/300', availability: '' },
+		{ level: '400 level', link: '/ebook', availability: 'Not Available now' },
+		{ level: '500 level', link: '/ebook', availability: 'Not Available now' },
 	];
 
 	const renderedList = levels.map((items) => {
