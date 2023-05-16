@@ -1,4 +1,4 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AiOutlineLeft } from 'react-icons/ai';
@@ -34,7 +34,7 @@ const GRADE_LOOKUP = {
 };
 
 const Cgpa3 = () => {
-	const {level, levelSemester } = useParams();
+	const { level, levelSemester } = useParams();
 	const [session, setSession] = useState([]);
 	const [cgpa, setCgpa] = useState(0);
 
@@ -53,7 +53,10 @@ const Cgpa3 = () => {
 
 	// Converting grades to their respective values in the lookup object
 	function convertGrades(inputValue) {
-		if (GRADE_LOOKUP[inputValue] == null) return;
+		if (GRADE_LOOKUP[inputValue] == undefined) {
+			toast('Please ensure to enter valid grades (i.e: A-F)🙏');
+			return;
+		}
 
 		const gradeValue = GRADE_LOOKUP[inputValue];
 		return gradeValue;
@@ -62,11 +65,6 @@ const Cgpa3 = () => {
 	function calculateCgpa() {
 		let sum = 0;
 		let gradeValueArr = courseData.map((item) => convertGrades(item.Value));
-
-		if (gradeValueArr.includes(null || undefined)) {
-			toast('Please ensure to enter valid grades (i.e: A-F)🙏');
-			return;
-		}
 
 		for (const [index] of gradeValueArr.entries()) {
 			sum += gradeValueArr[index] * credits[index];
