@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineLeft } from 'react-icons/ai';
-import Timetable2 from "./timetable2.png"
+import Timetable2 from "./timetable2.png";
+import ExamL2 from "./examL2.png"
 
 const L2 = () => {
 	return (
@@ -15,6 +16,10 @@ const L2 = () => {
             <p className='text-center text-[17px] md:text-[20px] mt-10 md:mt-16 font-bold'>Lecture TimeTable</p>
             <div className='rounded-2xl md:rounded-3xl md:w-[80%] mt-5 mb-10 md:mb-16 w-[90%] mx-auto py-6'>
                 <img className="w-full" src={Timetable2} alt="timetable2_img" />
+            </div>
+            <p className='text-center text-[17px] md:text-[20px] mt-10 md:mt-16 font-bold'>Exam TimeTable</p>
+            <div className='rounded-2xl md:rounded-3xl md:w-[80%] mt-5 mb-10 md:mb-16 w-[90%] mx-auto py-6'>
+                <img className="w-full" src={ExamL2} alt="exam2_img" />
             </div>
 		</div>
 	);

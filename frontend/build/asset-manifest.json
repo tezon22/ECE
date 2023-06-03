@@ -1,30 +1,33 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd91268c.css",
-    "main.js": "/static/js/main.535a1242.js",
+    "main.css": "/static/css/main.5c9c5907.css",
+    "main.js": "/static/js/main.1e347c81.js",
     "static/media/image 3.png": "/static/media/image 3.26f025dc24b34f6f11dd.png",
     "static/media/background.png": "/static/media/background.10b2b646fe67d1c696b7.png",
     "static/media/ECE LOGO With TEXT.png": "/static/media/ECE LOGO With TEXT.4e6e34d454604cfd24e4.png",
+    "static/media/image 1.svg": "/static/media/image 1.653b8a3356ea426982f2aaacdb713c9c.svg",
     "static/media/image 2.png": "/static/media/image 2.8117259fef4b896a7eab.png",
+    "static/media/image 5.svg": "/static/media/image 5.b4358925a4a5b492c21ba295f071f32f.svg",
     "static/media/background.svg": "/static/media/background.26fa20587c9a97fd3b6a.svg",
-    "static/media/image 1.png": "/static/media/image 1.4eac613350ba22369928.png",
-    "static/media/image 5.png": "/static/media/image 5.bd49d2012048a16b9b2e.png",
-    "static/media/image 12 (1).png": "/static/media/image 12 (1).dcd47739ce24a698cc8a.png",
-    "static/media/image 4.png": "/static/media/image 4.75fbcd0807201fea03ef.png",
+    "static/media/image 12 (1).svg": "/static/media/image 12 (1).a9ce809297c3a458746bb31e061f8ca3.svg",
+    "static/media/image 4.svg": "/static/media/image 4.83bc1271cc99a5da34806b9b8697c9d4.svg",
     "static/media/image 22.png": "/static/media/image 22.05bf26ba6f6fc714f85e.png",
+    "static/media/examL3.png": "/static/media/examL3.f6f58982d4c3b0093f9e.png",
     "static/media/image 21.png": "/static/media/image 21.7cc21ced951224f916dc.png",
     "static/media/unsplash_eAiNt7N5FaA.png": "/static/media/unsplash_eAiNt7N5FaA.42b1755d36eb64c99739.png",
     "static/media/image 16.png": "/static/media/image 16.7658cd3d01411357d5dd.png",
     "static/media/image 20.png": "/static/media/image 20.f419a625d8d97c4a114e.png",
+    "static/media/examL2.png": "/static/media/examL2.085224a9cd2f6bc7f949.png",
     "static/media/timetable2.png": "/static/media/timetable2.a696fc1d873d04b17f34.png",
-    "static/media/Oval.png": "/static/media/Oval.38b703f5d42a44de797d.png",
+    "static/media/examL1.png": "/static/media/examL1.9bf3f66f342a2c3e3605.png",
     "static/media/contact_svg.webp": "/static/media/contact_svg.f2892f54a75d54f784f5.webp",
     "index.html": "/index.html",
-    "main.fd91268c.css.map": "/static/css/main.fd91268c.css.map",
-    "main.535a1242.js.map": "/static/js/main.535a1242.js.map"
+    "static/media/Oval.svg": "/static/media/Oval.dab551659a009d0bd53b.svg",
+    "main.5c9c5907.css.map": "/static/css/main.5c9c5907.css.map",
+    "main.1e347c81.js.map": "/static/js/main.1e347c81.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd91268c.css",
-    "static/js/main.535a1242.js"
+    "static/css/main.5c9c5907.css",
+    "static/js/main.1e347c81.js"
   ]
 }

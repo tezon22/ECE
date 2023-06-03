@@ -110,7 +110,7 @@ const Login = () => {
 						New member? <Link to='/signup'>SIGNUP</Link>
 					</p>
 				</div>
-				<div className='content_2'>
+				<div className='md:mt-36 md:mb-32 content_2'>
 					<img src={Image3} alt='p' />
 				</div>
 			</div>

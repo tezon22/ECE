@@ -1,6 +1,9 @@
+// @desc    Download a Pdf
+// @route   GET /api/pdf/download/:id
+// @access  Public
 const express = require("express")
-// const request = require('request');
 const pdfModel = require("../db")
+const request = require('request')
 
 const router = express.Router()
 
@@ -18,11 +21,20 @@ router.get("/", async (req, res)=>{
 router.get("/download/:id", async (req, res)=>{
   const id = req.params.id
   const pdf = await pdfModel.findById(id)
+  const fileType = pdf.fileType
   try{
-   res.setHeader('Content-Type', 'application/pdf');
-   res.setHeader('Content-Disposition', `attachment; filename=${pdf.fileName}.pdf`);
-      const url = pdf.url
-      request.get(url).pipe(res)
+    if(fileType === "docx"){
+      res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+      res.setHeader('Content-Disposition', `attachment; filename=${pdf.fileName}.docx`);
+    }else if(fileType === "jpg"){
+      res.setHeader('Content-Type', 'image/jpeg');
+      res.setHeader('Content-Disposition', `attachment; filename=${pdf.fileName}.jpg`);
+    }else{
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename=${pdf.fileName}.pdf`);
+    }
+    const url = pdf.url 
+    request.get(url).pipe(res)
   }catch(err){
     res.redirect("/")
     console.log(`There was an error: ${err}`)

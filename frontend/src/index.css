@@ -18,9 +18,9 @@ html[data-theme='dark'] {
 	--text-color: rgb(193, 191, 189);
 }
 
-html.theme-transition,
-html.theme-transition * {
-	transition: all 600ms ease-in-out;
+theme-transition,
+theme-transition * {
+	transition: background-color 500ms ease-in-out;
 }
 
 * {
@@ -41,8 +41,7 @@ body {
 	font-size: 1.6rem;
 	margin: 0;
 	background-image: url(../src/assests/Images/background.svg);
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: fill;
 }
 
 input {
@@ -76,6 +75,7 @@ input {
 	0% {
 		transform: rotate(0deg);
 	}
+
 	100% {
 		transform: rotate(360deg);
 	}
