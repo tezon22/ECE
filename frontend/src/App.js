@@ -25,6 +25,8 @@ import DarkModeButton from './components/DarkModeButton';
 import Cgpa3 from './components/Cgpa/Cgpa3';
 import Cgpa2 from './components/Cgpa/Cgpa2';
 import Level from './components/Pdf/Level';
+import Upload from './components/Pdf/Upload';
+
 
 function App() {
 	return (
@@ -55,6 +57,7 @@ function App() {
 						<Route exact path="/ebook" element={<Ebooks />} />
 						<Route exact path="/ebook/:level" element={<Level/>} />
 						<Route exact path="/pdf/:id" element={<Download />} />
+						<Route exact path="/upload" element={<Upload />} />
 					</Routes>
 				</div>
 			</Router>
