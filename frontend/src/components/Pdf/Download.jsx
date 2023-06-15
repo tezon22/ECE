@@ -17,7 +17,6 @@ const Download = () => {
 		return <Spinner/>
 	}
 
-	console.log(id[4])
 	return (
 		<div className='text-[var(--lighter-blue,_#29335c)]'>
 			<div className='flex mt-5 mb-7 mx-4'>

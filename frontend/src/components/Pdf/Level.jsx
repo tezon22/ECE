@@ -25,7 +25,7 @@ const Level = () => {
 					<p className='font-semibold text-2xl md:text-3xl mt-10 md:mt-14 mb-6 md:mb-8'>First Semester</p>
 					{firstSemester.map((course1) => {
 						return (
-							<Link to={{ pathname: `/pdf/${course1.Course}` }} state={{ from: course1 }} key={course1}>
+							<Link to={{ pathname: `/pdf/${course1.Course}` }} key={course1.Course}>
 								<div className='my-6 md:my-8 p-3 md:p-4 bg-[var(--light-black,_rgb(226,232,240))] rounded-full font-semibold text-xl md:text-2xl'>
 									{course1.Course}{' '}
 									<span className='text-xl md:text-2xl float-right'>
@@ -38,7 +38,7 @@ const Level = () => {
 					<p className='font-semibold text-2xl md:text-3xl mt-10 md:mt-14 mb-6 md:mb-8'>Second Semester</p>
 					{secondSemester.map((course2) => {
 						return (
-							<Link to={`/pdf/${course2.Course}`} state={{ from: course2 }} key={course2}>
+							<Link to={`/pdf/${course2.Course}`}  key={course2.Course}>
 								<div className='my-6 md:my-8 p-3 md:p-4 bg-[var(--light-black,_rgb(226,232,240))] rounded-full font-semibold text-xl md:text-2xl'>
 									{course2.Course}{' '}
 									<span className='text-xl md:text-2xl float-right'>
