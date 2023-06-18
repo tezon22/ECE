@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { AiOutlineLeft } from 'react-icons/ai';
 import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { AiOutlineLeft } from 'react-icons/ai';
 import Courses from '../../assests/Courses';
 import Spinner from '../Spinner';
 
@@ -55,7 +55,7 @@ const Cgpa3 = () => {
 
 	// Converting grades to their respective values in the lookup object
 	function convertGrades(inputValue) {
-		if (GRADE_LOOKUP[inputValue] == undefined) {
+		if (GRADE_LOOKUP[inputValue] === undefined) {
 			toast('Please ensure to enter valid grades (i.e: A-F)🙏');
 			return;
 		}
@@ -65,12 +65,12 @@ const Cgpa3 = () => {
 	}
 
 	function calculateCgpa() {
-		let sum = 0;
 		let gradeValueArr = courseData.map((item) => convertGrades(item.Value));
 
-		for (const [index] of gradeValueArr.entries()) {
-			sum += gradeValueArr[index] * credits[index];
-		}
+		const sum = gradeValueArr.reduce(
+			(acc, gradeValueItem, index) => acc + gradeValueItem * credits[index],
+			0
+		);
 
 		setCgpa(sum / totalCreditLoad);
 	}
