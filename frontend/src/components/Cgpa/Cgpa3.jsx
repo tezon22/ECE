@@ -65,14 +65,14 @@ const Cgpa3 = () => {
 	}
 
 	function calculateCgpa() {
-		let gradeValueArr = courseData.map((item) => convertGrades(item.Value));
+		const gradeValueArr = courseData.map((item) => convertGrades(item.Value));
 
 		const sum = gradeValueArr.reduce(
 			(acc, gradeValueItem, index) => acc + gradeValueItem * credits[index],
 			0
 		);
 
-		setCgpa(sum / totalCreditLoad);
+		setCgpa(sum ? sum / totalCreditLoad : 0);
 	}
 
 	if (session.length === 0) {
