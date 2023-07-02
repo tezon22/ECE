@@ -4,7 +4,10 @@ import { useState } from "react";
 
 const Upload = () => {
   const [fileName, setFileName] = useState("")
-  const [response, setResponse] = useState("")
+  const [author, setAuthor] = useState("")
+  const [level, setLevel] = useState("")
+  const [keywords, setKeywords] = useState("")
+
   const client = filestack.init('AqUp2oJ2SvGVXXPWfLVgaz');
   const submit = () => {
     const options = {
@@ -14,18 +17,21 @@ const Upload = () => {
         location: 's3', // Specify the storage location (e.g., S3)
       },
       onFileUploadFinished(file){
-        console.log(file);
+        cloudinaryUpload(file);
       },
       uploadConfig: {
         tags: {
           fileName,
+          author,
+          level,
+          keywords,
+          fileType:"pdf"
         },
       },   
     };
     
-    client.picker(options).open().then((response) => setResponse(response));
+    client.picker(options).open();
   };
-  console.log(response)
   return (
     <div className="flex flex-col ">
       <div className="flex flex-col text-center gap-20">
@@ -38,11 +44,26 @@ const Upload = () => {
           Fill this form to sucessfully upload a PDF
         </p>
       </div>
-      <div>
+      <div className="flex flex-col">
       <input
               className="mx-auto my-3 p-8 w-[80%] bg-[var(--light-black,_rgb(226,232,240))] rounded-[10px] font-semibold text-xl md:text-2xl"
-              placeholder="FileName"
+              placeholder="Course Name eg FEG 303"
               onChange={(e)=> setFileName(e.target.value)}
+            />
+      <input
+              className="mx-auto my-3 p-8 w-[80%] bg-[var(--light-black,_rgb(226,232,240))] rounded-[10px] font-semibold text-xl md:text-2xl"
+              placeholder="Author"
+              onChange={(e)=> setAuthor(e.target.value)}
+            />
+      <input
+              className="mx-auto my-3 p-8 w-[80%] bg-[var(--light-black,_rgb(226,232,240))] rounded-[10px] font-semibold text-xl md:text-2xl"
+              placeholder="Keywords"
+              onChange={(e)=> setKeywords(e.target.value)}
+            />
+      <input
+              className="mx-auto my-3 p-8 w-[80%] bg-[var(--light-black,_rgb(226,232,240))] rounded-[10px] font-semibold text-xl md:text-2xl"
+              placeholder="Level eg: 100 first"
+              onChange={(e)=> setLevel(e.target.value)}
             />
       <button
         onClick={submit}

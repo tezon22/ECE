@@ -4,7 +4,6 @@
 const express = require('express')
 const router = require('./downloads')
 const pdfs = require('../db') 
-const cloudinary = require('cloudinary')
 router.post('/', async (req, res)=>{
     const {url, fileName, size, title, author, keywords, level, thumbnail} = req.body
 
@@ -19,6 +18,5 @@ router.post('/', async (req, res)=>{
                }else if(!pdf){
     res.status(400).json({message: "pdf not uploaded"})
    }
-// cloudinary.v2.uploader.upload()
 })
 module.exports = router
