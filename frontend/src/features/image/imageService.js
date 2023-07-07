@@ -22,6 +22,7 @@ export const uploadImage = async ({body, id}) => {
     .catch((err) => {
       console.log(err);
     });
+    console.log(body);
 }
 
 

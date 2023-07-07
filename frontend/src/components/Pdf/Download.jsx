@@ -39,7 +39,7 @@ const Download = () => {
 								</div>
 								<div className='my-2 mx-1 w-[60%]'>
 									<p className='text-md font-semibold truncate'>{pdf.title}</p>
-									<p className='text-[12px]'>{pdf.size} mb</p>
+									<p className='text-[12px]'>{Number(pdf.size).toFixed(2)} mb</p>
 								</div>
 								<div className='w-[10%] m-3'>
 									<button>
