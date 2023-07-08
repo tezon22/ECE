@@ -39,7 +39,7 @@ const pdfSchema = new Schema({
 });
 
 
-const PDF_URI = process.env.PDF_URI
+const PDF_URI = process.env.URI
 
 const pdf = mongoose.createConnection(PDF_URI);
 
@@ -52,4 +52,4 @@ mongoose.connection.on('error', (err) => {
 
 
 module.exports = pdf.model('pdf', pdfSchema);
-;
+
