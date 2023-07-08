@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
+mongoose.set('strictQuery', false)
 
 const Schema = mongoose.Schema;
 
