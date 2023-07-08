@@ -2,7 +2,7 @@
 // @route   GET /api/pdf/download/:id
 // @access  Public
 const express = require("express")
-const pdfModel = require("../db")
+const pdfModel = require("../models/pdfModel")
 const request = require('request')
 
 const router = express.Router()
@@ -33,7 +33,7 @@ router.get("/download/:id", async (req, res)=>{
       res.setHeader('Content-Type', 'application/pdf');
       res.setHeader('Content-Disposition', `attachment; filename=${pdf.fileName}.pdf`);
     }
-    const url = pdf.url 
+    const url = pdf.url
     request.get(url).pipe(res)
   }catch(err){
     res.redirect("/")
