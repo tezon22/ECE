@@ -14,9 +14,9 @@ router.post('/', async (req, res)=>{
             url, fileName, size, title, author, keywords, level, thumbnail
            })
            if(pdf){
-                res.status(200).json({message: "pdf uploaded"})
+                res.status(200).json({message: "PDF uploaded sucessfully"})
                }else if(!pdf){
-    res.status(400).json({message: "pdf not uploaded"})
+    res.status(400).json({message: "PDF not uploaded, Please try again"})
    }
 })
 module.exports = router

@@ -18,6 +18,10 @@ const Upload = () => {
       },
       onFileUploadFinished(file){
         cloudinaryUpload(file);
+        setAuthor("")
+        setFileName("")
+        setLevel("")
+        setKeywords("")
       },
       uploadConfig: {
         tags: {
@@ -44,25 +48,29 @@ const Upload = () => {
           Fill this form to sucessfully upload a PDF
         </p>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col" id='create-course-form'>
       <input
               className="mx-auto my-3 p-8 w-[80%] bg-[var(--light-black,_rgb(226,232,240))] rounded-[10px] font-semibold text-xl md:text-2xl"
               placeholder="Course Name eg FEG 303"
+              value={fileName}
               onChange={(e)=> setFileName(e.target.value)}
             />
       <input
               className="mx-auto my-3 p-8 w-[80%] bg-[var(--light-black,_rgb(226,232,240))] rounded-[10px] font-semibold text-xl md:text-2xl"
               placeholder="Author"
+              value={author}
               onChange={(e)=> setAuthor(e.target.value)}
             />
       <input
               className="mx-auto my-3 p-8 w-[80%] bg-[var(--light-black,_rgb(226,232,240))] rounded-[10px] font-semibold text-xl md:text-2xl"
               placeholder="Keywords"
+              value={keywords}
               onChange={(e)=> setKeywords(e.target.value)}
             />
       <input
               className="mx-auto my-3 p-8 w-[80%] bg-[var(--light-black,_rgb(226,232,240))] rounded-[10px] font-semibold text-xl md:text-2xl"
               placeholder="Level eg: 100 first"
+              value={level}
               onChange={(e)=> setLevel(e.target.value)}
             />
       <button

@@ -1,7 +1,7 @@
 import axios from 'axios'
- 
+import {toast} from 'react-toastify'
 const url = "api/upload"
-export const cloudinaryUpload = (data) =>{
+export const cloudinaryUpload = async (data) =>{
     const body = {
         url: data.url,
         fileName: data.uploadTags.fileName,
@@ -13,8 +13,9 @@ export const cloudinaryUpload = (data) =>{
         thumbnail: `https://cdn.filestackcontent.com/output=format:jpg/${data.handle}`
     }
    
-    const response = axios.post(url, body)
-    .then((res)=>console.log(res.data))
-    .catch((err)=>console.log(err.response.data.error.message))
+    const response = await axios.post(url, body)
+    .then((res)=>res.data.message)
+    .catch((err)=>err.response.data.error.message)
     console.log(response, data)  
+    toast.success(response)
 }
