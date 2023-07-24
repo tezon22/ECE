@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
-import { FaUserCircle, FaVideo, FaCalculator, FaBook } from 'react-icons/fa';
+import { FaUserCircle, FaVideo, FaCalculator, FaBook, FaLayerGroup } from 'react-icons/fa';
 import { AiTwotoneSetting } from 'react-icons/ai';
 
 // import images
@@ -55,7 +55,7 @@ const Mobiledashboard = () => {
 				<div>
 					{click ? (
 						<>
-							<div className='mt-[9rem] ml-[1rem] flex flex-col gap-[7rem] text-center items-center justify-center'>
+							<div className='mt-[9rem] ml-[1rem] flex flex-col gap-[6rem] text-center items-center justify-center'>
 								<Link to='/profile'>
 									<div className='flex gap-2'>
 										<h1>Profile</h1>
@@ -78,6 +78,12 @@ const Mobiledashboard = () => {
 									<div className='flex gap-2'>
 										<h1>Calculator</h1>
 										<FaCalculator size={20} />
+									</div>
+								</Link>
+								<Link to='/course/outline'>
+									<div className='flex gap-2'>
+										<h1>CourseOutline</h1>
+										<FaLayerGroup size={20} />
 									</div>
 								</Link>
 								<div>
@@ -104,6 +110,9 @@ const Mobiledashboard = () => {
 								</Link>
 								<Link to='/cgpa'>
 									<FaCalculator size={20} className='mb-[6rem]' />
+								</Link>
+								<Link to='/course/outline'>
+									<FaLayerGroup size={20} className='mb-[6rem]' />
 								</Link>
 								<div>
 									<Link to='/settings'>
