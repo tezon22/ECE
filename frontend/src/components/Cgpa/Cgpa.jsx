@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { reset } from '../../features/auth/authSlice';
 import { AiOutlineLeft } from 'react-icons/ai';
+import Navbar from '../Navbar/Navbar';
 
 const Cgpa = () => {
 	const levels = [
@@ -26,23 +27,26 @@ const Cgpa = () => {
 	}, [user, navigate, dispatch]);
 
 	return (
-		<div className="text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]">
-			<div className="flex my-5 mx-4">
-				<Link className="w-1/12 text-2xl md:text-4xl font-bold" to="/">
-					<AiOutlineLeft />
-				</Link>
-				<div className="w-11/12 text-center md:text-2xl font-bold mt-2">Select your level (CGPA)</div>
-			</div>
-			{levels.map((item) => {
-				return (
-					<Link key={item.level} to={item.link}>
-						<div className="rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-10 md:py-16 my-8 md:my-14 mx-10 md:mx-24">
-							{item.level}
-						</div>
+		<>
+			<Navbar />
+			<div className="text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]">
+				<div className="flex my-5 mx-4">
+					<Link className="w-1/12 text-2xl md:text-4xl font-bold" to="/">
+						<AiOutlineLeft />
 					</Link>
-				);
-			})}
-		</div>
+					<div className="w-11/12 text-center md:text-2xl font-bold mt-2">Select your level (CGPA)</div>
+				</div>
+				{levels.map((item) => {
+					return (
+						<Link key={item.level} to={item.link}>
+							<div className="rounded-2xl md:rounded-3xl md:text-xl bg-[var(--light-black,_rgb(226,232,240))] text-center font-medium py-10 md:py-16 my-8 md:my-14 mx-10 md:mx-24">
+								{item.level}
+							</div>
+						</Link>
+					);
+				})}
+			</div>
+		</>
 	);
 };
 

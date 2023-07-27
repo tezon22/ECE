@@ -108,6 +108,10 @@ const UserDashboard = () => {
 							<AiFillSchedule size={50} />
 							<p className='text-[20px] font-normal'>Time table</p>
 						</Link>
+						<Link to='/course/outline' className='grid-tiles'>
+							<FaLayerGroup size={50} />
+							<p className='text-[20px] font-normal'>Course Outline</p>
+						</Link>
 					</section>
 
 					<article className='footer-img-article'>

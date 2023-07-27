@@ -27,6 +27,8 @@ import Cgpa2 from './components/Cgpa/Cgpa2';
 import Level from './components/Pdf/Level';
 import Upload from './components/Pdf/Upload';
 import Outline from './components/CourseOutline/CourseOutlineList';
+import OutlineContent from './components/CourseOutline/CourseContent';
+import ErrorPage from './assests/ErrorPage';
 
 
 function App() {
@@ -60,6 +62,8 @@ function App() {
 						<Route exact path="/pdf/:id" element={<Download />} />
 						<Route exact path="/upload" element={<Upload />} />
 						<Route exact path="/course/outline" element={<Outline />} />
+						<Route exact path="/course/outline/:level" element={<OutlineContent />} />
+						<Route exact path="/*" element={<ErrorPage />} />
 					</Routes>
 				</div>
 			</Router>

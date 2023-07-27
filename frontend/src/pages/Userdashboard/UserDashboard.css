@@ -13,7 +13,8 @@
 		'one one one'
 		'two two two'
 		'three three three'
-		'four four four';
+		'four four four'
+		'five five five';
 	gap: 2.1rem;
 	padding: 0 0.4rem 0 1rem;
 }
@@ -55,6 +56,11 @@
 .grid-tiles:nth-child(4) {
 	grid-area: four;
 }
+.grid-tiles:nth-child(5) {
+	grid-area: five;
+	width: 42rem;
+}
+
 @media only screen and (max-width: 884px) {
 	.nav-men {
 		transform: translate(0);
@@ -100,7 +106,8 @@
 		width: 100%;
 		grid-template-areas:
 			'one one one two two two'
-			'three three three four four four';
+			'three three three four four four'
+			'. . five five . .';
 
 		gap: 4rem 4.5rem;
 		padding: 0;
