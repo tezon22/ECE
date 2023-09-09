@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/Navbar/Navbar';
-import { FaUserCircle, FaVideo, FaCalculator, FaBook } from 'react-icons/fa';
+import { FaUserCircle, FaVideo, FaCalculator, FaBook, FaLayerGroup } from 'react-icons/fa';
 import { AiTwotoneSetting, AiFillSchedule } from 'react-icons/ai';
 import './UserDashboard.css';
 import footer_img from './images/image 16.png';
@@ -61,6 +61,12 @@ const UserDashboard = () => {
 							<FaCalculator size={20} />
 						</li>
 						<li className='flex gap-2 items-center'>
+							<Link to='/course/outline' className='text-[18px]'>
+								CourseOutline
+							</Link>
+							<FaLayerGroup size={20} />
+						</li>
+						<li className='flex gap-2 items-center'>
 							<Link to='/settings' className='text-[18px]'>
 								Settings
 							</Link>
@@ -101,6 +107,10 @@ const UserDashboard = () => {
 						<Link to='/timetable' className='grid-tiles'>
 							<AiFillSchedule size={50} />
 							<p className='text-[20px] font-normal'>Time table</p>
+						</Link>
+						<Link to='/course/outline' className='grid-tiles'>
+							<FaLayerGroup size={50} />
+							<p className='text-[20px] font-normal'>Course Outline</p>
 						</Link>
 					</section>
 

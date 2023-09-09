@@ -47,7 +47,7 @@ const Pdf = () => {
 
 	
 	return (
-		<div>
+		<>
 			<Navbar />
 			<div className='text-[var(--lighter-blue,_#29335c)] lg:mx-[15%]'>
 				<div className='flex my-5 md:my-8 mx-4'>
@@ -60,7 +60,7 @@ const Pdf = () => {
 				</div>
 				{renderedList}
 			</div>
-		</div>
+		</>
 	);
 };
 
