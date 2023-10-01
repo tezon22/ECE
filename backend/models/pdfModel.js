@@ -51,6 +51,7 @@ mongoose.connection.on('error', (err) => {
 	console.log(`There was an error in connecting to Mongodb: ${err}`);
 });
 
+const pdfModel = pdf.model('pdf', pdfSchema)
 
-module.exports = pdf.model('pdf', pdfSchema);
+module.exports = pdfModel;
 
